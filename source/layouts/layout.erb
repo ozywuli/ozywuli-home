@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Ozy Wu-Li &ndash; <%= current_page.data.title || "Hello" %></title>
+
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100,100italic' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag "normalize", "main" %>
+
+  </head>
+
+
+<body class="<%= page_classes %>">
+
+
+      <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+
+
+<div class="container flex">
+
+<nav class="navbar flex">
+  <h1 class="title navbar__item">
+    <a href="/" class="flex title__link">
+      <table class="logo title__item"> <tbody><tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr></tbody></table>
+      <span class="title__item">Ozy Wu-Li</span>
+    </a>
+  </h1>
+  <ul class="menu flex navbar__item">
+    <li class="menu__item">
+      <%= link_to 'Portfolio', '/portfolio.html', class: 'menu__link menu__link--portfolio' %>
+    </li>
+    <li class="menu__item">
+      <%= link_to 'About', '/about.html', class: 'menu__link menu__link--about' %>
+    </li>
+    <li class="menu__item">
+    <%= link_to 'Blog', '/blog.html', class: 'menu__link menu__link--blog' %>
+    </li>
+  </ul>
+</nav>
+
+<main class="content flex">
+  <section class="content__col">
+      <%= yield %>
+  </section>
+</main>
+
+
+<footer class="footer flex">
+  <div class="footer__item copyright">
+    <a href="/">Ozy Wu-Li</a>
+    &copy;
+    <time class="copyright-years">2015</time>
+  </div>
+  <div class="footer__item"></div>
+</footer>
+
+
+</div>
+
+
+
+
+
+
+
+    <%= javascript_include_tag  "main" %>
+
+
+</body>
+</html>
