@@ -32,7 +32,7 @@
 
 
 
-<div class="container flex">
+<div class="container flex" id="top">
 
 <nav class="navbar flex">
   <h1 class="title navbar__item">
@@ -58,7 +58,12 @@
   <section class="content__col">
       <%= yield %>
   </section>
+
+
+  <a href="#top">Scroll Up</a>
 </main>
+
+
 
 
 <footer class="footer flex">
@@ -67,7 +72,30 @@
     &copy;
     <time class="copyright-years">2015</time>
   </div>
-  <div class="footer__item"></div>
+  <div class="footer__item">
+    <ul class="social">
+      <li class="social__item">
+        <a href="https://www.twitter.com/ozy_wuli" class="social__link" target="_blank">
+          <%= partial "partials/twitter" %>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="https://www.github.com/ozywuli" class="social__link" target="_blank">
+          <%= partial "partials/github" %>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="http://sonofsamnon.tumblr.com" class="social__link" target="_blank">
+          <%= partial "partials/tumblr" %>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="mailto:ozywuli@gmail.com" class="social__link" target="_blank">
+          <%= partial "partials/email" %>
+        </a>
+      </li>
+    </ul>
+  </div>
 </footer>
 
 
@@ -79,7 +107,7 @@
 
 
 
-    <%= javascript_include_tag  "main" %>
+<%= javascript_include_tag  "main" %>
 
 
 </body>

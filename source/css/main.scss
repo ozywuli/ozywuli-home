@@ -281,10 +281,20 @@ p {
 
 
 .footer {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
   padding: 15px;
   font-size: 1.4rem;
 }
 
+
+.social__item {
+  display: inline-block;
+  margin-left: 12px;
+}
 
 
 
