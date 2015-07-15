@@ -35,66 +35,73 @@
 <div class="container flex" id="top">
 
 <nav class="navbar flex">
-  <h1 class="title navbar__item">
-    <a href="/" class="flex title__link">
-      <table class="logo title__item"> <tbody><tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr></tbody></table>
-      <span class="title__item">Ozy Wu-Li</span>
-    </a>
-  </h1>
-  <ul class="menu flex navbar__item">
-    <li class="menu__item">
-      <%= link_to 'Portfolio', '/portfolio.html', class: 'menu__link menu__link--portfolio' %>
-    </li>
-    <li class="menu__item">
-      <%= link_to 'About', '/about.html', class: 'menu__link menu__link--about' %>
-    </li>
-    <li class="menu__item">
-    <%= link_to 'Blog', '/blog.html', class: 'menu__link menu__link--blog' %>
-    </li>
-  </ul>
+  <div class="navbar__col flex">
+    <h1 class="title">
+      <a href="/" class="title__link flex">
+        <table class="logo title__item"> <tbody><tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr></tbody></table>
+        <span class="title__item">Ozy Wu-Li</span>
+      </a>
+    </h1>
+<!--     <ul class="menu flex">
+      <li class="menu__item">
+        <%= link_to 'Portfolio', '/portfolio.html', class: 'menu__link menu__link--portfolio' %>
+      </li>
+      <li class="menu__item">
+        <%= link_to 'About', '/about.html', class: 'menu__link menu__link--about' %>
+      </li>
+      <li class="menu__item">
+      <%= link_to 'Blog', '/blog.html', class: 'menu__link menu__link--blog' %>
+      </li>
+    </ul> -->
+  </div>
 </nav>
 
 <main class="content flex">
   <section class="content__col">
       <%= yield %>
+
+  <a href="#top" class="scrolltop">Scroll Top</a>
+
   </section>
 
 
-  <a href="#top">Scroll Up</a>
+
 </main>
 
 
 
 
 <footer class="footer flex">
-  <div class="footer__item copyright">
-    <a href="/">Ozy Wu-Li</a>
-    &copy;
-    <time class="copyright-years">2015</time>
+  <div class="footer__col flex">
+    <div class="footer__item copyright">
+      <a href="/">Ozy Wu-Li</a>
+      &copy;
+      <time class="copyright-years">2015</time>
+    </div>
+    <div class="footer__item flex">
+      <ul class="social">
+        <li class="social__item">
+          <a href="https://www.twitter.com/ozy_wuli" class="social__link" target="_blank">
+            <%= partial "partials/twitter" %>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="https://www.github.com/ozywuli" class="social__link" target="_blank">
+            <%= partial "partials/github" %>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="http://sonofsamnon.tumblr.com" class="social__link" target="_blank">
+            <%= partial "partials/tumblr" %>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="mailto:ozywuli@gmail.com" class="social__link" target="_blank">
+            <%= partial "partials/email" %>
+          </a>
+        </li>
+      </ul>
   </div>
-  <div class="footer__item">
-    <ul class="social">
-      <li class="social__item">
-        <a href="https://www.twitter.com/ozy_wuli" class="social__link" target="_blank">
-          <%= partial "partials/twitter" %>
-        </a>
-      </li>
-      <li class="social__item">
-        <a href="https://www.github.com/ozywuli" class="social__link" target="_blank">
-          <%= partial "partials/github" %>
-        </a>
-      </li>
-      <li class="social__item">
-        <a href="http://sonofsamnon.tumblr.com" class="social__link" target="_blank">
-          <%= partial "partials/tumblr" %>
-        </a>
-      </li>
-      <li class="social__item">
-        <a href="mailto:ozywuli@gmail.com" class="social__link" target="_blank">
-          <%= partial "partials/email" %>
-        </a>
-      </li>
-    </ul>
   </div>
 </footer>
 
