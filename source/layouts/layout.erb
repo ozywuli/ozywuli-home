@@ -1,21 +1,23 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Ozy Wu-Li &ndash; <%= current_page.data.title || "Hello" %></title>
 
 
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100,100italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100,100italic' rel='stylesheet' type='text/css'>
 
-    <%= stylesheet_link_tag "normalize", "main" %>
+    <%= stylesheet_link_tag "main" %>
 
   </head>
 
@@ -38,10 +40,16 @@
   <div class="navbar__col flex">
     <h1 class="title">
       <a href="/" class="title__link flex">
-        <table class="logo title__item"> <tbody><tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr></tbody></table>
+
+        <div class="logo">
+            <%= partial "partials/grid" %>
+        </div>
+
         <span class="title__item">Ozy Wu-Li</span>
       </a>
     </h1>
+
+
 <!--     <ul class="menu flex">
       <li class="menu__item">
         <%= link_to 'Portfolio', '/portfolio.html', class: 'menu__link menu__link--portfolio' %>
@@ -58,9 +66,12 @@
 
 <main class="content flex">
   <section class="content__col">
+
       <%= yield %>
 
-  <a href="#top" class="scrolltop">Scroll Top</a>
+  <p class="scrolltop-">
+    <a href="#top" class="scrolltop">Scroll Top</a>
+  </p>
 
   </section>
 
