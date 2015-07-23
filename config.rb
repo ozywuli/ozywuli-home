@@ -51,10 +51,12 @@ set :css_dir, 'css'
 
 set :js_dir, 'js'
 
-set :images_dir, 'iimg'
+set :images_dir, 'img'
 
 # Build-specific configuration
 configure :build do
+
+  activate :minify_html
   # For example, change the Compass output style for deployment
   activate :minify_css
 
@@ -65,7 +67,7 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
