@@ -98,18 +98,6 @@
 
   }
 
-    .menu--portfolio {
-      border-bottom: 1px solid $gold;
-    }
-
-    .menu--about {
-      border-bottom: 1px solid $gold;
-    }
-
-    .menu--blog {
-      border-bottom: 1px solid $gold;
-    }
-
 
 
 
@@ -161,9 +149,28 @@
 
 
 .portfolio__list {
-  font-style: italic;
-}
 
+}
+  .portfolio__item {
+    margin-bottom: 20px;
+  }
+    .portfolio__item-description {
+      margin-left: 10px;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: #818181;
+    }
+  .portfolio__link--img {
+    display: block;
+    margin-top: 5px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .portfolio__img {
+    width: 100%;
+  }
 
 
 
