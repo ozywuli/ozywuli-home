@@ -62,6 +62,8 @@
   }
 
 .title {
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: 9px 0;
   font-size: 2rem;
@@ -90,7 +92,7 @@
     display: block;
     margin-bottom: -1px;
     border-bottom: 1px solid transparent;
-    padding: 10px 15px;
+    padding: 15px 15px;
 
     &:hover {
       border-bottom: 1px solid $gold;
@@ -152,7 +154,7 @@
 
 }
   .portfolio__item {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
     .portfolio__item-description {
       margin-left: 10px;
