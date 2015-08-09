@@ -19,6 +19,10 @@ body {
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   line-height: 1.5;
+
+  @media all and (min-width: 728px) {
+    font-size: 2rem;
+  }
 }
 
 
@@ -107,10 +111,19 @@ ol, ul, li {
 
 
 h2, h3, h4, h5, h6 {
+  color: #FFF;
   line-height: 1;
   margin-bottom: 20px;
 }
 
 p {
   margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &:first-of-type {
+    margin-bottom: 20px;
+  }
+
 }

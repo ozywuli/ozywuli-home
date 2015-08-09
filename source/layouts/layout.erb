@@ -34,7 +34,7 @@
 
 
 
-<div class="container flex" id="top">
+<div class="container flex">
 
 <nav class="navbar flex">
   <div class="navbar__col flex">
@@ -88,11 +88,7 @@
       &copy;
       <time class="copyright-years">2015</time>
     </div>
-    <div class="footer__item flex">
 
-      <a href="#top" class="scrolltop">Scroll Top</a>
-
-    </div>
   </div>
 </footer>
 
@@ -100,17 +96,13 @@
 </div>
 
 
+<div class="scrolltop-container">
+  <a href="#" class="scrolltop">
+    <%= partial "partials/scrolltop" %>
+  </a>
+</div>
 
 
-<script>
-function init() {
-var imgDefer = document.getElementsByTagName('img');
-for (var i=0; i<imgDefer.length; i++) {
-if(imgDefer[i].getAttribute('data-src')) {
-imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-} } }
-window.onload = init;
-</script>
 
 
 <%= javascript_include_tag  "main" %>

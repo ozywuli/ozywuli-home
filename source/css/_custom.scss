@@ -22,8 +22,8 @@
 
 .browserupgrade {
     max-width: 500px;
-    color: #DDD;
-    font-size: 24px;
+    color: $text-color;
+    font-size: 25px;
 }
 
 /* ==========================================================================
@@ -34,7 +34,11 @@
   font-size: 4rem;
 }
 .h3 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
+}
+
+.small-text {
+  font-size: 1.4rem;
 }
 
 
@@ -46,9 +50,7 @@
   @include flex-direction(column);
   min-height: 100vh;
 
-  @media all and (min-width: 728px) {
-    font-size: 1.8rem;
-  }
+
 }
 
 .navbar {
@@ -125,21 +127,18 @@
 
 
 .billboard {
-  margin-bottom: 20px;
-  border-bottom: 1px solid $border;
-  font-size: 2rem;
+ @extend .row;
 }
 
 .page-title {
-  font-size: 3.6rem;
-  color: #FFF;
+  font-size: 3.2rem;
+
 
   @media all and (min-width: 768px) {
     font-size: 4rem;
   }
 }
 .page-des {
-  font-size: 1.4rem;
   margin-bottom: 0;
 
   &:last-of-type {
@@ -163,7 +162,8 @@
 
 .portfolio__list {
   @include flex-wrap(wrap);
-  margin-right: -15px;
+  margin-bottom: -15px;
+
 }
   .portfolio__item {
     margin-bottom: 15px;
@@ -173,12 +173,7 @@
       margin-right: 15px;
     }
   }
-    .portfolio__item-description {
-      margin-left: 10px;
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      color: #818181;
-    }
+
   .portfolio__link--img {
     display: block;
 
@@ -190,6 +185,11 @@
     width: 100%;
   }
 
+  @media all and (min-width: 800px) {
+    .portfolio__list {
+      margin-right: -15px;
+    }
+  }
 
 
 
@@ -238,7 +238,7 @@
     }
       .contact-info__type {
         font-size: 1.2rem;
-        color: #DDD;
+        color: $text-color;
       }
 
 
@@ -275,5 +275,12 @@
   margin-left: 12px;
 }
 
+
+.scrolltop-container {
+  display: none;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
 
 
