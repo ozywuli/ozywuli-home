@@ -25,12 +25,12 @@
 <body class="<%= page_classes %>">
 
 
-      <!--[if lt IE 9]>
-          <div class="browser-overlay">
-          <h1><a href="/">Ozy Wu-Li</a></h1>
-          <p class="browserupgrade">Hey there, it looks like you're using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-          </div>
-      <![endif]-->
+<!--[if lt IE 9]>
+    <div class="browser-overlay">
+    <h1><a href="/">Ozy Wu-Li</a></h1>
+    <p class="browserupgrade">Hey there, it looks like you're using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    </div>
+<![endif]-->
 
 
 
@@ -61,6 +61,7 @@
         <a href="#connect" class="menu__link">Connect</a>
       </li>
     </ul>
+
   </div>
 </nav>
 
@@ -69,9 +70,7 @@
 
       <%= yield %>
 
-  <p class="scrolltop-container">
-    <a href="#top" class="scrolltop">Scroll Top</a>
-  </p>
+
 
   </section>
 
@@ -90,29 +89,10 @@
       <time class="copyright-years">2015</time>
     </div>
     <div class="footer__item flex">
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://www.twitter.com/ozy_wuli" class="social__link" target="_blank">
-            <%= partial "partials/twitter" %>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.github.com/ozywuli" class="social__link" target="_blank">
-            <%= partial "partials/github" %>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="http://sonofsamnon.tumblr.com" class="social__link" target="_blank">
-            <%= partial "partials/tumblr" %>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="mailto:ozywuli@gmail.com" class="social__link" target="_blank">
-            <%= partial "partials/email" %>
-          </a>
-        </li>
-      </ul>
-  </div>
+
+      <a href="#top" class="scrolltop">Scroll Top</a>
+
+    </div>
   </div>
 </footer>
 
@@ -122,7 +102,15 @@
 
 
 
-
+<script>
+function init() {
+var imgDefer = document.getElementsByTagName('img');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
 
 
 <%= javascript_include_tag  "main" %>

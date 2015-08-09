@@ -1,0 +1,40 @@
+{
+  "item": [
+    {
+      "type": "Twitter",
+      "name": "@ozy_wuli",
+      "url": "https://twitter.com/ozy_wuli",
+      "logo": "twitter-round"
+    },
+    {
+      "type": "Email",
+      "name": "ozy.wu.li@gmail.com",
+      "url": "mailto:ozy.wu.li@gmail.com",
+      "logo": "email-round"
+    },
+    {
+      "type": "Github",
+      "name": "ozywuli",
+      "url": "https://github.com/ozywuli",
+      "logo": "github-round"
+    },
+    {
+      "type": "CodePen",
+      "name": "ozywuli",
+      "url": "http://codepen.io/ozywuli/",
+      "logo": "codepen"
+    },
+    {
+      "type": "Flickr",
+      "name": "ozywuli",
+      "url": "https://twitter.com/ozy_wuli",
+      "logo": "flickr"
+    },
+    {
+      "type": "Tumblr",
+      "name": "ozywoolee",
+      "url": "https://twitter.com/ozy_wuli",
+      "logo": "tumblr-round"
+    }
+  ]
+}

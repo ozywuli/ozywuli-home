@@ -10,10 +10,14 @@
 
 html {
   background: $bg;
-  color: #DDD;
-  font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
-  font-weight: 300;
+}
+
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
   line-height: 1.5;
 }
 
@@ -82,9 +86,14 @@ textarea {
     resize: vertical;
 }
 
+/*
+ * User
+ */
+
 a {
   text-decoration: none;
   color: $gold;
+  @include transition(all 150ms ease);
 
   &:hover {
     color: darken($gold, 10%);
@@ -96,6 +105,11 @@ ol, ul, li {
   list-style: none;
 }
 
+
+h2, h3, h4, h5, h6 {
+  line-height: 1;
+  margin-bottom: 20px;
+}
 
 p {
   margin-bottom: 20px;

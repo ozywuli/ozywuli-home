@@ -30,14 +30,21 @@
    Author's custom styles
    ========================================================================== */
 
+.h2 {
+  font-size: 4rem;
+}
+.h3 {
+  font-size: 2.5rem;
+}
+
+
 .flex {
-  display: flex;
+  @include display-flex;
 }
 
 .container {
-  flex-direction: column;
+  @include flex-direction(column);
   min-height: 100vh;
-  font-size: 1.6rem;
 
   @media all and (min-width: 728px) {
     font-size: 1.8rem;
@@ -45,7 +52,7 @@
 }
 
 .navbar {
-  justify-content: center;
+  @include justify-content(center);
   border-bottom: 1px solid $border;
   padding: 0 20px;
 
@@ -56,18 +63,18 @@
   }
 }
   .navbar__col {
-    flex: 1 0 100%;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex(1 0 100%);
+    @include flex-direction(column);
+    @include justify-content(space-between);
     max-width: 740px;
     @media all and (min-width: 728px) {
-      flex-direction: row;
+      @include flex-direction(row);
     }
   }
 
 .title {
-  display: flex;
-  align-items: center;
+  @extend .flex;
+  @include align-items(center);
   width: 100%;
   padding: 9px 0;
   font-size: 2rem;
@@ -82,7 +89,7 @@
 }
 
   .title__link {
-    align-items: center;
+    @include align-items(center);
   }
 
 .logo {
@@ -108,7 +115,7 @@
 
 
 .content {
-  justify-content: center;
+  @include justify-content(center);
   border-bottom: 1px solid $border;
   padding: 15px;
 }
@@ -148,14 +155,14 @@
 }
 
   .row__title {
-    margin-bottom: 20px;
+    @extend .h3;
   }
 
 
 
 
 .portfolio__list {
-  flex-wrap: wrap;
+  @include flex-wrap(wrap);
   margin-right: -15px;
 }
   .portfolio__item {
@@ -187,12 +194,12 @@
 
 
 .contact-info {
-  flex-wrap: no-wrap;
-  flex-direction: column;
+  @include flex-wrap(no-wrap);
+  @include flex-direction(column);
 
   @media all and (min-width: 728px) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
     margin-right: -10px;
   }
 }
@@ -210,8 +217,8 @@
 }
 
   .contact-info__link {
-    display: flex;
-    align-items: center;
+    @extend .flex;
+    @include align-items(center);
     border: 1px solid $border;
     padding: 20px;
 
@@ -227,7 +234,7 @@
       margin-right: 20px;
     }
     .contact-info__body {
-      flex: 1;
+      @include flex(1);
     }
       .contact-info__type {
         font-size: 1.2rem;
@@ -251,13 +258,13 @@
 
 
 .footer {
-  justify-content: center;
+  @include justify-content(center);
   padding: 15px;
   font-size: 1.4rem;
 }
   .footer__col {
-    flex: 1 0 100%;
-    justify-content: space-between;
+    @include flex(1 0 100%);
+    @include justify-content(space-between);
     max-width: 740px
   }
 
@@ -270,10 +277,3 @@
 
 
 
-.scrolltop-container {
-  margin-bottom: 0;
-  text-align: center;
-}
-.scrolltop {
-  margin-top: 40px;
-}

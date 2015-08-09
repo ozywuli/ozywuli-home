@@ -14,55 +14,12 @@ title: Index
 
   <ul class="portfolio__list flex">
 
-
+  <% data.portfolio.item.each do |f| %>
     <li class="portfolio__item">
-      <a href="http://lab.ozywuli.com/dataviz" target="_blank" class="portfolio__link">Maps</a>
-      <a href="" target="_blank" class="portfolio__link--img"><img src="http://placehold.it/300x300" alt="" class="portfolio__img"></a>
+      <a href="<%= f.url %>" target="_blank" class="portfolio__link"><%= f.title %></a>
+      <a href="<%= f.url %>" target="_blank" class="portfolio__link--img"><img src="img/fake_300x300.png" data-src="<%= f.imgSrc %>" alt="<%= f.alt %>" class="portfolio__img"></a>
     </li>
-    <li class="portfolio__item">
-      <a href="http://lab.ozywuli.com/dataviz" target="_blank" class="portfolio__link">DataViz</a>
-      <a href="" target="_blank" class="portfolio__link--img"><img src="http://placehold.it/300x300" alt="" class="portfolio__img"></a>
-    </li>
-    <li class="portfolio__item">
-      <a href="http://lab.ozywuli.com/yunshu" target="_blank" class="portfolio__link">Yunshu</a>
-      <a href="" target="_blank" class="portfolio__link--img"><img src="http://placehold.it/300x300" alt="" class="portfolio__img"></a>
-    </li>
-    <li class="portfolio__item">
-      <a href="http://nituji.tumblr.com/" target="_blank" class="portfolio__link">Nituji</a>
-      <a href="http://nituji.tumblr.com/" target="_blank" class="portfolio__link--img"><img src="http://placehold.it/300x300" alt="Nituji - Tumblr theme" class="portfolio__img"></a>
-    </li>
-    <li class="portfolio__item">
-      <a href="http://009scriber.tumblr.com/" target="_blank" class="portfolio__link">Scriber</a>
-      <a href="http://009scriber.tumblr.com/" target="_blank" class="portfolio__link--img"><img src="http://placehold.it/300x300" alt="Scriber - Tumblr theme" class="portfolio__img"></a>
-    </li>
-    <li class="portfolio__item">
-      <a href="http://008geometria.tumblr.com/" target="_blank" class="portfolio__link">Geometria</a>
-      <a href="" target="_blank" class="portfolio__link--img"><img src="http://placehold.it/300x300" alt="" class="portfolio__img"></a>
-    </li>
-    <li class="portfolio__item">
-      <a href="http://010lexicon.tumblr.com/" target="_blank" class="portfolio__link">Tmypest</a>
-      <a href="" target="_blank" class="portfolio__link--img"><img src="http://placehold.it/300x300" alt="" class="portfolio__img"></a>
-    </li>
-    <li class="portfolio__item">
-      <a href="http://media.lamag.com/thefoodevent" target="_blank" class="portfolio__link">The Food Event 2015</a>
-
-      <a href="http://media.lamag.com/thefoodevent/" target="_blank" class="portfolio__link--img"><img src="img/foodevent_300x300.jpg" alt="The Food Event 2015" class="portfolio__img"></a>
-    </li>
-    <li class="portfolio__item">
-      <a href="http://media.lamag.com/tacos" target="_blank" class="portfolio__link">L.A.'s 25 Best Tacos</a>
-
-      <a href="http://media.lamag.com/tacos/" target="_blank" class="portfolio__link--img"><img src="http://placehold.it/300x300" alt="L.A.'s 25 Best Tacos" class="portfolio__img"></a>
-    </li>
-    <li class="portfolio__item">
-      <a href="http://media.lamag.com/theverge/" target="_blank" class="portfolio__link">L.A. On The Verge</a>
-
-      <a href="http://media.lamag.com/theverge/" target="_blank" class="portfolio__link--img"><img src="img/ontheverge_300x300.jpg" alt="L.A. On The Verge" class="portfolio__img"></a>
-    </li>
-    <li class="portfolio__item">
-      <a href="http://media.lamag.com/maps/secretla/" target="_blank" class="portfolio__link">Secret L.A. *</a>
-      <a href="http://media.lamag.com/maps/secretla/" target="_blank" class="portfolio__link--img"><img src="img/secretla_300x300.jpg" alt="Secret L.A." class="portfolio__img"></a>
-    </li>
-
+  <% end %>
 
   </ul>
 
@@ -70,6 +27,7 @@ title: Index
 
 <section class="row" id="about">
   <h3 class="row__title">About</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit obcaecati autem repudiandae, aliquam iste labore, suscipit dolorum, eaque ut facere quis accusantium nostrum rerum dignissimos rem atque fugiat id. Ut.</p>
   <p>References available upon request</p>
 
   <ul class="contact-info flex">
@@ -98,66 +56,16 @@ title: Index
   <h3 class="row__title">Connect with me</h3>
 
   <ul class="contact-info flex">
-
+  <% data.connect.item.each do |f| %>
     <li class="contact-info__item">
-      <a href="https://twitter.com/ozy_wuli" class="contact-info__link">
-        <div class="contact-info__icon"><%= partial "partials/twitter-round" %></div>
+      <a href="<%= f.url %>" class="contact-info__link">
+        <div class="contact-info__icon"><%= partial "partials/" + f.logo %></div>
         <div class="contact-info__body">
-          <div class="contact-info__type">Twitter</div>
-          <div class="contact-info__name">@ozy_wuli</div>
+          <div class="contact-info__type"><%= f.type %></div>
+          <div class="contact-info__name"><%= f.name %></div>
         </div>
       </a>
     </li>
-
-    <li class="contact-info__item">
-      <a href="mailto:ozy.wu.li@gmail.com" class="contact-info__link">
-        <div class="contact-info__icon"><%= partial "partials/email-round" %></div>
-        <div class="contact-info__body">
-          <div class="contact-info__type">Email</div>
-          <div class="contact-info__name">ozy.wu.li@gmail.com</div>
-        </div>
-      </a>
-    </li>
-
-    <li class="contact-info__item">
-      <a href="https://github.com/ozywuli" class="contact-info__link">
-        <div class="contact-info__icon"><%= partial "partials/github-round" %></div>
-        <div class="contact-info__body">
-          <div class="contact-info__type">Github</div>
-          <div class="contact-info__name">ozywuli</div>
-        </div>
-      </a>
-    </li>
-
-    <li class="contact-info__item">
-      <a href="http://codepen.io/ozywuli/" class="contact-info__link">
-        <div class="contact-info__icon"><%= partial "partials/codepen" %></div>
-        <div class="contact-info__body">
-          <div class="contact-info__type">CodePen</div>
-          <div class="contact-info__name">ozywuli</div>
-        </div>
-      </a>
-    </li>
-
-    <li class="contact-info__item">
-      <a href="http://ozywoolee.tumblr.com" class="contact-info__link">
-        <div class="contact-info__icon"><%= partial "partials/flickr" %></div>
-        <div class="contact-info__body">
-          <div class="contact-info__type">Flickr</div>
-          <div class="contact-info__name">ozywuli</div>
-        </div>
-      </a>
-    </li>
-
-    <li class="contact-info__item">
-      <a href="http://ozywoolee.tumblr.com" class="contact-info__link">
-        <div class="contact-info__icon"><%= partial "partials/tumblr-round" %></div>
-        <div class="contact-info__body">
-          <div class="contact-info__type">Tumblr</div>
-          <div class="contact-info__name">ozywoolee</div>
-        </div>
-      </a>
-    </li>
-
+  <% end %>
   </ul>
 </section>

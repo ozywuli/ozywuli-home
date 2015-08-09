@@ -6,3 +6,16 @@ title: Portfolio
   <h2 class="page-title">Portfolio</h2>
   <p class="page-des">Selection of web projects that I've worked on since 2014</p>
 </section>
+
+
+<ul>
+
+  <% data.portfolio.item.each do |f| %>
+  <li class="portfolio__item">
+    <a href="<%= f.url %>" target="_blank" class="portfolio__link"><%= f.title %></a>
+    <a href="<%= f.url %>" target="_blank" class="portfolio__link--img"><img src="<%= f.imgSrc %>" alt="<%= f.alt %>" class="portfolio__img"></a>
+  </li>
+
+  <% end %>
+</ul>
+
