@@ -38,6 +38,7 @@
 }
 
 .small-text {
+  padding-bottom: 20px;
   font-size: 1.4rem;
 }
 
@@ -122,12 +123,19 @@
   padding: 15px;
 }
   .content__col {
+    width: 100%;
     max-width: 740px;
   }
 
 
 .billboard {
  @extend .row;
+
+  @media all and (min-width: 800px) {
+     p {
+      font-size: 2rem
+     }
+  }
 }
 
 .page-title {
@@ -148,13 +156,13 @@
 
 
 .row {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-bottom: 1px solid $border;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
   .row__title {
-    @extend .h3;
+    @extend .h2;
   }
 
 

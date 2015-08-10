@@ -9,7 +9,7 @@
     {
       "title": "Maps",
       "url": "http://lab.ozywuli.com/dataviz",
-      "imgSrc": "http://placehold.it/300x300",
+      "imgSrc": "img/maps_300x300.jpg",
       "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
     },
     {
@@ -17,6 +17,12 @@
       "url": "http://lab.ozywuli.com/dataviz",
       "imgSrc": "http://placehold.it/300x300",
       "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
+    },
+    {
+      "title": "Steinbeck",
+      "url": "http://010lexicon.tumblr.com/",
+      "imgSrc": "http://placehold.it/300x300",
+      "alt": "Steinbeck - Ghost theme"
     },
     {
       "title": "Yunshu",
@@ -39,14 +45,8 @@
     {
       "title": "Geometria",
       "url": "http://008geometria.tumblr.com/",
-      "imgSrc": "http://placehold.it/300x300",
+      "imgSrc": "img/geometria_300x300.png",
       "alt": "Geometria"
-    },
-    {
-      "title": "Tmypest",
-      "url": "http://010lexicon.tumblr.com/",
-      "imgSrc": "http://placehold.it/300x300",
-      "alt": "Tmypest"
     },
     {
       "title": "The Food Event 2015 *",

@@ -20,9 +20,6 @@ body {
   font-weight: $base-font-weight;
   line-height: 1.5;
 
-  @media all and (min-width: 728px) {
-    font-size: 2rem;
-  }
 }
 
 
@@ -118,6 +115,7 @@ h2, h3, h4, h5, h6 {
 
 p {
   margin-bottom: 20px;
+  font-size: 1.6rem;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -125,5 +123,4 @@ p {
   &:first-of-type {
     margin-bottom: 20px;
   }
-
 }
