@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Resume</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Resume</h1>
+</div>
+<h1 id="oscar-ozy-wu-li">OSCAR (OZY) WU-LI</h1>
+<p><script type="text/javascript">
+<!--
+h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x6f;&#122;&#x79;&#46;&#x77;&#x75;&#46;&#108;&#x69;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x6f;&#122;&#x79;&#46;&#x77;&#x75;&#46;&#108;&#x69;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript><br />
+<a href="http://ozywuli.com">ozywuli.com</a></p>
+<h2 id="objective">OBJECTIVE</h2>
+<p>To obtain a challenging position to further my career as a web developer, and to collaborate with others to build elegant and engaging interfaces for the best possible user experience.</p>
+<h2 id="profile">PROFILE</h2>
+<ul>
+<li>Web UI designer and developer with experience in Wordpress development and Rails.</li>
+<li>Excited about learning the best and latest trends and technologies in web design and development and integrating them into my workflow.</li>
+</ul>
+<h2 id="technical-skills">TECHNICAL SKILLS</h2>
+<ul>
+<li>HTML &amp; CSS</li>
+<li>LESS / SASS preprocessors, PostCSS</li>
+<li>Javascript, Jquery, Backbone, React, D3, Leaflet</li>
+<li>Wordpress, PHP, WAMP/MAMP</li>
+<li>Ruby, Rails</li>
+<li>Git/Github</li>
+</ul>
+<h2 id="platforms">PLATFORMS</h2>
+<ul>
+<li>Wordpress</li>
+<li>Tumblr</li>
+<li>Middleman</li>
+<li>Ghost</li>
+<li>Shopify</li>
+</ul>
+<h2 id="software">SOFTWARE</h2>
+<ul>
+<li>Sublime Text 3</li>
+<li>QGIS</li>
+<li>Adobe Suite (Photoshop and Illustrator)</li>
+</ul>
+<h2 id="experience">EXPERIENCE</h2>
+<p><strong>FREELANCE WEB DEVELOPER</strong><br />
+<em>June 2013 – Present</em></p>
+<p><strong>LOS ANGELES MAGAZINE</strong><br />
+<em>July 2014 – September 2015</em></p>
+<h2 id="education">EDUCATION</h2>
+<p>UNIVERSITY OF CALIFORNIA, LOS ANGELES<br />
+<em>B.A. in History, Class of 2012</em></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">&lt;!--</th>
+<th align="center">First Header</th>
+<th align="right">Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">First row</td>
+<td align="center">Data</td>
+<td align="right">Very long data entry</td>
+</tr>
+<tr class="even">
+<td align="left">Second row</td>
+<td align="center"><strong>Cell</strong></td>
+<td align="right"><em>Cell</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Third row</td>
+<td align="center">Cell that spans across two columns</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

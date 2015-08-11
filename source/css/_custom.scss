@@ -170,15 +170,19 @@
 
 .portfolio__list {
   @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(center);
+
   margin-bottom: -15px;
 
 }
   .portfolio__item {
-    margin-bottom: 15px;
+    margin-bottom: 20px
 
     @media all and (min-width: 728px) {
       width: calc(33.33% - 15px);
       margin-right: 15px;
+      margin-bottom: 15px;
     }
   }
 
