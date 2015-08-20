@@ -14,7 +14,8 @@ To obtain a challenging position to further my career as a web developer, and to
 * Excited about learning the best and latest trends and technologies in web design and development and integrating them into my workflow.
 
 ##TECHNICAL SKILLS
-HTML, HTML emails, CSS, LESS / SASS, PostCSS, Javascript, Jquery, Backbone, React/Flux, Gulp, Browserify, Webpack D3, Highchrats, Tableau, Leaflet, Mapbox, Google Maps API, CartoDB, Wordpress, PHP, WAMP/MAMP, Python, Ruby, Rails, Git/Github, Bash, Middleman static sites, Tumblr themes, Ghost themes, Sublime Text 3, QGIS, Excel, Adobe Suite (Photoshop and Illustrator)
+HTML, HTML emails, CSS, LESS / SASS, PostCSS, Javascript, Jquery, Backbone, React/Flux, Gulp, Browserify, Webpack D3, Highcharts, Tableau, Leaflet, Mapbox, Google Maps API, CartoDB, Git/Github, Bash, Middleman static sites, Tumblr themes, Ghost themes, Sublime Text 3, QGIS, Excel, Adobe Suite (Photoshop and Illustrator)
+Familiar with Wordpress, PHP, WAMP/MAMP, Python, Ruby, Rails
 
 ##EXPERIENCE
 **OZYWULI.COM** | Freelance Web Developer | *June 2013 – Present*  

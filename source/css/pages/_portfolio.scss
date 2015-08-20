@@ -1,0 +1,39 @@
+// ==================================================
+// Portfolio
+// ==================================================
+
+.portfolio__list {
+  @extend .flex;
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(center);
+
+  margin-bottom: -15px;
+
+  @include tablet {
+    margin-right: -15px;
+  }
+
+}
+  .portfolio__item {
+    margin-bottom: 20px;
+
+    @include tablet {
+      width: calc(33.33% - 15px);
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+    
+  }
+
+  .portfolio__link--img {
+    display: block;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .portfolio__img {
+    width: 100%;
+  }
+

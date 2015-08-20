@@ -1,9 +1,9 @@
 {
   "item": [
     {
-      "title": "HaoBao",
+      "title": "Wenzhang",
       "url": "http://lab.ozywuli.com/dataviz",
-      "imgSrc": "http://placehold.it/300x300",
+      "imgSrc": "img/fake_300x300.png",
       "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
     },
     {
@@ -15,13 +15,13 @@
     {
       "title": "Dataviz Projects",
       "url": "http://lab.ozywuli.com/dataviz",
-      "imgSrc": "http://placehold.it/300x300",
+      "imgSrc": "img/fake_300x300.png",
       "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
     },
     {
       "title": "Steinbeck",
-      "url": "http://010lexicon.tumblr.com/",
-      "imgSrc": "http://placehold.it/300x300",
+      "url": "http://010steinbeck.tumblr.com/",
+      "imgSrc": "img/steinbeck_300x300.jpg",
       "alt": "Steinbeck - Ghost theme"
     },
     {

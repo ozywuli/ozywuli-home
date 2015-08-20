@@ -1,0 +1,76 @@
+// ==================================================
+// Custom
+// ==================================================
+
+.h2 {
+  font-size: 4rem;
+}
+.h3 {
+  font-size: 2.4rem;
+}
+
+.small-text {
+  padding-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+
+.flex {
+  @include display-flex;
+}
+
+.container {
+  @include flex-direction(column);
+  min-height: 100vh;
+
+
+}
+
+
+.social__item {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+
+.scrolltop-container {
+  display: none;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  @include z-index("scrolltop");
+
+  circle {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

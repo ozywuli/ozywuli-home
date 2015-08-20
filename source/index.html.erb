@@ -15,7 +15,7 @@ title: Index
   <p>Selection of projects that I've worked on since 2014</p>
   <p class="small-text">* primary developer, secondary designer</p>
 
-  <ul class="portfolio__list flex">
+  <ul class="portfolio__list">
 
   <% data.portfolio.item.each do |f| %>
     <li class="portfolio__item">
@@ -35,7 +35,7 @@ title: Index
   </p>
 
 
-  <ul class="contact-info flex">
+  <ul class="contact-info">
     <li class="contact-info__item">
       <a href="employment/resume.html" target="_blank" class="resume contact-info__link">
         <div class="contact-info__icon"><%= partial "partials/html" %></div>
@@ -74,7 +74,7 @@ title: Index
 
   <p>If you decide to message me for whatever reason, I'll do my best to respond within 24 hours.</p>
 
-  <ul class="contact-info flex">
+  <ul class="contact-info">
   <% data.connect.item.each do |f| %>
     <li class="contact-info__item">
       <a href="<%= f.url %>" class="contact-info__link">

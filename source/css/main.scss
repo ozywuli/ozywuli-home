@@ -1,11 +1,47 @@
+@charset "UTF-8";
 @import 'compass';
-@import 'normalize';
-@import 'variables';
-@import 'base';
-@import 'custom';
-@import 'resume';
-@import 'helper';
-@import 'print';
+
+
+// ==================================================
+// Core
+// ==================================================
+
+@import 'core/normalize';
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/z-index';
+@import 'core/helper';
+@import 'core/base';
+
+
+// ==================================================
+// Modules
+// ==================================================
+
+@import 'modules/browserupgrade';
+@import 'modules/layout';
+@import 'modules/nav';
+@import 'modules/footer';
+@import 'modules/custom';
+
+
+
+// ==================================================
+// Pages
+// ==================================================
+
+@import 'pages/portfolio';
+@import 'pages/contact';
+@import 'pages/resume';
+
+
+
+
+
+
+
+
+
 
 
 

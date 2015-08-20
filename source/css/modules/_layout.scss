@@ -1,0 +1,58 @@
+// ==================================================
+// Layout
+// ==================================================
+
+.container {
+  @extend .flex;
+}
+
+.content {
+  @extend .flex;
+  @include justify-content(center);
+  border-bottom: 1px solid $border;
+  padding: 15px;
+}
+  .content__col {
+    width: 100%;
+    max-width: 740px;
+  }
+
+
+.billboard {
+ @extend .row;
+
+  @include tablet {
+     p {
+      font-size: 2rem;
+     }
+  }
+
+}
+
+.page-title {
+  font-size: 3.2rem;
+
+  @include tablet {
+    font-size: 4rem;
+  }
+
+}
+.page-des {
+  margin-bottom: 0;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+
+.row {
+  margin-bottom: 40px;
+  border-bottom: 1px solid $border;
+  padding-bottom: 40px;
+}
+
+  .row__title {
+    @extend .h2;
+  }
+
