@@ -4,8 +4,9 @@
 
 .contact-info {
   @extend .flex;
-  @include flex-wrap(no-wrap);
   @include flex-direction(column);
+  @include flex-wrap(no-wrap);
+
 
   @include tablet {
     @include flex-direction(row);
