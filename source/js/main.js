@@ -114,7 +114,9 @@ var windowScrolling = {
 
 
 $(document).ready(function() {
-  deferredImages();
+  setTimeout(function() {
+    deferredImages();
+  }, 1000);
   scrollTop.init();
   scrollTo.init();
   windowScrolling.init();

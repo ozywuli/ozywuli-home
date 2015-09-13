@@ -50,14 +50,29 @@
   @extend .flex;
   font-size: 1.4rem;
 }
-  .menu__link {
-    display: block;
-    margin-bottom: -1px;
-    border-bottom: 1px solid transparent;
-    padding: 15px 15px;
+  .menu__item {
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      margin: 0 auto -1px auto;
+      background: $gold;
+      @include transition(all 150ms ease);
+    }
 
     &:hover {
-      border-bottom: 1px solid $gold;
+      &:after {
+        width: 100%;
+      }
     }
+
+  }
+
+  .menu__link {
+    position: relative;
+    display: block;
+    padding: 15px 15px;
 
   }
