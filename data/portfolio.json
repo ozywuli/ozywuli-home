@@ -15,7 +15,7 @@
     {
       "title": "Hannibal's March",
       "url": "http://hannibal.ozywuli.com/",
-      "imgSrc": "img/fake_300x300.png",
+      "imgSrc": "img/hannibal_300x300.jpg",
       "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
     },
     {
@@ -25,9 +25,9 @@
       "alt": "Escritor - Ghost theme"
     },
     {
-      "title": "Propaganda",
-      "url": "http://propaganda.ozywuli.com/dataviz",
-      "imgSrc": "img/fake_300x300.png",
+      "title": "Free Thought",
+      "url": "http://freethought.ozywuli.com/",
+      "imgSrc": "img/freethought_300x300.jpg",
       "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
     },
     {

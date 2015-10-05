@@ -89,9 +89,9 @@ var windowScrolling = {
   fading: function() {
 
     if ( this.scrollPosition > positionOfPortfolio) {
-      $scrollTopContainer.fadeIn(150);
+      $scrollTopContainer.addClass('scrolltop--active')
     } else {
-      $scrollTopContainer.fadeOut(150);
+      $scrollTopContainer.removeClass('scrolltop--active');
     }
 
   }
