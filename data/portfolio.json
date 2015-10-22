@@ -1,16 +1,22 @@
 {
   "item": [
     {
-      "title": "Visumancer",
-      "url": "http://visumancer.tumblr.com",
-      "imgSrc": "img/maps_300x300.jpg",
-      "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
+      "title": "L.A. On The Verge *",
+      "url": "http://media.lamag.com/theverge/",
+      "imgSrc": "img/ontheverge_300x300.jpg",
+      "alt": "L.A. On The Verge"
     },
     {
-      "title": "Countries Info",
-      "url": "http://countries.ozywuli.com/dataviz",
-      "imgSrc": "img/maps_300x300.jpg",
-      "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
+      "title": "Visumancer",
+      "url": "http://visumancer.tumblr.com",
+      "imgSrc": "img/visumancer_300x300.jpg",
+      "alt": "Showcase of some of the coolest data and spatial visualizations from around the web"
+    },
+    {
+      "title": "Country Info",
+      "url": "http://countryinfo.ozywuli.com",
+      "imgSrc": "img/countryinfo_300x300.jpg",
+      "alt": "Click on a country to get basic info about it"
     },
     {
       "title": "Hannibal's March",
@@ -30,18 +36,18 @@
       "imgSrc": "img/freethought_300x300.jpg",
       "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
     },
-    {
-      "title": "Wenzhang",
+/*    {
+      "title": "Bytesmith",
       "url": "http://lab.ozywuli.com/dataviz",
       "imgSrc": "img/fake_300x300.png",
-      "alt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem fuga corporis non, temporibus mollitia, quos voluptate exercitationem, tempore quaerat a voluptatem dicta natus sapiente quam cumque nisi in recusandae libero?"
+      "alt": "Bytesmith"
     },
     {
-      "title": "Yunshu",
+      "title": "Az",
       "url": "http://lab.ozywuli.com/yunshu",
       "imgSrc": "img/yunshu_300x300.png",
-      "alt": "Yunshu"
-    },
+      "alt": "Az"
+    },*/
     {
       "title": "Nituji",
       "url": "http://nituji.tumblr.com/",
@@ -71,12 +77,6 @@
       "url": "http://media.lamag.com/tacos/",
       "imgSrc": "img/tacos_300x300.jpg",
       "alt": "L.A.'s 25 Best Tacos"
-    },
-    {
-      "title": "L.A. On The Verge *",
-      "url": "http://media.lamag.com/theverge/",
-      "imgSrc": "img/ontheverge_300x300.jpg",
-      "alt": "L.A. On The Verge"
     },
     {
       "title": "Secret L.A. *",

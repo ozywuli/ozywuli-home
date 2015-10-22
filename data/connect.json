@@ -24,16 +24,16 @@
       "url": "http://codepen.io/ozywuli/",
       "logo": "codepen"
     },
-    {
+/*    {
       "type": "Flickr",
       "name": "ozywuli",
       "url": "https://twitter.com/ozy_wuli",
       "logo": "flickr"
-    },
+    },*/
     {
       "type": "Tumblr",
       "name": "ozywoolee",
-      "url": "https://twitter.com/ozy_wuli",
+      "url": "http://visumancer.tumblr.com",
       "logo": "tumblr-round"
     }
   ]

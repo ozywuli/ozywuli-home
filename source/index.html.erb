@@ -4,7 +4,7 @@ title: Index
 
 <section class="billboard">
   <h2 class="page-title">Interactive Designer and Developer</h2>
-  <p>Hello, my name is Ozy. I seek to help make the web a more useful, accessible, and enjoyable place for all. <a href="#portfolio" target="_blank" class="js-menu__link">Check out my work</a>. Currently employed full-time at <a href="http://lamag.com" target="_blank">Los Angeles magazine</a> but open to freelance projects or other collaborative work.</p>
+  <p>Hello, my name is Ozy. I seek to help make the web a more useful, accessible, and enjoyable place for all. <a href="#portfolio" target="_blank" class="js-menu__link">Check out my projects</a>. Open to freelance projects and other collaborative work.</p>
   <p>Follow me on <a href="https://www.twitter.com/ozy_wuli" target="_blank">Twitter</a> or send me an <a href="mailto:ozy.wu.li@gmail.com">email</a>.</p>
 </section>
 
@@ -31,7 +31,7 @@ title: Index
 <section class="row" id="about">
   <h3 class="row__title">About</h3>
   <p>
-    My full name is Oscar Wu-Li. You could call me Oscar, but I also go by my nickname Ozy. It doesn't matter much to me either way. I figure Ozy would be a tad bit more convenient because typing that out instead of my real name will save you two keystrokes.
+    My full name is Oscar Wu-Li or <a href="http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb=%E5%90%B4%E5%8D%8E%E5%9C%A3" target="_blank"> [吴华圣] </a>. I also go by my nickname Ozy.
   </p>
 
 
@@ -46,7 +46,7 @@ title: Index
   </a>
 </li> -->
     <li class="contact-info__item">
-      <a href="employment/resume.doc" target="_blank" class="resume contact-info__link">
+      <a href="employment/oscar_ozy_wu_li_resume.doc" target="_blank" class="resume contact-info__link">
         <div class="contact-info__icon"><%= partial "partials/doc" %></div>
         <div class="contact-info__body">
           <div class="contact-info__type">WORD DOC</div>
@@ -55,7 +55,7 @@ title: Index
       </a>
     </li>
     <li class="contact-info__item">
-      <a href="employment/resume.pdf" target="_blank" class="resume contact-info__link">
+      <a href="employment/oscar_ozy_wu_li_resume.pdf" target="_blank" class="resume contact-info__link">
         <div class="contact-info__icon"><%= partial "partials/pdf" %></div>
         <div class="contact-info__body">
           <div class="contact-info__type">PDF</div>
@@ -77,7 +77,7 @@ title: Index
   <ul class="contact-info">
   <% data.connect.item.each do |f| %>
     <li class="contact-info__item">
-      <a href="<%= f.url %>" class="contact-info__link">
+      <a href="<%= f.url %>" class="contact-info__link" target="_blank">
         <div class="contact-info__icon"><%= partial "partials/" + f.logo %></div>
         <div class="contact-info__body">
           <div class="contact-info__type"><%= f.type %></div>
@@ -94,9 +94,6 @@ title: Index
   <h3 class="row__title">Colophon</h3>
   <p>
     This website is built with the help of <a href="http://middlemanapp.com">Middleman</a>, a Rails powered <a href="">static website generator</a> that provides a host of useful features to speed up, maintain, and automate the front end web development workflow.
-  </p>
-  <p>
-     This website has a received a performance score of 100/100 according to <a href="http://tools.pingdom.com">Pingdom</a>. I built this Website with load speed in mind beause it is <a href="https://blog.kissmetrics.com/loading-time/">paramount</a> in our period of reduced attention spans. This website's front page loads on average in under one second and performs faster than 99% of websites.
   </p>
   <p>
     Fonts used is <a href="">Roboto</a>, served by Google Fonts.
