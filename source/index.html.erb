@@ -20,7 +20,14 @@ title: Index
   <% data.portfolio.item.each do |f| %>
     <li class="portfolio__item">
       <a href="<%= f.url %>" target="_blank" class="portfolio__link"><%= f.title %></a>
-      <a href="<%= f.url %>" target="_blank" class="portfolio__link--img"><img src="img/fake_300x300.png" data-src="<%= f.imgSrc %>" alt="<%= f.alt %>" class="portfolio__img"></a>
+      <a href="<%= f.url %>" target="_blank" class="portfolio__link portfolio__link--img">
+        <div class="portfolio__overlay">
+          <div>
+            <span>Explore</span>
+          </div>
+        </div>
+        <img src="img/fake_300x300.png" data-src="<%= f.imgSrc %>" alt="<%= f.alt %>" class="portfolio__img">
+      </a>
     </li>
   <% end %>
 

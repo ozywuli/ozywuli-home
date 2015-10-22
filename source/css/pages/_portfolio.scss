@@ -26,11 +26,43 @@
     
   }
 
+  .portfolio__link {
+    position: relative;
+  }
+
+  .portfolio__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+
+    opacity: 0;
+    @include transform(scale(0.9));
+    @include transition(all 150ms ease);
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    span {
+      display: block;
+      border: 1px solid $gold;
+      padding: 5px 10px;
+    }
+  }
+
   .portfolio__link--img {
     display: block;
 
-    &:hover {
-      opacity: 0.8;
+    &:hover .portfolio__overlay {
+      opacity: 1;
+      @include transform(scale(1));
     }
   }
   .portfolio__img {
