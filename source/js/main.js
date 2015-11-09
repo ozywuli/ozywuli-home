@@ -102,17 +102,6 @@ var windowScrolling = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function() {
   setTimeout(function() {
     deferredImages();
