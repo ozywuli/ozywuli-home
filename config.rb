@@ -18,6 +18,18 @@ page '/*.txt', layout: false
 
 # General configuration
 
+# External Pipeline
+activate :external_pipeline,
+  name: :gulp,
+  command: build? ? './node_modules/gulp/bin/gulp.js build' : './node_modules/gulp/bin/gulp.js default',
+  source: "tmp/dist",
+  latency: 1
+
+# Asset Paths
+config[:css_dir] = 'assets/css'
+config[:js_dir] = 'assets/js'
+config[:images_dir] = 'assets/img'
+
 ###
 # Helpers
 ###
