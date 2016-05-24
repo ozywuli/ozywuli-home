@@ -1,0 +1,7 @@
+<div class="nav">
+    <div class="nav-menu">
+    <% data.nav.options.each do |item| %>
+        <div class="nav-menu-option"><a href="/<%= item.title %>" class="nav-menu-option-link"><%= item.title %></a></div>
+    <% end %>
+    </div>
+</div>

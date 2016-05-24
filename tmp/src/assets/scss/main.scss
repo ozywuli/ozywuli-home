@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-$red: #FF0000;
-
-body {
-    background: $red;
-}
+@import '_reset';
+@import '_settings';
+@import '_base';
+@import '_topbar';
+@import '_nav';

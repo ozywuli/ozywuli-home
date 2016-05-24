@@ -1,0 +1,32 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: $dark;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.topbar-title-link {
+  color: #FFF;
+}
+
+.topbar-nav-toggle {
+  display: block;
+  padding: 10px;
+}
+
+.topbar-nav-toggle-bar {
+  display: block;
+  height: 2px;
+  width: 20px;
+  background: #FFF;
+  margin-bottom: 3px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
