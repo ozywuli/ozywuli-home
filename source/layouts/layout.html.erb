@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ozy Wu-Li | UI Designer and Developer</title>
-
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
+<%= partial "partials/header" %>
 
 <%= partial "partials/topbar" %> 
 <%= partial "partials/nav" %> 
 
 <%= yield %>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-</html>
+<%= partial "partials/footer" %>

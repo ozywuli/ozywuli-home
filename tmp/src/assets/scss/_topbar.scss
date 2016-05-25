@@ -5,9 +5,10 @@
   left: 0;
   background: $dark;
 
+  height: $topbar-short;
+
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .topbar-title-link {

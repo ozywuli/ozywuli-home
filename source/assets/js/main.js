@@ -6,7 +6,7 @@ var navToggleObj = {
     $nav: $('.nav'),
 
     toggleNav: function toggleNav() {
-        this.$nav.toggleClass('revealed');
+        this.$nav.toggleClass('is-visible');
     },
 
     init: function init() {
