@@ -1,5 +1,4 @@
 .nav {
-    @extend .hidden;
     position: fixed;
     top: $topbar-short;
     right: 0;
@@ -7,14 +6,32 @@
     left: 0;
     background: $dark;
     padding: 20px 0;
-    transform: translate3d(-100%, 0, 0);
-    transition: all 150ms ease;
 
     &.is-visible {
         transform: translate3d(0, 0, 0);
-        @extend .revealed;
+        @include revealed;
+    }
+
+    @media #{$desktop-below-only} {
+        @include hidden;
+        transform: translate3d(-100%, 0, 0);
+        transition: all 150ms ease;
+    }
+    @media #{$desktop} {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        padding: 0;
     }
 }
+
+.nav-menu-option {
+    @media #{$desktop} {
+        display: inline-block;
+    }
+}
+
 .nav-menu-option-link {
     display: block;
     width: 100%;
