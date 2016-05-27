@@ -4,6 +4,7 @@ var navToggleObj = {
 
     toggleNav: function() {
         this.$nav.toggleClass('is-visible');
+        this.$navToggle.toggleClass('is-opened');
     },
 
     init: function() {
