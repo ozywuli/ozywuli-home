@@ -10,10 +10,12 @@ title: Welcome to Middleman
 
 <div class="index-featured">
     <ul class="index-featured-list">
+        <% data.featured.items.each do |item| %>
         <li class="index-featured-list-item">
-            <a href="#" class="index-featured-list-item-link">
-                <div title="" class="index-featured-list-item-img"></div>
+            <a href="<%= item.url %>" class="index-featured-list-item-link">
+                <div title="<%= item.title %>" data-img="<%= item.img %>" class="index-featured-list-item-img"></div>
             </a>
         </li>
+        <% end %>
     </ul>
 </div>
