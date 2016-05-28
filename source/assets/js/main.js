@@ -11,7 +11,6 @@ var navToggleObj = {
     },
 
     init: function init() {
-        console.log(this);
         this.$navToggle.on('click', this.toggleNav.bind(this));
     }
 

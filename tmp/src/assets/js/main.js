@@ -8,7 +8,6 @@ var navToggleObj = {
     },
 
     init: function() {
-        console.log(this);
         this.$navToggle.on('click', this.toggleNav.bind(this));
     }
 

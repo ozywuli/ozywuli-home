@@ -3,13 +3,15 @@
 }
 
 html, body {
-  height: 100%;
-  font-size: 62.5%;
-  font-family: Arial, sans-serif;
+    height: 100%;
+    font-size: 62.5%;
+    background: $dark;
+    color: #FFF;
 }
 
 body {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
 }
 
 .container {
@@ -21,9 +23,14 @@ body {
 
 .content {
     flex: 1;
+    padding-top: $topbar-short;
+
+    @media #{$desktop} {
+        padding-top: $topbar-tall;
+    }
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
