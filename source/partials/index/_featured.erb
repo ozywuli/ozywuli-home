@@ -1,0 +1,11 @@
+<div class="featured">
+    <ul class="featured-list">
+        <% data.featured.items.each do |item| %>
+        <li class="featured-list-item js-featured-list-item" data-img="<%= item.img %>">
+            <a href="<%= item.url %>" class="featured-list-item-link">
+                <div title="<%= item.title %>" class="featured-list-item-img"></div>
+            </a>
+        </li>
+        <% end %>
+    </ul>
+</div>
