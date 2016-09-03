@@ -1,14 +1,29 @@
 @charset "utf-8";
 
 @import '_reset';
-@import '_settings';
+
+/*
+ * Settings
+ */
+@import 'settings/_typography';
+@import 'settings/_colors';
+@import 'settings/_spacing';
+
 @import '_mixins';
 @import '_media-queries';
 @import '_extends';
+
+/*
+ * Global
+ */
 @import '_base';
 @import '_topbar';
 @import '_nav';
 @import '_page';
+
+/*
+ * Partials
+ */
 @import 'partials/index/_intro';
 @import 'partials/index/_featured';
 @import 'partials/_footer';
