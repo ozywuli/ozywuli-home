@@ -6,7 +6,7 @@ html, body {
     height: 100%;
     font-size: 62.5%;
     background: $dark;
-    color: #FFF;
+    color: $light;
 }
 
 body {
@@ -33,6 +33,8 @@ body {
 a {
     text-decoration: none;
     color: $light;
+
+    
 }
 
 p {

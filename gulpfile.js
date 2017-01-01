@@ -24,18 +24,18 @@ var gutil = require('gulp-util');
 
 var imagemin = require('gulp-imagemin');
 
-/*
- * Paths object
- */
+/*------------------------------------*\
+  PATHS
+\*------------------------------------*/
 var paths = {
   rootAssets: 'tmp/root/',
   tmpAssets: 'tmp/src/assets/',
   srcAssets: 'source/assets/'
 }
 
-/*
- * Handle errors
- */
+/*------------------------------------*\
+  HANDLE ERRORS
+\*------------------------------------*/
 function handleError(error) {
   var message = error;
   if (typeof error === 'function' ) { return; }
@@ -47,9 +47,10 @@ gulp.task('clean', function() {
   return del(['build']);
 });
 
-/*
- * CSS
- */
+
+/*------------------------------------*\
+  CSS
+\*------------------------------------*/
 gulp.task('css', function() {
   gulp.src(paths.tmpAssets + 'scss/main.scss')
     .pipe(plumber({
@@ -70,9 +71,10 @@ gulp.task('css', function() {
     .pipe(notify({message: 'CSS compiled', onLast: true}))
 });
 
-/*
- * JS
- */
+
+/*------------------------------------*\
+  JS
+\*------------------------------------*/
 function compile(watch) {
   var bundler = watchify(browserify('./tmp/src/assets/js/main.js', {
     debug: true,
@@ -117,9 +119,10 @@ gulp.task('js', function() {
 });
 
 
-/*
- * Root/meta content
- */
+
+/*------------------------------------*\
+  PUBLIC
+\*------------------------------------*/
 gulp.task('root', function() {
   gulp.src([paths.rootAssets+'*', paths.rootAssets+'.*'])
     .pipe(gulp.dest('source/'))
@@ -127,18 +130,19 @@ gulp.task('root', function() {
 });
 
 
-/*
- * Images
- */
+/*------------------------------------*\
+  IMAGES
+\*------------------------------------*/
 gulp.task('img', function() {
   gulp.src(paths.tmpAssets + 'img/**/*')
     .pipe(gulp.dest(paths.srcAssets + 'img/'))
     .pipe(notify({message: 'Images compiled!', onLast: true}))
 });
 
-/*
- * Watch
- */
+
+/*------------------------------------*\
+  WATCH
+\*------------------------------------*/
 gulp.task('watch', function(error) {
   gulp.watch(paths.tmpAssets + 'scss/**/*', ['css']);
   gulp.watch(paths.tmpAssets + 'js/**/*', ['js']);
@@ -148,15 +152,17 @@ gulp.task('watch', function(error) {
   watchJS();
 });
 
-/*
- * Build
- */
+
+/*------------------------------------*\
+  BUILD
+\*------------------------------------*/
 gulp.task('build', function() {
   console.log('Ready to go!');
 });
 
-/*
- * Default task -
- */
+
+/*------------------------------------*\
+  DEFAULT TASK
+\*------------------------------------*/
 gulp.task('default', ['watch', 'css', 'js', 'img', 'root']);
 
