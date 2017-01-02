@@ -8,8 +8,8 @@ $(document).ready(function() {
 // Toggle nav
 // ===============================
 var navToggleObj = {
-    $navToggle: $('.js-topbar-nav-toggle'),
-    $nav: $('.nav'),
+    $navToggle: $('.js-nav-toggle'),
+    $nav: $('.js-nav'),
 
     toggleNav: function() {
         this.$nav.toggleClass('is-visible');

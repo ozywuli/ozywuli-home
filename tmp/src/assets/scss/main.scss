@@ -2,9 +2,10 @@
 
 @import '_reset';
 
-/*
- * Settings
- */
+
+/*------------------------------------*\
+  SETTINGS
+\*------------------------------------*/
 @import 'settings/_typography';
 @import 'settings/_colors';
 @import 'settings/_spacing';
@@ -13,20 +14,25 @@
 @import '_media-queries';
 @import '_extends';
 
-/*
- * Global
- */
+
+/*------------------------------------*\
+  GLOBAL
+\*------------------------------------*/
 @import '_base';
-@import '_topbar';
-@import '_nav';
 @import '_page';
 
-/*
- * Partials
- */
+
+/*------------------------------------*\
+  PARTIALS
+\*------------------------------------*/
+@import 'partials/site/_site-topbar';
+@import 'partials/site/_site-nav';
+@import 'partials/site/_site-footer';
+
 @import 'partials/index/_intro';
 @import 'partials/index/_featured';
 
-@import 'partials/site/_site-footer';
+
+
 
 

@@ -19,22 +19,29 @@ body {
     flex-direction: column;
     min-width: 100%;
     min-height: 100vh;
+    align-items: center;
 }
 
 .content {
     flex: 1;
     padding: ($topbar-short + 20) 20px 20px 20px;
+    width: 100%;
+    max-width: 720px;
 
     @media #{$desktop} {
-        padding-top: $topbar-tall;
+        padding-top: 80px;
     }
 }
 
 a {
     text-decoration: none;
-    color: $light;
+    color: $gold;    
+    transition: color 150ms ease;
 
-    
+    &:hover {
+        color: darken($gold, 5%);
+    }
+
 }
 
 p {
