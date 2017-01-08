@@ -6,8 +6,10 @@
 <%= partial "partials/site/site-nav" %> 
 
 <div class="content">
-<%= partial "partials/page/page-header" %>
-<%= yield %>
+    <%= partial "partials/page/page-header" %>
+    <div class="content__wrapper">
+        <%= yield %>
+    </div>
 </div>
 
 <%= partial "partials/site/site-footer" %>

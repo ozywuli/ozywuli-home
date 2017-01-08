@@ -1,0 +1,20 @@
+.page-header {
+    width: 100%;
+    margin-bottom: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background: #0d0d0d;
+
+    @media #{$desktop} {
+        padding-top: 87px;
+    }
+}
+
+.page-header__title {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 720px;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
