@@ -17,7 +17,7 @@
     <div class="site-topbar__sm">
         <% data.social.each do |key, item| %>
             <div class="site-topbar__sm__item">
-                <a href="<%= item.url %>" class="site-topbar__sm__item__link" target="_blank"><%= svg(item.name) %></a>
+                <a href="<%= item.url %>" class="site-topbar__sm__item__link" title="ozy's <%= item.name %>" target="_blank"><%= svg(item.svg) %></a>
             </div>
         <% end %>
     </div>

@@ -1,26 +1,32 @@
 {
     "github": {
         "name": "github",
+        "svg": "github",
         "url": "https://github.com/ozywuli"
     },
     "twitter": {
         "name": "twitter",
+        "svg": "twitter",
         "url": "https://twitter.com/ousikaa"
     },
     "codepen": {
         "name": "codepen",
+        "svg": "codepen",
         "url": "http://codepen.io/ousikaa"
     },
     "tumblr": {
         "name": "tumblr",
+        "svg": "tumblr",
         "url": "http://sonofsamnon.tumblr.com/"
     },
     "instagram": {
         "name": "instagram",
+        "svg": "instagram",
         "url": "https://www.instagram.com/ousikaa/"
     },
     "email": {
-        "name": "at",
+        "name": "email",
+        "svg": "at",
         "url": "mailto:ozy.wu.li@gmail.com"
     }
 }

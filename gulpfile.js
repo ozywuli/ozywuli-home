@@ -28,7 +28,7 @@ var imagemin = require('gulp-imagemin');
   PATHS
 \*------------------------------------*/
 var paths = {
-  rootAssets: 'tmp/root/',
+  publicAssets: 'tmp/public/',
   tmpAssets: 'tmp/src/assets/',
   srcAssets: 'source/assets/'
 }
@@ -123,10 +123,10 @@ gulp.task('js', function() {
 /*------------------------------------*\
   PUBLIC
 \*------------------------------------*/
-gulp.task('root', function() {
-  gulp.src([paths.rootAssets+'*', paths.rootAssets+'.*'])
+gulp.task('public', function() {
+  gulp.src([paths.publicAssets+'*', paths.publicAssets+'.*'])
     .pipe(gulp.dest('source/'))
-    .pipe(notify({message: 'Root compiled', onLast: true}))
+    .pipe(notify({message: 'Public files compiled', onLast: true}))
 });
 
 
@@ -147,7 +147,7 @@ gulp.task('watch', function(error) {
   gulp.watch(paths.tmpAssets + 'scss/**/*', ['css']);
   gulp.watch(paths.tmpAssets + 'js/**/*', ['js']);
   gulp.watch(paths.tmpAssets + 'img/**/*', ['img']);
-  gulp.watch([paths.rootAssets + '*', paths.rootAssets + '.*'], ['root'])
+  gulp.watch([paths.publicAssets + '*', paths.publicAssets + '.*'], ['public'])
 
   watchJS();
 });
@@ -164,5 +164,5 @@ gulp.task('build', function() {
 /*------------------------------------*\
   DEFAULT TASK
 \*------------------------------------*/
-gulp.task('default', ['watch', 'css', 'js', 'img', 'root']);
+gulp.task('default', ['watch', 'css', 'js', 'img', 'public']);
 
