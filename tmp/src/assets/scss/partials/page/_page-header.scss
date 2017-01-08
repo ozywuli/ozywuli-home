@@ -1,7 +1,6 @@
 .page-header {
     width: 100%;
     margin-bottom: 40px;
-    padding-left: 40px;
     padding-bottom: 40px;
     background: #0d0d0d;
 
@@ -10,11 +9,14 @@
     }
 }
 
-.page-header__title {
+.page-header__wrapper {
     margin: 0 auto;
     width: 100%;
     max-width: 720px;
-    font-size: 4rem;
+}
+
+.page-header__title {
+    font-size: 5.6rem;
     font-weight: bold;
     text-transform: uppercase;
 }

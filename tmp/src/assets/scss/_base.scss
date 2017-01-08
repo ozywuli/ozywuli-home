@@ -30,7 +30,7 @@ body {
 .content__wrapper {
     margin: 0 auto;
     width: 100%;
-    max-width: 720px;
+    max-width: 760px;
     padding: 0 20px 20px 20px;
 }
 
@@ -46,5 +46,7 @@ a {
 
 p {
     line-height: 1.5;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
 }
 
