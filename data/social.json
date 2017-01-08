@@ -29,6 +29,12 @@
         "username": "ousikaa",
         "url": "https://www.instagram.com/ousikaa/"
     },
+    "linkedin": {
+        "name": "linkedin",
+        "svg": "linkedin",
+        "username": "ozy wu-li",
+        "url": "https://www.linkedin.com/in/ozy-wu-li-a02096108"
+    },
     "email": {
         "name": "email",
         "svg": "at",

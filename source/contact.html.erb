@@ -1,4 +1,22 @@
 <div class="row">
+    <h3 class="row__title">email me</h3>
+    <p>If you decide to write me an email for good reasons, I'll do my best to respond within 24 hours.</p>
+    <ul class="social-blocks">
+        <li class="social-blocks__item">
+            <a href="<%= data.social.email.url %>" class="social-blocks__item__link" title="ozy's <%= data.social.email.name %>">
+                <div class="social-blocks__item__icon">
+                    <%= svg(data.social.email.svg) %>
+                </div>
+                <div class="social-blocks__item__body">
+                    <div class="social-blocks__item__type"><%= data.social.email.name %></div>
+                    <div class="social-blocks__item__username"><%= data.social.email.username %></div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="row">
     <h3 class="row__title">connect with me</h3>
-    <%= partial "partials/social-blocks" %> 
+    <%= partial "partials/social-blocks", :locals => { :amount => 1, :amount_text => "Pay $1" } %> 
 </div>
