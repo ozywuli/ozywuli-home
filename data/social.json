@@ -2,31 +2,37 @@
     "github": {
         "name": "github",
         "svg": "github",
+        "username": "ozywuli",
         "url": "https://github.com/ozywuli"
     },
     "twitter": {
         "name": "twitter",
         "svg": "twitter",
+        "username": "@ozy_wuli",
         "url": "https://twitter.com/ousikaa"
     },
     "codepen": {
         "name": "codepen",
         "svg": "codepen",
+        "username": "ousikaa",
         "url": "http://codepen.io/ousikaa"
     },
     "tumblr": {
         "name": "tumblr",
         "svg": "tumblr",
+        "username": "sonofsamnon",
         "url": "http://sonofsamnon.tumblr.com/"
     },
     "instagram": {
         "name": "instagram",
         "svg": "instagram",
+        "username": "ousikaa",
         "url": "https://www.instagram.com/ousikaa/"
     },
     "email": {
         "name": "email",
         "svg": "at",
+        "username": "ozy.wu.li@gmail.com",
         "url": "mailto:ozy.wu.li@gmail.com"
     }
 }

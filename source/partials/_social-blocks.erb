@@ -1,0 +1,15 @@
+<ul class="social-blocks">
+    <% data.social.each do |key, item| %>
+        <li class="social-blocks__item">
+            <a href="<%= item.url %>" class="social-blocks__item__link" title="ozy's <%= item.name %>" target="_blank">
+                <div class="social-blocks__item__icon">
+                    <%= svg(item.svg) %>
+                </div>
+                <div class="social-blocks__item__body">
+                    <div class="social-blocks__item__type"><%= item.name %></div>
+                    <div class="social-blocks__item__username"><%= item.username %></div>
+                </div>
+            </a>
+        </li>
+    <% end %>
+</ul>
