@@ -1,0 +1,26 @@
+{
+    "github": {
+        "name": "github",
+        "url": "https://github.com/ozywuli"
+    },
+    "twitter": {
+        "name": "twitter",
+        "url": "https://twitter.com/ousikaa"
+    },
+    "codepen": {
+        "name": "codepen",
+        "url": "http://codepen.io/ousikaa"
+    },
+    "tumblr": {
+        "name": "tumblr",
+        "url": "http://sonofsamnon.tumblr.com/"
+    },
+    "instagram": {
+        "name": "instagram",
+        "url": "https://www.instagram.com/ousikaa/"
+    },
+    "email": {
+        "name": "at",
+        "url": "mailto:ozy.wu.li@gmail.com"
+    }
+}

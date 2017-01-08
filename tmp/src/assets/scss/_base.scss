@@ -36,7 +36,6 @@ body {
 a {
     text-decoration: none;
     color: $gold;    
-    transition: color 150ms ease;
 
     &:hover {
         color: darken($gold, 5%);

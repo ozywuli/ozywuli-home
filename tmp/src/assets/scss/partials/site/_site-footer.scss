@@ -1,6 +1,18 @@
 .site-footer {
+    position: relative;
     width: 100%;
     border-top: 1px solid $dark-gray;
     padding: 20px;
     background: $dark;
+}
+
+.site-footer__ozy {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    svg {
+        width: 15px;
+        height: 15px;
+    }
 }

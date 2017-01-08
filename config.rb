@@ -35,11 +35,19 @@ config[:images_dir] = 'assets/img'
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
+helpers do
 #   def some_helper
 #     "Helping"
 #   end
-# end
+    def svg(name) 
+        root = Middleman::Application.root 
+        file_path = "#{root}/tmp/src/assets/svg/#{name}.svg" 
+        return File.read(file_path) if File.exists?(file_path) 
+        '(not found)' 
+    end
+end
+
+
 
 # Build-specific configuration
 configure :build do
