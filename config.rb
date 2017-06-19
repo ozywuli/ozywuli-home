@@ -47,7 +47,30 @@ helpers do
     end
 end
 
+activate :blog do |blog|
+  # This will add a prefix to all links, template references and source paths
+  blog.prefix = "articles"
 
+  blog.permalink = "{title}.html"
+  # Matcher for blog source files
+  # blog.sources = "{year}-{month}-{day}-{title}.html"
+  blog.taglink = "categories/{tag}.html"
+  # blog.layout = "layout"
+  # blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 250
+  # blog.year_link = "{year}.html"
+  # blog.month_link = "{year}/{month}.html"
+  # blog.day_link = "{year}/{month}/{day}.html"
+  # blog.default_extension = ".markdown"
+
+  blog.tag_template = "categories.html"
+  blog.calendar_template = "calendar.html"
+
+  # Enable pagination
+  blog.paginate = true
+  blog.per_page = 12
+  blog.page_link = "page/{num}"
+end
 
 # Build-specific configuration
 configure :build do
