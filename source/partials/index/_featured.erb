@@ -1,7 +1,7 @@
 <div class="featured">
     <ul class="featured-list">
         <% data.featured.items.each do |item| %>
-        <li class="featured-list__item js-featured-list-item" data-img="<%= item.img %>">
+        <li class="featured-list__item js-featured-list-item" data-img="<%= item.img %>" style="background-image: url('<%= item.img %>')">
             <a href="<%= item.url %>" class="featured-list__item-link">
                 <%= item.title %>
             </a>

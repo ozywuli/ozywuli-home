@@ -13,6 +13,7 @@ $featured-list-spacing: 15px;
     margin-right: $featured-list-spacing;
     margin-bottom: $featured-list-spacing;
     background: #f1f1f1;
+    background-size: contain;
 }
 
 .featured-list__item-link {

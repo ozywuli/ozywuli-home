@@ -134,8 +134,8 @@ gulp.task('public', function() {
   IMAGES
 \*------------------------------------*/
 gulp.task('img', function() {
-  gulp.src(paths.tmpAssets + 'img/**/*')
-    .pipe(gulp.dest(paths.srcAssets + 'img/'))
+  gulp.src(paths.tmpAssets + 'images/**/*')
+    .pipe(gulp.dest(paths.srcAssets + 'images/'))
     .pipe(notify({message: 'Images compiled!', onLast: true}))
 });
 
@@ -146,7 +146,7 @@ gulp.task('img', function() {
 gulp.task('watch', function(error) {
   gulp.watch(paths.tmpAssets + 'scss/**/*', ['css']);
   gulp.watch(paths.tmpAssets + 'js/**/*', ['js']);
-  gulp.watch(paths.tmpAssets + 'img/**/*', ['img']);
+  gulp.watch(paths.tmpAssets + 'images/**/*', ['img']);
   gulp.watch([paths.publicAssets + '*', paths.publicAssets + '.*'], ['public'])
 
   watchJS();

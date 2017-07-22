@@ -1,40 +1,40 @@
 {
     "items": [
         {
-            "name": "bleed for this",
-            "url": "http://bleed for this.com",
-            "img": "http://placehold.it/500x500",
-            "title": "Henkubao | Your Portal to Chinese Language and Culture"
+            "name": "PXL Agency",
+            "url": "http://pxlagency.com",
+            "img": "/assets/images/pxl-agency-thumbnail.jpg",
+            "title": "PXL Agency"
         },
         {
-            "name": "gleason",
-            "url": "http://gleasonmovie.com",
-            "img": "http://placehold.it/500x500",
-            "title": "Henkubao | Your Portal to Chinese Language and Culture"
+            "name": "Who's In Your Blood?",
+            "url": "http://whosinyourblood.com",
+            "img": "/assets/images/whos-in-your-blood-thumbnail.jpg",
+            "title": "Who's In Your Blood?"
         },
         {
-            "name": "not safe for weddings",
-            "url": "https://www.theknot.com/not-safe-for-weddings/",
-            "img": "http://placehold.it/500x500",
-            "title": "Henkubao | Your Portal to Chinese Language and Culture"
+            "name": "Yummm Cha! Guide",
+            "url": "https://yummmchaguide.com",
+            "img": "/assets/images/yummmcha-guide-thumbnail.jpg",
+            "title": "Yummm Cha! Guide"
         },
         {
-            "name": "henkubao",
+            "name": "Kidnap - Face In Hole",
             "url": "http://henkubao.com",
-            "img": "http://placehold.it/500x500",
-            "title": "Henkubao | Your Portal to Chinese Language and Culture"
+            "img": "/assets/images/kidnap-thumbnail.jpg",
+            "title": "Kidnap - Face In Hole"
         },
         {
-            "name": "dimsum guide",
-            "url": "http://yummmchaguide.com",
-            "img": "http://placehold.it/500x500",
-            "title": "Dimsum Guide | Learn All You Need To Know About Dimsum"
+            "name": "Henkubao",
+            "url": "https://henkubao.com",
+            "img": "/assets/images/henkubao-reversed-thumbnail.jpg",
+            "title": "Henkubao"
         },
         {
-            "name": "l.a. on the verge",
-            "url": "http://media.lamag.com/theverge",
-            "img": "http://placehold.it/500x500",
-            "title": ""
+            "name": "Fathom Events",
+            "url": "https://fathomevents.com",
+            "img": "/assets/images/fathom-events-thumbnail.jpg",
+            "title": "Fathom Events"
         }
     ]
 }
