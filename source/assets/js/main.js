@@ -22,12 +22,10 @@ var navToggleObj = {
         this.$navToggle.on('click', this.toggleNav.bind(this));
     }
 
-};
-
-// ===============================
-// Lazy Load Images
-// ===============================
-var lazyLoadImg = {
+    // ===============================
+    // Lazy Load Images
+    // ===============================
+};var lazyLoadImg = {
     $featuredItem: $('.js-featured-list-item'),
     featuredItemOffsets: [],
     scrolled: $(window).scrollTop(),
@@ -61,6 +59,5 @@ var lazyLoadImg = {
 };
 
 },{}]},{},[1])
-
 
 //# sourceMappingURL=main.js.map
