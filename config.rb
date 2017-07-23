@@ -72,6 +72,9 @@ activate :blog do |blog|
   blog.page_link = "page/{num}"
 end
 
+# PRETTY URL FOR DEV
+activate :directory_indexes
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build

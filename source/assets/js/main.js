@@ -13,9 +13,29 @@ var navToggleObj = {
     $navToggle: $('.js-nav-toggle'),
     $nav: $('.js-nav'),
 
-    toggleNav: function toggleNav() {
+    toggleNav: function toggleNav(e) {
+        var self = this;
+        e.preventDefault();
+        e.stopPropagation();
         this.$nav.toggleClass('is-visible');
         this.$navToggle.toggleClass('is-opened');
+
+        if (this.$nav.hasClass('is-visible')) {
+            $(window).on('click.nav', function () {
+                self.closeNav();
+            });
+            this.$nav.on('click.nav', function (event) {
+                event.stopPropagation();
+            });
+        } else {
+            $(window).off('click.nav');
+            this.$nav.off('click.nav');
+        }
+    },
+
+    closeNav: function closeNav(e) {
+        this.$nav.removeClass('is-visible');
+        this.$navToggle.removeClass('is-opened');
     },
 
     init: function init() {

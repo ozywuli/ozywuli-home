@@ -5,6 +5,7 @@
     left: 0;
     background: $dark;
     border-bottom: 1px solid $dark-gray;
+    z-index: 10;
 
     display: flex;
     align-items: center;
@@ -24,7 +25,7 @@
     display: block;
     height: 2px;
     width: 22px;
-    background: $gold;
+    background: $light;
     margin-bottom: 5px;
     transition: all 150ms ease;
 

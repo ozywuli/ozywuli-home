@@ -1,21 +1,21 @@
 {
-    "github": {
-        "name": "github",
-        "svg": "github",
-        "username": "ozywuli",
-        "url": "https://github.com/ozywuli"
-    },
     "twitter": {
         "name": "twitter",
         "svg": "twitter",
         "username": "@ozy_wuli",
         "url": "https://twitter.com/ousikaa"
     },
+    "github": {
+        "name": "github",
+        "svg": "github",
+        "username": "ozywuli",
+        "url": "https://github.com/ozywuli"
+    },
     "codepen": {
         "name": "codepen",
         "svg": "codepen",
-        "username": "ousikaa",
-        "url": "http://codepen.io/ousikaa"
+        "username": "ozywuli",
+        "url": "http://codepen.io/ozywuli"
     },
     "tumblr": {
         "name": "tumblr",
@@ -26,8 +26,8 @@
     "instagram": {
         "name": "instagram",
         "svg": "instagram",
-        "username": "ousikaa",
-        "url": "https://www.instagram.com/ousikaa/"
+        "username": "ozywuli",
+        "url": "https://www.instagram.com/ozywuli/"
     },
     "linkedin": {
         "name": "linkedin",

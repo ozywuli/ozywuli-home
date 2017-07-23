@@ -5,19 +5,40 @@ title: Home
 <div class="row">
     <h2 class="row__title">Featured Work</h2>
     <%= partial "partials/index/featured.erb" %>    
+
+    <div class="btns">
+        <%= partial(:'partials/_btn.erb', :locals => { :url => '/portfolio', :copy => 'Learn More', :arrow => true } ) %>
+    </div>
 </div>
 
 <div class="row">
     <h2 class="row__title">About</h2>
     <div class="row__p">My full legal name is Oscar Wu-Li or <%= partial 'partials/_chinese-name.erb' %>. But I go by my nickname Ozy. </div>
-    <p class="row__p">I was raised in San Diego, formally educated at UCLA, and now work and live in Los Angeles. I learned how to program and design for the web by just using it and being curious. Before you know it, a hobby turns into a career. When I'm not making stuff for the web, I like to dabble in illustration, 3d modelling, and photography. Just to name a few. Lately, I've been engrossed by the intersection between food, culture, and media.</p>
+    <p class="row__p">I was raised in San Diego, formally educated at UCLA, and now work and live in Los Angeles. I first learned how to program and design for the web by just using it and being curious. Before you know it, a hobby turns into a career. When I'm not making stuff for the web, I like to dabble in illustration, 3d modelling, and photography. Just to name a few. Lately, I've been engrossed by the intersection between food, culture, and media.</p>
 
     <div class="btns">
-        <%= partial(:'partials/_btn.erb', :locals => { :url => '/about', :copy => 'Learn More', :arrow => true  }  ) %>
+        <%= partial(:'partials/_btn.erb', :locals => { :url => '/about', :copy => 'Learn More', :arrow => true } ) %>
     </div>
 </div>
 
 <div class="row">
     <h2 class="row__title">Connect with me</h2>
+    <div class="row__p">If you decide to message me for whatever reason, I'll do my best to respond within 24 hours.</div>
+    <div class="cards">
+        <% data.social.each do |key, item| %>
+            <%= partial(:'partials/_card.erb', :locals => { :type => item.name, :copy => item.username, :url => item.url, :icon => item.svg } ) %>
+        <% end %>
+    </div>
+    <div class="btns">
+        <%= partial(:'partials/_btn.erb', :locals => { :url => '/contact', :copy => 'Learn More', :arrow => true } ) %>
+    </div>
+</div>
 
+
+<div class="row">
+    <h2 class="row__title">Colophon</h2>
+    <div class="row__pees">
+        <p class="row__p"> This website is built with the help of <a href="http://middlemanapp.com/" target="_blank">Middleman</a>, a Ruby powered static website generator that provides a host of useful features to speed up, maintain, and automate the front end web development workflow.</p>
+        <p class="row__p mod-no-mb">Fonts used is <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Roboto</a>, served by Google Fonts.</p>
+    </div>
 </div>
