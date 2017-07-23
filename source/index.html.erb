@@ -16,6 +16,12 @@ title: Home
     <div class="row__p">My full legal name is Oscar Wu-Li or <%= partial 'partials/_chinese-name.erb' %>. But I go by my nickname Ozy. </div>
     <p class="row__p">I was raised in San Diego, formally educated at UCLA, and now work and live in Los Angeles. I first learned how to program and design for the web by just using it and being curious. Before you know it, a hobby turns into a career. When I'm not making stuff for the web, I like to dabble in illustration, 3d modelling, and photography. Just to name a few. Lately, I've been engrossed by the intersection between food, culture, and media.</p>
 
+    <div class="cards">
+        <%= partial(:'partials/_card.erb', :locals => { :type => 'HTML', :copy => 'View Resume', :url => '#', :icon => 'html' } ) %>
+        <%= partial(:'partials/_card.erb', :locals => { :type => 'WORD DOC', :copy => 'View Resume', :url => '#', :icon => 'word' } ) %>
+        <%= partial(:'partials/_card.erb', :locals => { :type => 'PDF', :copy => 'View Resume', :url => '#', :icon => 'pdf' } ) %>
+    </div>
+
     <div class="btns">
         <%= partial(:'partials/_btn.erb', :locals => { :url => '/about', :copy => 'Learn More', :arrow => true } ) %>
     </div>
@@ -26,7 +32,7 @@ title: Home
     <div class="row__p">If you decide to message me for whatever reason, I'll do my best to respond within 24 hours.</div>
     <div class="cards">
         <% data.social.each do |key, item| %>
-            <%= partial(:'partials/_card.erb', :locals => { :type => item.name, :copy => item.username, :url => item.url, :icon => item.svg } ) %>
+            <%= partial(:'partials/_card.erb', :locals => { :type => item.name, :copy => item.username, :url => item.url, :icon => item.svg, :border => true } ) %>
         <% end %>
     </div>
     <div class="btns">

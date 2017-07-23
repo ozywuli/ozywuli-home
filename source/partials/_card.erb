@@ -1,0 +1,13 @@
+<% border = false if border.nil? %>
+
+<div class="card">
+    <a href="<%= url %>" target="_blank" class="card__link">
+        <div class="card__icon <%= 'mod-border' if border %>">
+            <%= svg(icon) %>
+        </div>
+        <div class="card__body">
+            <div class="card__type"><%= type %></div>
+            <div class="card__copy"><%= copy %></div>
+        </div>
+    </a>
+</div>

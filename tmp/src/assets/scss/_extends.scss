@@ -6,7 +6,7 @@
 
 .row__title {
     margin-bottom: 30px;
-    font-size: 3.2rem;
+    font-size: 3.6rem;
 }
 
 .row__p {
@@ -104,17 +104,26 @@
 
 .card__icon {
     margin-right: 20px;
-    border: 1px solid $light;
-    border-radius: 50%;
-    padding: 10px;
+
+    &.mod-border {
+        border: 1px solid $light;
+        border-radius: 50%;
+        padding: 10px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
     svg {
         display: block;
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
         path, ellipse {
             fill: $light !important;
         }
     }
+
 }
 
 .card__type {
