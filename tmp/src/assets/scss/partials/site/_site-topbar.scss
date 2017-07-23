@@ -15,12 +15,16 @@
 
 }
 
-.site-topbar__nav-toggle {
+/*------------------------------------*\
+  NAV
+\*------------------------------------*/
+
+.nav-toggle {
     display: block;
     padding: 15px 20px;
 }
 
-.site-topbar__nav-toggle__bar {
+.nav-toggle__bar {
     position: relative;
     display: block;
     height: 2px;
@@ -33,7 +37,7 @@
         margin-bottom: 0;
     }
 
-    .site-topbar__nav-toggle.is-opened & {
+    .nav-toggle.is-visible & {
         &:nth-of-type(1) {
             transform: rotate(45deg) translate3d(2px, 7px, 0);
         }
@@ -47,6 +51,11 @@
 
 }
 
+
+/*------------------------------------*\
+  SOCIAL MEDIA
+\*------------------------------------*/
+
 .site-topbar__sm {
     display: none;
     position: absolute;
@@ -59,12 +68,12 @@
     }
 }
 
-.site-topbar__sm__item {
+.site-topbar__sm-item {
     display: block;
     margin-left: 15px;
 }
 
-.site-topbar__sm__item__link {
+.site-topbar__sm-item-link {
     display: block;
     width: 12px;
     height: 12px;
@@ -82,7 +91,7 @@
         svg {
             fill: $gold !important;
 
-            path {
+            path, polygon {
                 fill: $gold !important;
             }
         }

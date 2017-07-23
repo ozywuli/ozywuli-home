@@ -16,7 +16,7 @@ var navToggleObj = {
         e.preventDefault();
         e.stopPropagation();
         this.$nav.toggleClass('is-visible');
-        this.$navToggle.toggleClass('is-opened');
+        this.$navToggle.toggleClass('is-visible');
 
         if (this.$nav.hasClass('is-visible')) {
             $(window).on('click.nav', function() {
@@ -33,7 +33,7 @@ var navToggleObj = {
 
     closeNav: function(e) {
         this.$nav.removeClass('is-visible');
-        this.$navToggle.removeClass('is-opened');
+        this.$navToggle.removeClass('is-visible');
     },
 
     init: function() {

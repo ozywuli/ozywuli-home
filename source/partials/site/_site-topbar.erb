@@ -1,23 +1,23 @@
 <div class="site-topbar">
 
-    <a href="#" class="site-topbar__nav-toggle js-nav-toggle">
-        <span class="site-topbar__nav-toggle__bar"></span>
-        <span class="site-topbar__nav-toggle__bar"></span>
-        <span class="site-topbar__nav-toggle__bar"></span>
+    <a href="#" class="nav-toggle js-nav-toggle">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
     </a>
 
     <h1 class="site-topbar__title">
-        <a href="/" class="site-topbar__title__link">
-            <span class="site-topbar__title__logo"></span>
-            <span class="site-topbar__title__text">OZY WU-LI</span>
+        <a href="/" class="site-topbar__title-link">
+            <span class="site-topbar__title-logo"></span>
+            <span class="site-topbar__title-copy">OZY WU-LI</span>
         </a>
     </h1>
 
     <!-- http://cobwwweb.com/render-inline-svg-rails-middleman -->
     <div class="site-topbar__sm">
         <% data.social.each do |key, item| %>
-            <div class="site-topbar__sm__item">
-                <a href="<%= item.url %>" class="site-topbar__sm__item__link" title="ozy's <%= item.name %>" target="_blank"><%= svg(item.svg) %></a>
+            <div class="site-topbar__sm-item">
+                <a href="<%= item.url %>" class="site-topbar__sm-item-link" title="ozy's <%= item.name %>" target="_blank"><%= svg(item.svg) %></a>
             </div>
         <% end %>
     </div>

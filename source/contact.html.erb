@@ -1,22 +1,9 @@
 <div class="row">
-    <h3 class="row__title">email me</h3>
-    <p>If you have good reasons to write me an email, I'll do my best to respond within 24 hours.</p>
-    <ul class="social-blocks">
-        <li class="social-blocks__item">
-            <a href="<%= data.social.email.url %>" class="social-blocks__item__link" title="ozy's <%= data.social.email.name %>">
-                <div class="social-blocks__item__icon">
-                    <%= svg(data.social.email.svg) %>
-                </div>
-                <div class="social-blocks__item__body">
-                    <div class="social-blocks__item__type"><%= data.social.email.name %></div>
-                    <div class="social-blocks__item__username"><%= data.social.email.username %></div>
-                </div>
-            </a>
-        </li>
-    </ul>
-</div>
-
-<div class="row">
-    <h3 class="row__title">connect with me</h3>
-    <%= partial "partials/social-blocks", :locals => { :amount => 1, :amount_text => "Pay $1" } %> 
+    <h3 class="row__title">Connect with me</h3>
+    <div class="row__p">If you decide to message me for whatever reason, I'll do my best to respond within 24 hours.</div>
+    <div class="cards">
+        <% data.social.each do |key, item| %>
+            <%= partial(:'partials/_card.erb', :locals => { :type => item.name, :copy => item.username, :url => item.url, :icon => item.svg, :border => true } ) %>
+        <% end %>
+    </div>
 </div>

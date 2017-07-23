@@ -1,16 +1,17 @@
 <header class="page-header">
     <div class="page-header__wrapper">
-        <% if page_classes === 'index' %>
+        <% whatPage = page_classes.split(' ')[0] %>
+        <% if whatPage === 'index' %>
             <p class="page-header__p">Hey, I'm Ozy Wu-Li <%= partial 'partials/_chinese-name.erb' %></p>
             <p class="page-header__p">Interaction designer and developer</p>
             <p class="page-header__p">Helping the web be a cooler and more useful&nbsp;place</p>
         <% else %>
             <h2 class="page-header__title">
-                <% if page_classes === 'contact' %>
+                <% if whatPage === 'contact' %>
                     Contact
-                <% elsif page_classes === 'about' %>
+                <% elsif whatPage === 'about' %>
                     About
-                <% elsif page_classes === 'portfolio' %>
+                <% elsif whatPage === 'portfolio' %>
                     Portfolio
                 <% end %>
             </h2>

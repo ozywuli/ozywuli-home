@@ -1,9 +1,16 @@
 <div class="featured">
     <ul class="featured-list">
         <% data.featured.items.each do |item| %>
-        <li class="featured-list__item js-featured-list-item" data-img="<%= item.img %>" style="background-image: url('<%= item.img %>')">
+        <li class="featured-list__item js-featured-list-item">
             <a href="<%= item.url %>" class="featured-list__item-link">
-                <%= item.title %>
+                <div class="featured__bg" data-img="<%= item.img %>" style="background-image: url('<%= item.img %>')"></div>
+                <div class="featured__overlay">
+                    <!-- div.featured__block -->
+                    <span class="featured__copy"><%= item.title %></span>
+                    <div class="featured__icon">
+                        <%= svg('external-link') %>
+                    </div>
+                </div>
             </a>
         </li>
         <% end %>
