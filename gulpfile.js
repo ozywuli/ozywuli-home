@@ -131,6 +131,16 @@ gulp.task('public', function() {
 
 
 /*------------------------------------*\
+  MISCELLANEOUS
+\*------------------------------------*/
+gulp.task('misc', function() {
+  gulp.src(paths.tmpAssets + 'misc/**/*')
+    .pipe(gulp.dest('source/assets/misc'))
+    .pipe(notify({message: 'Miscellaenous files compiled', onLast: true}))
+});
+
+
+/*------------------------------------*\
   IMAGES
 \*------------------------------------*/
 gulp.task('img', function() {
@@ -147,6 +157,7 @@ gulp.task('watch', function(error) {
   gulp.watch(paths.tmpAssets + 'scss/**/*', ['css']);
   gulp.watch(paths.tmpAssets + 'js/**/*', ['js']);
   gulp.watch(paths.tmpAssets + 'images/**/*', ['img']);
+  gulp.watch(paths.tmpAssets + 'misc/**/*', ['misc']);
   gulp.watch([paths.publicAssets + '*', paths.publicAssets + '.*'], ['public'])
 
   watchJS();
@@ -164,5 +175,5 @@ gulp.task('build', function() {
 /*------------------------------------*\
   DEFAULT TASK
 \*------------------------------------*/
-gulp.task('default', ['watch', 'css', 'js', 'img', 'public']);
+gulp.task('default', ['watch', 'css', 'js', 'img', 'public', 'misc']);
 

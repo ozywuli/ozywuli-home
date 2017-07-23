@@ -4,7 +4,7 @@ title: Home
 
 <div class="row">
     <h2 class="row__title">Featured Work</h2>
-    <%= partial "partials/index/featured.erb" %>    
+    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.featured.items } ) %>
 
     <div class="btns">
         <%= partial(:'partials/_btn.erb', :locals => { :url => '/portfolio', :copy => 'Learn More', :arrow => true } ) %>
@@ -17,9 +17,9 @@ title: Home
     <p class="row__p">I was raised in San Diego, formally educated at UCLA, and now work and live in Los Angeles. I first learned how to program and design for the web by just using it and being curious. Before you know it, a hobby turns into a career. When I'm not making stuff for the web, I like to dabble in illustration, 3d modelling, and photography. Just to name a few. Lately, I've been engrossed by the intersection between food, culture, and media.</p>
 
     <div class="cards">
-        <%= partial(:'partials/_card.erb', :locals => { :type => 'HTML', :copy => 'View Resume', :url => '#', :icon => 'html' } ) %>
-        <%= partial(:'partials/_card.erb', :locals => { :type => 'WORD DOC', :copy => 'View Resume', :url => '#', :icon => 'word' } ) %>
-        <%= partial(:'partials/_card.erb', :locals => { :type => 'PDF', :copy => 'View Resume', :url => '#', :icon => 'pdf' } ) %>
+        <%= partial(:'partials/_card.erb', :locals => { :type => 'HTML', :copy => 'View Resume', :url => '/resume', :icon => 'html' } ) %>
+        <%= partial(:'partials/_card.erb', :locals => { :type => 'WORD DOC', :copy => 'View Resume', :url => '/assets/misc/oscar_ozy_wu_li_resume.doc', :icon => 'word' } ) %>
+        <%= partial(:'partials/_card.erb', :locals => { :type => 'PDF', :copy => 'View Resume', :url => '/assets/misc/oscar_ozy_wu_li_resume.pdf', :icon => 'pdf' } ) %>
     </div>
 
     <div class="btns">

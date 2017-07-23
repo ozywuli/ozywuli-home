@@ -1,76 +1,76 @@
 {
     "items": [
         {
-            "name": "bleed for this",
-            "url": "http://bleed for this.com",
-            "img": "http://placehold.it/500x500",
-            "title": "bleed for this movie website"
+            "name": "PXL Agency",
+            "url": "http://pxlagency.com",
+            "img": "/assets/images/pxl-agency-thumbnail.jpg",
+            "title": "PXL Agency"
         },
         {
-            "name": "gleason",
-            "url": "http://gleasonmovie.com",
-            "img": "http://placehold.it/500x500",
-            "title": "gleason movie website"
-        },
-        {
-            "name": "who's in your blood?",
+            "name": "Who's In Your Blood?",
             "url": "http://whosinyourblood.com",
-            "img": "http://placehold.it/500x500",
-            "title": "who's in your blood?"
+            "img": "/assets/images/whos-in-your-blood-thumbnail.jpg",
+            "title": "Who's In Your Blood?"
         },
         {
-            "name": "sleepless",
-            "url": "http://sleeplessmovie.com",
-            "img": "http://placehold.it/500x500",
-            "title": "sleepless movie website"
+            "name": "Yummm Cha! Guide",
+            "url": "https://yummmchaguide.com",
+            "img": "/assets/images/yummmcha-guide-thumbnail.jpg",
+            "title": "Yummm Cha! Guide"
         },
         {
-            "name": "not safe for weddings",
-            "url": "https://www.theknot.com/not-safe-for-weddings/",
-            "img": "http://placehold.it/500x500",
-            "title": "not safe for weddings"
-        },
-        {
-            "name": "virtus tumblr theme",
-            "url": "http://sonofsamnon.tumblr.com",
-            "img": "http://placehold.it/500x500",
-            "title": "virtus tumblr theme"
-        },
-        {
-            "name": "escriberion ghost theme",
-            "url": "http://sonofsamnon.tumblr.com",
-            "img": "http://placehold.it/500x500",
-            "title": "escriberion ghost theme"
-        },
-        {
-            "name": "hollow wordpress theme",
-            "url": "http://sonofsamnon.tumblr.com",
-            "img": "http://placehold.it/500x500",
-            "title": "hollow wordpress theme"
-        },
-        {
-            "name": "henkubao",
+            "name": "Kidnap - Face In Hole",
             "url": "http://henkubao.com",
-            "img": "http://placehold.it/500x500",
-            "title": "Henkubao | Your Portal to Chinese Language and Culture"
+            "img": "/assets/images/kidnap-thumbnail.jpg",
+            "title": "Kidnap - Face In Hole"
         },
         {
-            "name": "dimsum guide",
-            "url": "http://yummmchaguide.com",
-            "img": "http://placehold.it/500x500",
-            "title": "Dimsum Guide | Learn All You Need To Know About Dimsum"
+            "name": "Henkubao",
+            "url": "https://henkubao.com",
+            "img": "/assets/images/henkubao-reversed-thumbnail.jpg",
+            "title": "Henkubao"
         },
         {
-            "name": "LAMAG Food Event Website",
-            "url": "http://media.lamag.com/thefoodevent/",
-            "img": "http://placehold.it/500x500",
-            "title": "LAMAG Food Event Website"
+            "name": "Fathom Events",
+            "url": "https://fathomevents.com",
+            "img": "/assets/images/fathom-events-thumbnail.jpg",
+            "title": "Fathom Events"
         },
         {
-            "name": "l.a. on the verge",
-            "url": "http://media.lamag.com/theverge",
-            "img": "http://placehold.it/500x500",
-            "title": "l.a. on the verge"
+            "name": "20th Century Fox",
+            "url": "https://foxmovies.com",
+            "img": "/assets/images/20th-century-fox-thumbnail.jpg",
+            "title": "20th Centry Fox"
+        },
+        {
+            "name": "Wish Upon - Best Friends",
+            "url": "https://bestfriends.wishupon.com",
+            "img": "/assets/images/bestfriends-wishupon-thumbnail.jpg",
+            "title": "Fathom Events"
+        },
+        {
+            "name": "Bleed For This",
+            "url": "https://bleedforthismovie.com",
+            "img": "/assets/images/bleed-for-this-thumbnail.jpg",
+            "title": "Bleed For This"
+        },
+        {
+            "name": "Los Angeles Magazine",
+            "url": "https://lamag.com",
+            "img": "/assets/images/lamag-thumbnail.jpg",
+            "title": "Los Angeles Magazine"
+        },
+        {
+            "name": "Sleepless Movie",
+            "url": "https://sleeplessmovie.com",
+            "img": "/assets/images/sleepless-thumbnail.jpg",
+            "title": "Sleepless Movie"
+        },
+        {
+            "name": "Universal Pictures",
+            "url": "https://universalpictuers.com",
+            "img": "/assets/images/universal-pictures-thumbnail.jpg",
+            "title": "Universal Pictures"
         }
     ]
 }

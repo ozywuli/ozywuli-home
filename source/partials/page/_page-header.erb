@@ -7,13 +7,7 @@
             <p class="page-header__p">Helping the web be a cooler and more useful&nbsp;place</p>
         <% else %>
             <h2 class="page-header__title">
-                <% if whatPage === 'contact' %>
-                    Contact
-                <% elsif whatPage === 'about' %>
-                    About
-                <% elsif whatPage === 'portfolio' %>
-                    Portfolio
-                <% end %>
+                <%= current_page.data.title %>
             </h2>
         <% end %>
     </div>
