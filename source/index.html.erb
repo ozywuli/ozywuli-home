@@ -14,7 +14,9 @@ title: Home
 <div class="row">
     <h2 class="row__title">About</h2>
     <div class="row__p">My full legal name is Oscar Wu-Li or <%= partial 'partials/_chinese-name.erb' %>. But I go by my nickname Ozy. </div>
-    <p class="row__p">I was raised in San Diego, formally educated at UCLA, and now work and live in Los Angeles. I first learned how to program and design for the web by just using it and being curious. Before you know it, a hobby turns into a career. When I'm not making stuff for the web, I like to dabble in illustration, 3d modelling, and photography. Just to name a few. Lately, I've been engrossed by the intersection between food, culture, and media.</p>
+    <p class="row__p">
+    I was raised in San Diego, formally educated at UCLA, and now work and live in Los Angeles. I first learned how to program and design for the web by just using it and being curious. Before you know it, a hobby turns into a career. When I'm not making stuff for the web, I like to dabble in illustration, 3d modelling, and photography. Just to name a few. Lately, I've been engrossed by the intersection between food, culture, and media.
+    </p>
 
     <div class="cards">
         <%= partial(:'partials/_card.erb', :locals => { :type => 'HTML', :copy => 'View Resume', :url => '/resume', :icon => 'html' } ) %>

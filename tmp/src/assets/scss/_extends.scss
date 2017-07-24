@@ -24,6 +24,15 @@
 
 .row__item {
     margin-bottom: 15px;
+    &:last-of-type:not(:first-of-type) {
+        margin-bottom: 0;
+    }
+}
+
+@for $i from 1 through 5 {
+    .space-#{$i * 5} {
+        margin-bottom: $i * 5px;
+    }
 }
 
 /*------------------------------------*\
