@@ -39,6 +39,7 @@ helpers do
 #   def some_helper
 #     "Helping"
 #   end
+    # http://cobwwweb.com/render-inline-svg-rails-middleman
     def svg(name) 
         root = Middleman::Application.root 
         file_path = "#{root}/tmp/src/assets/svg/#{name}.svg" 

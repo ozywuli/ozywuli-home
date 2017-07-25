@@ -4,7 +4,22 @@ $(document).ready(function() {
     navToggleObj.init();
     lazyLoadImg.init();
     scrollUpObj.init();
+    smToggleObj.init();
 });
+
+/*------------------------------------*\
+  SOCIAL MEDIA TOGGLE
+\*------------------------------------*/
+let smToggleObj = {
+    $smToggleBtn: $('.js-sm-toggle-btn'),
+    toggleSm: function(e) {
+        e.preventDefault();
+        $('.js-topbar-sm').toggleClass('is-revealed');
+    },
+    init: function() {
+        this.$smToggleBtn.on('click', this.toggleSm);
+    }
+}
 
 /*------------------------------------*\
   GLOBAL SCROLL EVENT

@@ -13,8 +13,14 @@
         </a>
     </h1>
 
-    <!-- http://cobwwweb.com/render-inline-svg-rails-middleman -->
-    <div class="site-topbar__sm">
+    
+    <div class="sm-toggle">
+        <a href="#" class="sm-toggle__btn js-sm-toggle-btn">
+            <%= svg('share') %>
+        </a>
+    </div>
+    
+    <div class="site-topbar__sm js-topbar-sm">
         <% data.social.each do |key, item| %>
             <div class="site-topbar__sm-item">
                 <a href="<%= item.url %>" class="site-topbar__sm-item-link" title="ozy's <%= item.name %>" target="_blank"><%= svg(item.svg) %></a>

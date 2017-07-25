@@ -519,12 +519,26 @@ $(document).ready(function () {
     navToggleObj.init();
     lazyLoadImg.init();
     scrollUpObj.init();
+    smToggleObj.init();
 });
 
 /*------------------------------------*\
-  GLOBAL SCROLL EVENT
+  SOCIAL MEDIA TOGGLE
 \*------------------------------------*/
-function scrollHandler() {
+var smToggleObj = {
+    $smToggleBtn: $('.js-sm-toggle-btn'),
+    toggleSm: function toggleSm(e) {
+        e.preventDefault();
+        $('.js-topbar-sm').toggleClass('is-revealed');
+    },
+    init: function init() {
+        this.$smToggleBtn.on('click', this.toggleSm);
+    }
+
+    /*------------------------------------*\
+      GLOBAL SCROLL EVENT
+    \*------------------------------------*/
+};function scrollHandler() {
     if ($(window).scrollTop() > $(window).height() / 1.5) {
         $('.js-scrollup').addClass('is-revealed');
     } else {
