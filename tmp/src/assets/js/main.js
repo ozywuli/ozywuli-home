@@ -1,7 +1,40 @@
+import _debounce from 'lodash/debounce';
+
 $(document).ready(function() {
     navToggleObj.init();
     lazyLoadImg.init();
+    scrollUpObj.init();
 });
+
+/*------------------------------------*\
+  GLOBAL SCROLL EVENT
+\*------------------------------------*/
+function scrollHandler() {
+    if ($(window).scrollTop() > $(window).height() / 1.5) {
+        $('.js-scrollup').addClass('is-revealed');
+    } else {
+        $('.js-scrollup').removeClass('is-revealed');
+    }
+}
+
+$(window).on('scroll', _debounce(scrollHandler, 150));
+
+/*------------------------------------*\
+  SCROLL TO TOP / SCROLL UP
+\*------------------------------------*/
+let scrollUpObj = {
+    $scrollUpBtn: $('.js-scrollup-btn'),
+    scrollUp: function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+    },
+    init: function() {
+        this.$scrollUpBtn.on('click', this.scrollUp);
+    }
+}
+
 
 
 // ===============================

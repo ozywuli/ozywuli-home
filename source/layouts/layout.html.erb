@@ -1,17 +1,20 @@
-<%= partial "partials/site/site-header" %>
+<%= partial 'partials/site/site-header' %>
 
 <div class="container">
 
-<%= partial "partials/site/site-topbar" %> 
-<%= partial "partials/site/site-nav" %> 
+<%= partial 'partials/site/site-topbar' %> 
+<%= partial 'partials/site/site-nav' %> 
 
 <div class="content">
-    <%= partial "partials/page/page-header" %>
-    <div class="content__wrapper">
+    <%= partial 'partials/page/page-header' %>
+    <div class='content__wrapper'>
         <%= yield %>
     </div>
 </div>
 
-<%= partial "partials/site/site-footer" %>
+
+<%= partial 'partials/site/_site-scrollup' %>
+
+<%= partial 'partials/site/_site-footer' %>
 
 </div>

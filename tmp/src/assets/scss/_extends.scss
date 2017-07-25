@@ -108,13 +108,18 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-right: -10px;
+    @media #{$tablet} {
+        margin-right: -10px;
+    }
 }
 
 .card {
-    width: calc(50% - 10px);
-    margin-right: 10px;
+    width: 100%;
     margin-bottom: 10px;
+    @media #{$tablet} {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+    }
 }
 
 .card__link {
