@@ -527,12 +527,29 @@ $(document).ready(function () {
 \*------------------------------------*/
 var smToggleObj = {
     $smToggleBtn: $('.js-sm-toggle-btn'),
+    $smBar: $('.js-topbar-sm'),
     toggleSm: function toggleSm(e) {
+        var self = this;
         e.preventDefault();
-        $('.js-topbar-sm').toggleClass('is-revealed');
+        e.stopPropagation();
+        this.$smBar.toggleClass('is-revealed');
+
+        if (this.$smBar.hasClass('is-revealed')) {
+            console.log(0);
+            $(window).on('click.sm', function () {
+                self.$smBar.removeClass('is-revealed');
+            });
+            this.$smBar.on('click.sm', function (event) {
+                event.stopPropagation();
+            });
+        } else {
+            console.log(1);
+            $(window).off('click.sm');
+            this.$smBar.off('click.sm');
+        }
     },
     init: function init() {
-        this.$smToggleBtn.on('click', this.toggleSm);
+        this.$smToggleBtn.on('click', this.toggleSm.bind(this));
     }
 
     /*------------------------------------*\
@@ -564,7 +581,7 @@ var scrollUpObj = {
     }
 
     // ===============================
-    // Toggle nav
+    // TOGGLE NAV
     // ===============================
 };var navToggleObj = {
     $navToggle: $('.js-nav-toggle'),
