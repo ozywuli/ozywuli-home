@@ -5,7 +5,15 @@
     </a>
 </div>
 
+<!-- EXTERNAL LIBS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- MAPBOX -->
+<% if currentPage.data.hasMap %>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>    
+<% end %>
+
+<!-- MAIN SCRIPT -->
 <script src="assets/js/main.js"></script>
 
 </body>

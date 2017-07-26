@@ -5,6 +5,12 @@ $(document).ready(function() {
     lazyLoadImg.init();
     scrollUpObj.init();
     smToggleObj.init();
+
+    // https://stackoverflow.com/questions/138669/how-can-i-determine-if-a-javascript-variable-is-defined-in-a-page
+    if ('undefined' !== typeof(mapboxgl)) {
+        contactMapObj.init();    
+    }
+    
 });
 
 /*------------------------------------*\
@@ -141,5 +147,37 @@ var lazyLoadImg = {
         this.updateOffsets();
 
         $(window).on('scroll', this.scrolling.bind(this));
+    }
+}
+
+
+/*------------------------------------*\
+  CONTACT MAP
+\
+*------------------------------------*/
+let contactMapObj = {
+    init() {
+        mapboxgl.accessToken = 'pk.eyJ1IjoibXJvd2wiLCJhIjoiQW5seEFHVSJ9.fC2U7HkEIM-7EPNDMIoRXA';
+        var map = new mapboxgl.Map({
+            container: 'contact-map',
+            style: 'mapbox://styles/mapbox/dark-v9',
+            center: [-118.2468, 34.0407],
+            zoom: 9
+        });
+
+        map.on('load', function() {
+            // var el = document.createElement('div');
+            // el.className = 'marker';
+            // el.style.backgroundImage = 'url(/assets/images/marker.png)';
+            // el.style.width = '64px';
+            // el.style.height = '64px';
+
+            // add marker to map
+            // new mapboxgl.Marker(el)
+            //     .setLngLat([-118.2468, 34.12])
+            //     .addTo(map);
+        });
+
+          
     }
 }

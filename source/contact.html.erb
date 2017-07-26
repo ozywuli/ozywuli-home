@@ -1,5 +1,6 @@
 ---
 title: Contact
+hasMap: true
 ---
 
 <div class="row">
@@ -9,5 +10,13 @@ title: Contact
         <% data.social.each do |key, item| %>
             <%= partial(:'partials/_card.erb', :locals => { :type => item.name, :copy => item.username, :url => item.url, :icon => item.svg, :border => true } ) %>
         <% end %>
+    </div>
+</div>
+
+<div class="row">
+    <h3 class="row__title">Location</h3>
+    <p class="row__p">Since 2008, I've been based in Los Angeles, but I've also lived for an extended period of time (more than 2 months) in San Diego, Tijuana, Beijing, and Enping.</p>
+    <div class="map-wrapper">
+        <div id="contact-map" class="contact-map"></div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<%= partial 'partials/site/site-header' %>
+<%= partial(:'partials/site/_site-header', :locals => { :currentPage => current_page } ) %>
 
 <div class="container">
 
@@ -13,8 +13,9 @@
 </div>
 
 
+
 <%= partial 'partials/site/_site-scrollup' %>
 
-<%= partial 'partials/site/_site-footer' %>
+<%= partial(:'partials/site/_site-footer', :locals => { :currentPage => current_page } ) %>
 
 </div>
