@@ -4,7 +4,7 @@ title: Home
 
 <div class="row">
     <h2 class="row__title">Featured Work</h2>
-    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.featured.items } ) %>
+    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.portfolio.items, :flag => 'featured' } ) %>
 
     <div class="btns">
         <%= partial(:'partials/_btn.erb', :locals => { :url => '/portfolio', :copy => 'Learn More', :arrow => true } ) %>

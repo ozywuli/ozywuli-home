@@ -4,73 +4,85 @@
             "name": "PXL Agency",
             "url": "http://pxlagency.com",
             "img": "/assets/images/pxl-agency-thumbnail.jpg",
-            "title": "PXL Agency"
+            "title": "PXL Agency",
+            "featured": true
         },
         {
             "name": "Who's In Your Blood?",
             "url": "http://whosinyourblood.com",
             "img": "/assets/images/whos-in-your-blood-thumbnail.jpg",
-            "title": "Who's In Your Blood?"
+            "title": "Who's In Your Blood?",
+            "featured": true
         },
         {
             "name": "Yummm Cha! Guide",
             "url": "https://yummmchaguide.com",
             "img": "/assets/images/yummmcha-guide-thumbnail.jpg",
-            "title": "Yummm Cha! Guide"
+            "title": "Yummm Cha! Guide",
+            "featured": true
         },
         {
             "name": "Kidnap - Face In Hole",
             "url": "http://henkubao.com",
             "img": "/assets/images/kidnap-thumbnail.jpg",
-            "title": "Kidnap - Face In Hole"
+            "title": "Kidnap - Face In Hole",
+            "featured": true
         },
         {
             "name": "Henkubao",
             "url": "https://henkubao.com",
             "img": "/assets/images/henkubao-reversed-thumbnail.jpg",
-            "title": "Henkubao"
+            "title": "Henkubao",
+            "featured": true
         },
         {
             "name": "Fathom Events",
             "url": "https://fathomevents.com",
             "img": "/assets/images/fathom-events-thumbnail.jpg",
-            "title": "Fathom Events"
+            "title": "Fathom Events",
+            "featured": true
         },
         {
             "name": "20th Century Fox",
             "url": "https://foxmovies.com",
             "img": "/assets/images/20th-century-fox-thumbnail.jpg",
-            "title": "20th Centry Fox"
+            "title": "20th Centry Fox",
+            "featured": false
         },
         {
             "name": "Wish Upon - Best Friends",
             "url": "https://bestfriends.wishupon.com",
             "img": "/assets/images/bestfriends-wishupon-thumbnail.jpg",
-            "title": "Fathom Events"
+            "title": "Fathom Events",
+            "featured": false
         },
         {
             "name": "Bleed For This",
             "url": "https://bleedforthismovie.com",
             "img": "/assets/images/bleed-for-this-thumbnail.jpg",
-            "title": "Bleed For This"
+            "title": "Bleed For This",
+            "featured": false
         },
         {
             "name": "Los Angeles Magazine",
             "url": "https://lamag.com",
             "img": "/assets/images/lamag-thumbnail.jpg",
-            "title": "Los Angeles Magazine"
+            "title": "Los Angeles Magazine",
+            "featured": false
         },
         {
             "name": "Sleepless Movie",
             "url": "https://sleeplessmovie.com",
             "img": "/assets/images/sleepless-thumbnail.jpg",
-            "title": "Sleepless Movie"
+            "title": "Sleepless Movie",
+            "featured": false
         },
         {
             "name": "Universal Pictures",
             "url": "https://universalpictuers.com",
             "img": "/assets/images/universal-pictures-thumbnail.jpg",
-            "title": "Universal Pictures"
+            "title": "Universal Pictures",
+            "featured": false
         }
     ]
 }
