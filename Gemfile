@@ -9,6 +9,12 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem 'middleman', '>= 4.0.0'
+gem "middleman", "~> 4.0.0"
+gem "middleman-blog"
 
-gem "middleman-blog", "~> 4.0"
+gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+
+gem 'middleman-minify-html'
+
+# For feed.xml.builder
+gem "builder", "~> 3.0"
