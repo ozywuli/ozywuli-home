@@ -19,6 +19,10 @@
     text-transform: uppercase;
 }
 
+.page-header__date {
+    margin-top: 15px;
+}
+
 .page-header__p {
     @media #{$tablet} {
         font-size: 3.2rem;

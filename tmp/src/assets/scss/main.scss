@@ -54,3 +54,25 @@
     bottom: 0;
     left: 0;
 }
+
+.article-list__title {
+    margin-bottom: 10px;
+    font-size: 3.6rem;
+
+    a {
+        color: $light;
+
+        &:hover {
+            color: $gold;
+        }
+    }
+}
+
+.article-list__date {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.article-list__excerpt {
+    margin-bottom: 0;
+}
