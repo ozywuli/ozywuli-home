@@ -10,7 +10,7 @@
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
-    max-width: 800px;
+    max-width: 780px;
 }
 
 .page-header__title {
@@ -24,6 +24,7 @@
 }
 
 .page-header__p {
+    margin-bottom: 0;
     @media #{$tablet} {
         font-size: 3.2rem;
     }
