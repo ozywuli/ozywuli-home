@@ -239,3 +239,15 @@ $block-list-spacing: 15px;
         height: 100%;
     }
 }
+
+
+/*------------------------------------*\
+  IMAGES
+\*------------------------------------*/
+.img-ele {
+    display: inline-block;
+
+    &.mod-full-width {
+        width: 100%;
+    }
+}
