@@ -1,0 +1,22 @@
+{
+    "sections": [
+        {
+            "title": "Web Tools",
+            "list": [
+                {
+                    "name": "Adobe Color Wheel",
+                    "url": "https://color.adobe.com/create/color-wheel/"
+                }
+            ] 
+        },
+        {
+            "title": "References",
+            "list": [
+                {
+                    "name": "Markdown Cheatsheet",
+                    "url": "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+                }
+            ] 
+        }
+    ]
+}

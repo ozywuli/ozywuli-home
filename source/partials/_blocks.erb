@@ -1,0 +1,24 @@
+<div class="blocks">
+    <ul class="blocks__list">
+        <!-- CHECK IF IF THERE'S A FLAG -->
+        <% flag = false if flag.nil? %>
+
+        <% items.each do |item| %>
+            <!-- OUTPUT AN ITEM IF IT'S FLAGGED OR IF NO FLAG HAS BEEN PASSED IN -->
+            <% if item[flag] || !flag %>
+                <li class="block js-blocks-item">
+                    <a href="<%= item.url %>" class="block__link" target="_blank">
+                        <div class="block__bg" data-img="<%= item.img %>" style="background-image: url('<%= item.img %>')"></div>
+                        <div class="block__overlay">
+                            <!-- div.featured__block -->
+                            <span class="block__copy"><%= item.title %></span>
+                            <div class="block__icon">
+                                <%= svg('external-link') %>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            <% end %>
+        <% end %>
+    </ul>
+</div>

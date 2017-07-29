@@ -1,0 +1,23 @@
+---
+title: Resources
+---
+
+<div class="row">
+    <p class="row__p mod-no-mb">List of resources that I've found useful for my work</p>
+</div>
+
+
+<% data.resources.sections.each do |section| %>
+<div class="row">
+    <h3 class="row__title">
+        <%= section.title %>    
+    </h3>
+    <ul class="row__list">
+        <% section.list.each do |item| %>
+        <li class="row__list-item">
+            <a href="<%= item.url %>" target="_blank"><%= item.name %></a>
+        </li>
+        <% end %>
+    </ul>
+</div>
+<% end %>
