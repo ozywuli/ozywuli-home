@@ -516,10 +516,10 @@ var _debounce3 = _interopRequireDefault(_debounce2);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
-    navToggleObj.init();
+    // navToggleObj.init();
     lazyLoadImg.init();
     scrollUpObj.init();
-    smToggleObj.init();
+    // smToggleObj.init();
 
     // https://stackoverflow.com/questions/138669/how-can-i-determine-if-a-javascript-variable-is-defined-in-a-page
     if ('undefined' !== typeof mapboxgl) {
@@ -540,7 +540,6 @@ var smToggleObj = {
         this.$smBar.toggleClass('is-revealed');
 
         if (this.$smBar.hasClass('is-revealed')) {
-            console.log(0);
             $(window).on('click.sm', function () {
                 self.$smBar.removeClass('is-revealed');
             });
@@ -548,7 +547,6 @@ var smToggleObj = {
                 event.stopPropagation();
             });
         } else {
-            console.log(1);
             $(window).off('click.sm');
             this.$smBar.off('click.sm');
         }
@@ -686,11 +684,76 @@ var scrollUpObj = {
 };
 
 /*------------------------------------*\
+  CLICK NAV
+\*------------------------------------*/
+// let outsideClickEvents = [
+//     {
+//         emitter: '.js-nav-toggle',
+//         target: '.js-nav'
+//     },
+//     {
+//         emitter: '.js-sm-toggle-btn',
+//         target: '.js-topbar-sm'
+//     }
+// ]
+
+// for (let i = 0; i < outsideClickEvents.length; i++) {
+//     $(document).on('click', outsideClickEvents[i].emitter, function(e) {
+//         e.preventDefault();
+//         e.stopPropagation();
+//         $(outsideClickEvents[i].target).toggleClass('is-revealed');
+//     });
+
+//     $(document).on('click', function(e) {
+//         if ( !$(e.target).closest('.js-nav').length ) {
+//             $(outsideClickEvents[i].target).removeClass('is-revealed');
+//         }
+//     });    
+// }
+
+$('.js-toggle').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var self = $(this);
+
+    if ($('.js-toggle-target').hasClass('is-revealed')) {
+        $('.js-toggle-target').removeClass('is-revealed');
+    }
+
+    $(self.attr('data-target')).toggleClass('is-revealed');
+
+    $('body').on('click', function () {
+        $(self.attr('data-target')).removeClass('is-revealed');
+    });
+});
+
+// $(document).on('click', '.js-nav-toggle', function(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     $('.js-nav').toggleClass('is-visible');
+// });
+
+// $(document).on('click', function(e) {
+//     if ( !$(e.target).closest('.js-nav').length ) {
+//         $('.js-nav').removeClass('is-visible');
+//     }
+// });
+
+/*------------------------------------*\
   MASONRY
 \*------------------------------------*/
-$('.msnry-grid').masonry({
-    itemSelector: '.msnry-grid__item'
-});
+if (typeof imagesLoaded !== 'undefined') {
+    var $msnry = $('.msnry-grid').imagesLoaded(function () {
+        $msnry.css({ opacity: 1 });
+        $msnry.masonry({
+            itemSelector: '.msnry-grid__item',
+            // columnWidth: '.msnry-gris__sizer',
+            percentPosition: true
+            // gutter: '.msnry-grid__gutter'
+        });
+    });
+}
 
 },{"lodash/debounce":7}]},{},[13])
 

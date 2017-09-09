@@ -79,11 +79,44 @@
 
 
 
+.page-wrapper {
+    &.mod-full {
+        padding: 0 20px;
+
+        body.images & {
+            padding: 0 0 0 20px;
+        }
+    }
+}
+
+
 /*------------------------------------*\
   MASONRY
 \*------------------------------------*/
+.msnry-grid {
+    /*width: calc(100% + 20px);*/
+    /*padding-right: 20px;*/
+    /*padding: 0 20px;*/
+    opacity: 0;
+}
 
-.msnry-grid__item {
-    width: 33.33%;
-    padding: 0 0 20px 20px;
+.msnry-grid__item, .msnry-grid__sizer {
+    width: 100%;
+    padding: 0 20px 20px 0;
+
+    @media #{$small-tablet} {
+        width: 50%;
+        padding: 0 20px 20px 0;
+    }
+
+    @media #{$tablet} {
+        width: 33.33%;
+    }
+
+}
+
+.msnry-grid__gutter {
+    @media #{$small-tablet} {
+
+    }
 }

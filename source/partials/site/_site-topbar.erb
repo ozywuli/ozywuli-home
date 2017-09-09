@@ -1,6 +1,6 @@
 <div class="site-topbar">
 
-    <a href="#" class="nav-toggle js-nav-toggle">
+    <a href="#" class="nav-toggle js-nav-toggle js-toggle" data-target=".js-nav">
         <span class="nav-toggle__bar"></span>
         <span class="nav-toggle__bar"></span>
         <span class="nav-toggle__bar"></span>
@@ -15,12 +15,12 @@
 
     
     <div class="sm-toggle">
-        <a href="#" class="sm-toggle__btn js-sm-toggle-btn">
+        <a href="#" class="sm-toggle__btn js-sm-toggle-btn js-toggle" data-target=".js-topbar-sm">
             <%= svg('share') %>
         </a>
     </div>
     
-    <div class="site-topbar__sm js-topbar-sm">
+    <div class="site-topbar__sm js-topbar-sm js-toggle-target" >
         <% data.social.each do |key, item| %>
             <div class="site-topbar__sm-item">
                 <a href="<%= item.url %>" class="site-topbar__sm-item-link" title="ozy's <%= item.name %>" target="_blank"><%= svg(item.svg) %></a>
