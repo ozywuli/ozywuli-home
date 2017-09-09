@@ -717,14 +717,18 @@ $('.js-toggle').on('click', function (e) {
 
     var self = $(this);
 
-    if ($('.js-toggle-target').hasClass('is-revealed')) {
-        $('.js-toggle-target').removeClass('is-revealed');
+    if (!self.is(e.target)) {
+        if ($('.js-toggle-target').hasClass('is-revealed')) {
+            $('.js-toggle-target').removeClass('is-revealed');
+        }
     }
 
     $(self.attr('data-target')).toggleClass('is-revealed');
 
-    $('body').on('click', function () {
-        $(self.attr('data-target')).removeClass('is-revealed');
+    $('body').on('click', function (e) {
+        if (!$(e.target).closest('.js-toggle-target').length) {
+            $(self.attr('data-target')).removeClass('is-revealed');
+        }
     });
 });
 

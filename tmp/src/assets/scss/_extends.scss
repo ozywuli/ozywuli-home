@@ -6,7 +6,11 @@
 
 .row__title {
     margin-bottom: 30px;
-    font-size: 3.6rem;
+    font-size: 2.8rem;
+
+    @media #{$tablet} {
+        font-size: 3.6rem;
+    }
 }
 
 .row__p {
@@ -42,6 +46,11 @@
     margin-bottom: 10px;
     list-style: square;
     line-height: 1.5;
+    list-style-position: inside;
+
+    @media #{$tablet} {
+        list-style-position: outside;
+    }
 
     &:last-of-type:not(:first-of-type) {
         margin-bottom: 0;

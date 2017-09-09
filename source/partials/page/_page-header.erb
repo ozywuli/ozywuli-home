@@ -9,11 +9,13 @@
             <h2 class="page-header__title">
                 <%= current_page.data.title %>
             </h2>
-            <div class="page-header__date">
-                <% if current_article %>
-                    <%= current_article.data.date.strftime('%e %B %Y') %>
-                <% end %>
-            </div>
+            <% if whatPage === 'blog' %>
+                <div class="page-header__date">
+                    <% if current_article %>
+                        <%= current_article.data.date.strftime('%e %B %Y') %>
+                    <% end %>
+                </div>
+            <% end %>
         <% end %>
     </div>
 </header>

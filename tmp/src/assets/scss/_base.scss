@@ -10,9 +10,13 @@ html, body {
 }
 
 body {
-    font-size: 1.6rem;
     font-family: $sans-body;
     font-weight: 300;
+    font-size: 1.4rem;
+
+    @media #{$tablet} {
+        font-size: 1.6rem;
+    }
 }
 
 .container {

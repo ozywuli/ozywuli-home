@@ -14,6 +14,7 @@ page '/*.txt', layout: false
 page "/index.html", :layout => :single_column
 page "/404.html", :layout => :single_column
 page "/about.html", :layout => :single_column
+page "/blog.html", :layout => :single_column
 page "/blog/*", :layout => :single_column
 page "/contact.html", :layout => :single_column
 page "/portfolio.html", :layout => :single_column
