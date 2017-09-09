@@ -685,6 +685,13 @@ var scrollUpObj = {
     }
 };
 
+/*------------------------------------*\
+  MASONRY
+\*------------------------------------*/
+$('.msnry-grid').masonry({
+    itemSelector: '.msnry-grid__item'
+});
+
 },{"lodash/debounce":7}]},{},[13])
 
 //# sourceMappingURL=main.js.map

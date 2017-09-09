@@ -181,3 +181,12 @@ let contactMapObj = {
           
     }
 }
+
+
+
+/*------------------------------------*\
+  MASONRY
+\*------------------------------------*/
+$('.msnry-grid').masonry({
+    itemSelector: '.msnry-grid__item'
+});

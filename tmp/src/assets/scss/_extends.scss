@@ -179,9 +179,12 @@ $block-list-spacing: 15px;
 .block {
     position: relative;
     width: calc(33.33% - #{$block-list-spacing});
-    padding-bottom: calc(33.33% - #{$block-list-spacing});
     margin-right: $block-list-spacing;
     margin-bottom: $block-list-spacing;
+}
+
+.block__container {
+    padding-bottom: 100%
 }
 
 .block__link {

@@ -5,7 +5,8 @@
             "list": [
                 {
                     "name": "Adobe Color Wheel",
-                    "url": "https://color.adobe.com/create/color-wheel/"
+                    "url": "https://color.adobe.com/create/color-wheel/",
+                    "description": "Lots of user made color patterns to pick from and providesa great tool to come up with your own color patterns."
                 }
             ] 
         },
@@ -13,8 +14,14 @@
             "title": "References",
             "list": [
                 {
+                    "name": "Trello CSS Style Guide",
+                    "url": "https://gist.github.com/bobbygrace/9e961e8982f42eb91b80",
+                    "description": "This is the CSS style guide I follow for most of my projects. I like that the rules are simple and flexible but scales reasonably well."
+                },
+                {
                     "name": "Markdown Cheatsheet",
-                    "url": "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+                    "url": "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet",
+                    "description": "Simple and easy to read reference for markdown."
                 }
             ] 
         }

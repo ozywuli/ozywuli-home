@@ -11,6 +11,17 @@ page '/*.txt', layout: false
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
+page "/index.html", :layout => :single_column
+page "/404.html", :layout => :single_column
+page "/about.html", :layout => :single_column
+page "/blog/*", :layout => :single_column
+page "/contact.html", :layout => :single_column
+page "/portfolio.html", :layout => :single_column
+page "/resources.html", :layout => :single_column
+page "/images.html", :layout => :full_page
+
+
+
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
@@ -75,6 +86,8 @@ end
 
 # PRETTY URL FOR DEV
 activate :directory_indexes
+
+activate :minify_html
 
 # Build-specific configuration
 configure :build do

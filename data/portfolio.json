@@ -83,6 +83,13 @@
             "img": "/assets/images/thumbnails/universal-pictures-thumbnail.jpg",
             "title": "Universal Pictures",
             "featured": false
+        },
+        {
+            "name": "The Nut Job",
+            "url": "https://thenutjob.com",
+            "img": "/assets/images/thumbnails/thenutjob-thumbnail.jpg",
+            "title": "The Nut Job",
+            "featured": false
         }
     ]
 }

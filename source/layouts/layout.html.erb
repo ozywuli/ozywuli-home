@@ -2,18 +2,17 @@
 
 <div class="container">
 
-<%= partial 'partials/site/site-topbar' %> 
-<%= partial 'partials/site/site-nav' %> 
+    <%= partial 'partials/site/site-topbar' %> 
+    <%= partial 'partials/site/site-nav' %> 
 
-<div class="content">
-    <%= partial 'partials/page/page-header' %>
-    <div class='content__wrapper'>
+    <div class="content">
+        <%= partial 'partials/page/page-header' %>    
         <%= yield %>
     </div>
+
+    <%= partial 'partials/site/_site-scrollup' %>
+
 </div>
 
-<%= partial 'partials/site/_site-scrollup' %>
 
 <%= partial(:'partials/site/_site-footer', :locals => { :currentPage => current_page } ) %>
-
-</div>
