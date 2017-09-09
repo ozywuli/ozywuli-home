@@ -686,41 +686,14 @@ var scrollUpObj = {
 /*------------------------------------*\
   CLICK NAV
 \*------------------------------------*/
-// let outsideClickEvents = [
-//     {
-//         emitter: '.js-nav-toggle',
-//         target: '.js-nav'
-//     },
-//     {
-//         emitter: '.js-sm-toggle-btn',
-//         target: '.js-topbar-sm'
-//     }
-// ]
-
-// for (let i = 0; i < outsideClickEvents.length; i++) {
-//     $(document).on('click', outsideClickEvents[i].emitter, function(e) {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         $(outsideClickEvents[i].target).toggleClass('is-revealed');
-//     });
-
-//     $(document).on('click', function(e) {
-//         if ( !$(e.target).closest('.js-nav').length ) {
-//             $(outsideClickEvents[i].target).removeClass('is-revealed');
-//         }
-//     });    
-// }
-
 $('.js-toggle').on('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
 
     var self = $(this);
 
-    if (!self.is(e.target)) {
-        if ($('.js-toggle-target').hasClass('is-revealed')) {
-            $('.js-toggle-target').removeClass('is-revealed');
-        }
+    if ($('.js-toggle-target').not(self.attr('data-target')).hasClass('is-revealed')) {
+        $('.js-toggle-target').not(self.attr('data-target')).removeClass('is-revealed');
     }
 
     $(self.attr('data-target')).toggleClass('is-revealed');
@@ -731,18 +704,6 @@ $('.js-toggle').on('click', function (e) {
         }
     });
 });
-
-// $(document).on('click', '.js-nav-toggle', function(e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     $('.js-nav').toggleClass('is-visible');
-// });
-
-// $(document).on('click', function(e) {
-//     if ( !$(e.target).closest('.js-nav').length ) {
-//         $('.js-nav').removeClass('is-visible');
-//     }
-// });
 
 /*------------------------------------*\
   MASONRY
