@@ -698,7 +698,7 @@ $('.js-toggle').on('click', function (e) {
 
     $(self.attr('data-target')).toggleClass('is-revealed');
 
-    $('body').on('click', function (e) {
+    $('body').on('click touchstart', function (e) {
         if (!$(e.target).closest('.js-toggle-target').length) {
             $(self.attr('data-target')).removeClass('is-revealed');
         }

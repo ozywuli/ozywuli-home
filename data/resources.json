@@ -7,6 +7,11 @@
                     "name": "Adobe Color Wheel",
                     "url": "https://color.adobe.com/create/color-wheel/",
                     "description": "Lots of user made color patterns to pick from and providesa great tool to come up with your own color patterns."
+                },
+                {
+                    "name": "BeautifulSoup4",
+                    "url": "https://www.crummy.com/software/BeautifulSoup/",
+                    "description": "BeautifulSoup4 is a great Python library that helps you scrape a website."
                 }
             ] 
         },
