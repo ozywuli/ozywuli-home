@@ -1,7 +1,7 @@
 ---
 title: Export SVG
 slug: export-svg
-date: 2017-09-11
+date: 2017-09-10
 excerpt: How to export SVG using Illustrator
 ---
 
