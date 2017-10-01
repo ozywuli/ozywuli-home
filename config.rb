@@ -90,6 +90,11 @@ activate :directory_indexes
 
 activate :minify_html
 
+activate :syntax
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build

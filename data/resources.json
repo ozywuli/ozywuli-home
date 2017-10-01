@@ -1,6 +1,26 @@
 {
     "sections": [
         {
+            "title": "References",
+            "list": [
+                {
+                    "name": "Trello CSS Style Guide",
+                    "url": "https://gist.github.com/bobbygrace/9e961e8982f42eb91b80",
+                    "description": "This is the CSS style guide I follow for most of my projects. I like that the rules are simple and flexible but scales reasonably well."
+                },
+                {
+                    "name": "Markdown Cheatsheet",
+                    "url": "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet",
+                    "description": "Simple and easy to read reference for markdown."
+                },
+                {
+                    "name": "ERB Sublime Snippets",
+                    "url": "https://github.com/matthewrobertson/ERB-Sublime-Snippets",
+                    "description": "Snippets for erb keyboard shortcuts"
+                }
+            ] 
+        },
+        {
             "title": "Web Tools",
             "list": [
                 {
@@ -16,17 +36,17 @@
             ] 
         },
         {
-            "title": "References",
+            "title": "Rails Resources",
             "list": [
                 {
-                    "name": "Trello CSS Style Guide",
-                    "url": "https://gist.github.com/bobbygrace/9e961e8982f42eb91b80",
-                    "description": "This is the CSS style guide I follow for most of my projects. I like that the rules are simple and flexible but scales reasonably well."
+                    "name": "Heroku",
+                    "url": "https://www.heroku.com/",
+                    "description": "Heroku makes it easy to set up, manage, and deploy your Rails application. They take care of the system administration so that you can focus on building your app."
                 },
                 {
-                    "name": "Markdown Cheatsheet",
-                    "url": "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet",
-                    "description": "Simple and easy to read reference for markdown."
+                    "name": "pgAdmin",
+                    "url": "https://www.pgadmin.org/",
+                    "description": "Powerful GUI for managing your psql databases. The UI is dated but the tool works great."
                 }
             ] 
         }

@@ -95,3 +95,11 @@ h1, h2, h3, h4, h5 {
 b, strong {
     font-weight: bold;
 }
+
+code {
+    display: block;
+    background: $dark-gray;
+    padding: 16px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    margin-bottom: 30px;
+}
