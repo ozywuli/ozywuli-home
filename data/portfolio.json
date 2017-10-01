@@ -43,6 +43,13 @@
             "featured": true
         },
         {
+            "name": "Ticketbot",
+            "url": "http://ticketbot.us",
+            "img": "/assets/images/thumbnails/ticketbot-thumbnail.jpg",
+            "title": "Ticketbot",
+            "featured": false
+        },
+        {
             "name": "20th Century Fox",
             "url": "https://foxmovies.com",
             "img": "/assets/images/thumbnails/20th-century-fox-thumbnail.jpg",
