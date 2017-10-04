@@ -92,6 +92,13 @@
             "featured": false
         },
         {
+            "name": "Marshall",
+            "url": "https://marshallmovie.com",
+            "img": "/assets/images/thumbnails/marshall-thumbnail.jpg",
+            "title": "Marshall",
+            "featured": false
+        },
+        {
             "name": "The Nut Job",
             "url": "https://thenutjob.com",
             "img": "/assets/images/thumbnails/thenutjob-thumbnail.jpg",
