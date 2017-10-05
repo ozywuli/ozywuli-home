@@ -49,6 +49,16 @@
                     "description": "Powerful GUI for managing your psql databases. The UI is dated but the tool works great."
                 }
             ] 
+        },
+        {
+            "title": "Miscellaenous",
+            "list": [
+                {
+                    "name": "Postman",
+                    "url": "https://www.getpostman.com/postman",
+                    "description": "Postman makes API development easier and more enjoyable."
+                }
+            ]
         }
     ]
 }

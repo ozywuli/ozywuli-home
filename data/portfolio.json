@@ -99,6 +99,13 @@
             "featured": false
         },
         {
+            "name": "All I See Is You",
+            "url": "https://alliseeisyoumovie.com",
+            "img": "/assets/images/thumbnails/all-i-see-is-you-thumbnail.jpg",
+            "title": "All I See Is You",
+            "featured": false
+        },
+        {
             "name": "The Nut Job",
             "url": "https://thenutjob.com",
             "img": "/assets/images/thumbnails/thenutjob-thumbnail.jpg",
