@@ -193,7 +193,11 @@ $block-list-spacing: 15px;
 }
 
 .block__container {
-    padding-bottom: 100%
+    padding-bottom: 100%;
+
+    .block.mod-clear & {
+        padding-bottom: 66.66%;
+    }
 }
 
 .block__link {
@@ -211,6 +215,11 @@ $block-list-spacing: 15px;
             @include revealed;
         }
     }
+    .block.mod-clear & {
+        .block__overlay {
+            display: none;
+        }
+    }
 }
 
 .block__bg {
@@ -218,6 +227,13 @@ $block-list-spacing: 15px;
     height: 100%;
     background: #f1f1f1;
     background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    .block.mod-clear & {
+        background-color: transparent;
+        background-size: 80%;
+    }
 }
 
 .block__overlay {

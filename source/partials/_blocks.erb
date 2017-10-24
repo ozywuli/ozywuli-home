@@ -6,7 +6,7 @@
         <% items.each do |item| %>
             <!-- OUTPUT AN ITEM IF IT'S FLAGGED OR IF NO FLAG HAS BEEN PASSED IN -->
             <% if item[flag] || !flag %>
-                <li class="block js-blocks-item">
+                <li class="block js-blocks-item <%= defined?(clear) ? 'mod-clear' : '' %>">
                     <div class="block__container">
                         <a href="<%= item.url %>" class="block__link" target="_blank">
                             <div class="block__bg" data-img="<%= item.img %>" style="background-image: url('<%= item.img %>')"></div>

@@ -10,4 +10,5 @@ title: Portfolio
 <div class="row">
     <h3 class="row__title">Clients</h3>
     <p class="row__p">Selection of clients and companies I've worked with since 2012</p>
+    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.clients.items, :clear => true } ) %>
 </div>

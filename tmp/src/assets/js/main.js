@@ -193,10 +193,11 @@ $('.js-toggle').on('click', function(e) {
 
     let self = $(this);
 
+    $(this).toggleClass('is-revealed');
+
     if ($('.js-toggle-target').not(self.attr('data-target')).hasClass('is-revealed') ) {
         $('.js-toggle-target').not(self.attr('data-target')).removeClass('is-revealed');
     }
-
 
     $(self.attr('data-target')).toggleClass('is-revealed');
 

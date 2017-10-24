@@ -1,0 +1,40 @@
+{
+    "items": [
+        {
+            "name": "20th Century Fox",
+            "url": "http://foxmovies.com",
+            "img": "/assets/images/client/client-logo-20th-century-fox.png",
+            "title": "20th Century Fox"
+        },
+        {
+            "name": "Universal Pictures",
+            "url": "http://universalpictures.com",
+            "img": "/assets/images/client/client-logo-universal-pictures.png",
+            "title": "Universal Pictures"
+        },
+        {
+            "name": "Open Road Films",
+            "url": "http://openroadfilms.com",
+            "img": "/assets/images/client/client-logo-open-road.png",
+            "title": "Open Road Films"
+        },
+        {
+            "name": "Los Angeles Magazine",
+            "url": "http://lamag.com",
+            "img": "/assets/images/client/client-logo-lamag.png",
+            "title": "Los Angeles Magazine"
+        },
+        {
+            "name": "Terranea",
+            "url": "http://terranea.com",
+            "img": "/assets/images/client/client-logo-terranea.png",
+            "title": "Terranea"
+        },
+        {
+            "name": "Fathom Events",
+            "url": "http://fathomevents.com",
+            "img": "/assets/images/client/client-logo-fathom-events.png",
+            "title": "Fathom Events"
+        }
+    ]
+}

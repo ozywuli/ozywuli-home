@@ -37,7 +37,7 @@
         margin-bottom: 0;
     }
 
-    .nav-toggle.is-visible & {
+    .nav-toggle.is-revealed & {
         &:nth-of-type(1) {
             transform: rotate(45deg) translate3d(2px, 7px, 0);
         }
