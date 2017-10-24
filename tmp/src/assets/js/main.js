@@ -203,6 +203,7 @@ $('.js-toggle').on('click', function(e) {
 
     $('body').on('click', function(e) {
         if ( !$(e.target).closest('.js-toggle-target').length ) {
+            $('.js-toggle').removeClass('is-revealed');
             $(self.attr('data-target')).removeClass('is-revealed');
         }
     });
