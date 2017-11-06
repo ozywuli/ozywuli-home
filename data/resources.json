@@ -29,11 +29,36 @@
                     "description": "Lots of user made color patterns to pick from and providesa great tool to come up with your own color patterns."
                 },
                 {
-                    "name": "BeautifulSoup4",
-                    "url": "https://www.crummy.com/software/BeautifulSoup/",
-                    "description": "BeautifulSoup4 is a great Python library that helps you scrape a website."
+                    "name": "Pingdom Website Speed Test",
+                    "url": "https://tools.pingdom.com/",
+                    "description": "Check the load time of a webpage from different locations around the world."
                 }
             ] 
+        },
+        {
+            "title": "D3",
+            "list": [
+                {
+                    "name": "Interactive Data Visualization for the Web",
+                    "url": "http://alignedleft.com/work/d3-book-2e",
+                    "description": "Great introductory book on D3 and interactive data visualization on the web."
+                }
+            ]
+        },
+        {
+            "title": "Ember Resources",
+            "list": [
+                {
+                    "name": "EmberMap",
+                    "url": "https://embermap.com/",
+                    "description": "Paid video tutorials for Ember. Pricey but excellent material."
+                },
+                {
+                    "name": "Ember Igniter",
+                    "url": "https://emberigniter.com/",
+                    "description": "Articles and tutorials on Ember. Covers many aspects of Ember."
+                }
+            ]
         },
         {
             "title": "Rails Resources",
@@ -51,12 +76,27 @@
             ] 
         },
         {
-            "title": "Miscellaenous",
+            "title": "Desktop Tools",
             "list": [
+                {
+                    "name": "Sublime Text",
+                    "url": "https://www.sublimetext.com",
+                    "description": "Great general purpose editor. It's paid software, but you can download it for free and test drive it."
+                },
                 {
                     "name": "Postman",
                     "url": "https://www.getpostman.com/postman",
                     "description": "Postman makes API development easier and more enjoyable."
+                }
+            ]
+        },
+        {
+            "title": "Miscellaenous",
+            "list": [
+                {
+                    "name": "BeautifulSoup4",
+                    "url": "https://www.crummy.com/software/BeautifulSoup/",
+                    "description": "BeautifulSoup4 is a great Python library that helps you scrape a website."
                 }
             ]
         }

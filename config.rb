@@ -88,8 +88,11 @@ end
 # PRETTY URL FOR DEV
 activate :directory_indexes
 
+# Minify HTML
 activate :minify_html
 
+
+# Enable markdown syntax highlighting
 activate :syntax
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true

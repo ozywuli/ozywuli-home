@@ -97,9 +97,19 @@ b, strong {
 }
 
 code {
+    background: $dark-gray;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    padding: 6px;
+}
+
+pre.highlight {
     display: block;
     background: $dark-gray;
     padding: 16px;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     margin-bottom: 30px;
+
+    code {
+        padding: 0;
+    }
 }
