@@ -1,6 +1,6 @@
 ---
-title: How To Rotate A Video With After Affects
-slug: how-to-rotate-a-video-with-after-affects
+title: How To Rotate A Video With After Effects
+slug: how-to-rotate-a-video-with-after-effects
 date: 2017-11-05
 excerpt: Use After Effects to rotate a video
 ---

@@ -513,6 +513,10 @@ var _debounce2 = require('lodash/debounce');
 
 var _debounce3 = _interopRequireDefault(_debounce2);
 
+var _OnToggle = require('ontoggle/dist/OnToggle');
+
+var _OnToggle2 = _interopRequireDefault(_OnToggle);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
@@ -686,27 +690,7 @@ var scrollUpObj = {
 /*------------------------------------*\
   CLICK NAV
 \*------------------------------------*/
-$('.js-toggle').on('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    var self = $(this);
-
-    $(this).toggleClass('is-revealed');
-
-    if ($('.js-toggle-target').not(self.attr('data-target')).hasClass('is-revealed')) {
-        $('.js-toggle-target').not(self.attr('data-target')).removeClass('is-revealed');
-    }
-
-    $(self.attr('data-target')).toggleClass('is-revealed');
-
-    $('body').on('click', function (e) {
-        if (!$(e.target).closest('.js-toggle-target').length) {
-            $('.js-toggle').removeClass('is-revealed');
-            $(self.attr('data-target')).removeClass('is-revealed');
-        }
-    });
-});
+var myOnToggle = new _OnToggle2.default();
 
 /*------------------------------------*\
   MASONRY
@@ -723,6 +707,89 @@ if (typeof imagesLoaded !== 'undefined') {
     });
 }
 
-},{"lodash/debounce":7}]},{},[13])
+},{"lodash/debounce":7,"ontoggle/dist/OnToggle":14}],14:[function(require,module,exports){
+;(function( $, window, document, undefined ) {
+    var pluginName = 'OnToggle';
+
+    /**
+     * 
+     */
+    var defaults = {
+        toggleEl: '.js-toggle',
+        toggleTargetEl: '.js-toggle-target',
+        isVisibleClass: 'is-visible'
+
+        /**
+         * PLUGIN CONSTRUCTOR 
+         */
+    };var OnToggle = function OnToggle(options) {
+        this.options = $.extend({}, defaults, options);
+        this.init();
+    };
+
+    /**
+     * 
+     */
+    // https://stackoverflow.com/questions/4736910/javascript-when-to-use-prototypes
+    OnToggle.prototype = {
+
+        /**
+         * 
+         */
+        init: function init() {
+            this.checkDevice();
+            $(this.options.toggleEl).on('click', this.openToggle.bind(this));
+            $(document).on(this.eventType, this.detectOutsideClick.bind(this));
+        },
+
+        /**
+         * 
+         */
+        eventType: 'click',
+
+        /**
+         * 
+         */
+        checkDevice: function checkDevice() {
+            // if we detect an ios device, then use the `touchstart`event instead of the `click` event
+            var event = /iPad|iPhone|iPod/.test(navigator.userAgent) ? "touchstart" : "click";
+            this.event = event;
+        },
+        /**
+         * 
+         */
+        openToggle: function openToggle(event) {
+            event.preventDefault();
+            // get the associated toggle target
+            var thistoggleTargetEl = $(event.target).attr('data-toggle-target');
+
+            // hide any toggle target that isn't the associated target
+            $(this.options.toggleTargetEl).not($('.' + thistoggleTargetEl)).removeClass(this.options.isVisibleClass);
+            $('.' + thistoggleTargetEl).toggleClass(this.options.isVisibleClass);
+        },
+
+        /**
+         * 
+         */
+        detectOutsideClick: function detectOutsideClick(event) {
+            if (!$(event.target).closest(this.options.toggleEl + ', ' + this.options.toggleTargetEl).length) {
+                $('' + this.options.toggleTargetEl).removeClass(this.options.isVisibleClass);
+            }
+        }
+
+        // A really lightweight plugin wrapper around the constructor,
+        // preventing against multiple instantiations
+    };$.fn[pluginName] = function (options) {
+        return this.each(function () {
+            if (!$.data(this, "plugin_" + pluginName)) {
+                $.data(this, "plugin_" + pluginName, new OnToggle(options));
+            }
+        });
+    };
+
+    module.exports = OnToggle;
+})(jQuery, window, document);
+
+},{}]},{},[13])
 
 //# sourceMappingURL=main.js.map

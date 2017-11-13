@@ -1,4 +1,6 @@
 import _debounce from 'lodash/debounce';
+import OnToggle from 'ontoggle/dist/OnToggle';
+
 
 $(document).ready(function() {
     // navToggleObj.init();
@@ -187,27 +189,7 @@ let contactMapObj = {
 /*------------------------------------*\
   CLICK NAV
 \*------------------------------------*/
-$('.js-toggle').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    let self = $(this);
-
-    $(this).toggleClass('is-revealed');
-
-    if ($('.js-toggle-target').not(self.attr('data-target')).hasClass('is-revealed') ) {
-        $('.js-toggle-target').not(self.attr('data-target')).removeClass('is-revealed');
-    }
-
-    $(self.attr('data-target')).toggleClass('is-revealed');
-
-    $('body').on('click', function(e) {
-        if ( !$(e.target).closest('.js-toggle-target').length ) {
-            $('.js-toggle').removeClass('is-revealed');
-            $(self.attr('data-target')).removeClass('is-revealed');
-        }
-    });
-})
+let myOnToggle = new OnToggle();
 
 
 

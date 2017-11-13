@@ -37,7 +37,7 @@
         margin-bottom: 0;
     }
 
-    .nav-toggle.is-revealed & {
+    .nav-toggle.is-visible & {
         &:nth-of-type(1) {
             transform: rotate(45deg) translate3d(2px, 7px, 0);
         }
@@ -71,7 +71,7 @@
         transform: translate3d(100%, 0, 0);
         @include hidden();
 
-        &.is-revealed {
+        &.is-visible {
             transform: translate3d(0, 0, 0);
             @include revealed();
         }
