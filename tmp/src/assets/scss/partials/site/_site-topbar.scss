@@ -32,6 +32,7 @@
     background: $light;
     margin-bottom: 5px;
     transition: all 150ms ease;
+    pointer-events: none;
 
     &:last-of-type {
         margin-bottom: 0;

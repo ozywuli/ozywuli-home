@@ -71,6 +71,13 @@
             "featured": false
         },
         {
+            "name": "Deadpool Core",
+            "url": "http://deadpoolcore.com",
+            "img": "/assets/images/thumbnails/thumbnail-deadpool-core.jpg",
+            "title": "Deadpool Core",
+            "featured": false
+        },
+        {
             "name": "Los Angeles Magazine",
             "url": "http://lamag.com",
             "img": "/assets/images/thumbnails/lamag-thumbnail.jpg",
@@ -111,6 +118,14 @@
             "img": "/assets/images/thumbnails/thenutjob-thumbnail.jpg",
             "title": "The Nut Job",
             "featured": false
+        },
+        {
+            "name": "OnToggleJS",
+            "url": "https://github.com/ozywuli/OnToggle",
+            "img": "/assets/images/thumbnails/thumbnail-ontoggle.jpg",
+            "title": "OnToggleJS",
+            "featured": false
         }
     ]
 }
+

@@ -3,46 +3,16 @@ import OnToggle from 'ontoggle/dist/OnToggle';
 
 
 $(document).ready(function() {
-    // navToggleObj.init();
+
     lazyLoadImg.init();
     scrollUpObj.init();
-    // smToggleObj.init();
 
     // https://stackoverflow.com/questions/138669/how-can-i-determine-if-a-javascript-variable-is-defined-in-a-page
     if ('undefined' !== typeof(mapboxgl)) {
         contactMapObj.init();    
     }
-    
 });
 
-/*------------------------------------*\
-  SOCIAL MEDIA TOGGLE
-\*------------------------------------*/
-let smToggleObj = {
-    $smToggleBtn: $('.js-sm-toggle-btn'),
-    $smBar: $('.js-topbar-sm'),
-    toggleSm: function(e) {
-        let self = this;
-        e.preventDefault();
-        e.stopPropagation();
-        this.$smBar.toggleClass('is-revealed');
-
-        if (this.$smBar.hasClass('is-revealed')) {
-            $(window).on('click.sm', function() {
-                self.$smBar.removeClass('is-revealed');
-            });
-            this.$smBar.on('click.sm', function(event){
-                event.stopPropagation();
-            });
-        } else {
-            $(window).off('click.sm');
-            this.$smBar.off('click.sm');
-        }
-    },
-    init: function() {
-        this.$smToggleBtn.on('click', this.toggleSm.bind(this));
-    }
-}
 
 /*------------------------------------*\
   GLOBAL SCROLL EVENT
@@ -56,6 +26,7 @@ function scrollHandler() {
 }
 
 $(window).on('scroll', _debounce(scrollHandler, 150));
+
 
 /*------------------------------------*\
   SCROLL TO TOP / SCROLL UP
@@ -73,45 +44,6 @@ let scrollUpObj = {
     }
 }
 
-
-
-// ===============================
-// TOGGLE NAV
-// ===============================
-var navToggleObj = {
-    $navToggle: $('.js-nav-toggle'),
-    $nav: $('.js-nav'),
-
-    toggleNav: function(e) {
-        let self = this;
-        e.preventDefault();
-        e.stopPropagation();
-        this.$nav.toggleClass('is-visible');
-        this.$navToggle.toggleClass('is-visible');
-
-        if (this.$nav.hasClass('is-visible')) {
-            $(window).on('click.nav', function() {
-                self.closeNav();
-            });
-            this.$nav.on('click.nav', function(event){
-                event.stopPropagation();
-            });
-        } else {
-            $(window).off('click.nav');
-            this.$nav.off('click.nav');
-        }
-    },
-
-    closeNav: function(e) {
-        this.$nav.removeClass('is-visible');
-        this.$navToggle.removeClass('is-visible');
-    },
-
-    init: function() {
-        this.$navToggle.on('click', this.toggleNav.bind(this));
-    }
-
-}
 
 // ===============================
 // Lazy Load Images
@@ -187,7 +119,7 @@ let contactMapObj = {
 
 
 /*------------------------------------*\
-  CLICK NAV
+  INITIALIZE ONTOGGLE
 \*------------------------------------*/
 let myOnToggle = new OnToggle();
 

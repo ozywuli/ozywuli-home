@@ -520,10 +520,9 @@ var _OnToggle2 = _interopRequireDefault(_OnToggle);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
-    // navToggleObj.init();
+
     lazyLoadImg.init();
     scrollUpObj.init();
-    // smToggleObj.init();
 
     // https://stackoverflow.com/questions/138669/how-can-i-determine-if-a-javascript-variable-is-defined-in-a-page
     if ('undefined' !== typeof mapboxgl) {
@@ -532,37 +531,9 @@ $(document).ready(function () {
 });
 
 /*------------------------------------*\
-  SOCIAL MEDIA TOGGLE
+  GLOBAL SCROLL EVENT
 \*------------------------------------*/
-var smToggleObj = {
-    $smToggleBtn: $('.js-sm-toggle-btn'),
-    $smBar: $('.js-topbar-sm'),
-    toggleSm: function toggleSm(e) {
-        var self = this;
-        e.preventDefault();
-        e.stopPropagation();
-        this.$smBar.toggleClass('is-revealed');
-
-        if (this.$smBar.hasClass('is-revealed')) {
-            $(window).on('click.sm', function () {
-                self.$smBar.removeClass('is-revealed');
-            });
-            this.$smBar.on('click.sm', function (event) {
-                event.stopPropagation();
-            });
-        } else {
-            $(window).off('click.sm');
-            this.$smBar.off('click.sm');
-        }
-    },
-    init: function init() {
-        this.$smToggleBtn.on('click', this.toggleSm.bind(this));
-    }
-
-    /*------------------------------------*\
-      GLOBAL SCROLL EVENT
-    \*------------------------------------*/
-};function scrollHandler() {
+function scrollHandler() {
     if ($(window).scrollTop() > $(window).height() / 1.5) {
         $('.js-scrollup').addClass('is-revealed');
     } else {
@@ -585,42 +556,6 @@ var scrollUpObj = {
     },
     init: function init() {
         this.$scrollUpBtn.on('click', this.scrollUp);
-    }
-
-    // ===============================
-    // TOGGLE NAV
-    // ===============================
-};var navToggleObj = {
-    $navToggle: $('.js-nav-toggle'),
-    $nav: $('.js-nav'),
-
-    toggleNav: function toggleNav(e) {
-        var self = this;
-        e.preventDefault();
-        e.stopPropagation();
-        this.$nav.toggleClass('is-visible');
-        this.$navToggle.toggleClass('is-visible');
-
-        if (this.$nav.hasClass('is-visible')) {
-            $(window).on('click.nav', function () {
-                self.closeNav();
-            });
-            this.$nav.on('click.nav', function (event) {
-                event.stopPropagation();
-            });
-        } else {
-            $(window).off('click.nav');
-            this.$nav.off('click.nav');
-        }
-    },
-
-    closeNav: function closeNav(e) {
-        this.$nav.removeClass('is-visible');
-        this.$navToggle.removeClass('is-visible');
-    },
-
-    init: function init() {
-        this.$navToggle.on('click', this.toggleNav.bind(this));
     }
 
     // ===============================
@@ -688,7 +623,7 @@ var scrollUpObj = {
 };
 
 /*------------------------------------*\
-  CLICK NAV
+  INITIALIZE ONTOGGLE
 \*------------------------------------*/
 var myOnToggle = new _OnToggle2.default();
 
@@ -708,40 +643,57 @@ if (typeof imagesLoaded !== 'undefined') {
 }
 
 },{"lodash/debounce":7,"ontoggle/dist/OnToggle":14}],14:[function(require,module,exports){
+/**
+ * OnToggle.js
+ * @author Ozy Wu-Li - @ousikaa
+ * @description Toggle DOM element state
+ */
+
+// https://github.com/jquery-boilerplate/jquery-patterns/blob/master/patterns/jquery.basic.plugin-boilerplate.js
+
+// the semi-colon before the function invocation is a safety
+// net against concatenated scripts and/or other plugins
+// that are not closed properly.
+// the anonymous function protects the `$` alias from name collisions
 ;(function( $, window, document, undefined ) {
-    var pluginName = 'OnToggle';
+    let pluginName = 'OnToggle';
 
     /**
      * 
      */
-    var defaults = {
+    let defaults = {
         toggleEl: '.js-toggle',
         toggleTargetEl: '.js-toggle-target',
         isVisibleClass: 'is-visible'
+    }
 
-        /**
-         * PLUGIN CONSTRUCTOR 
-         */
-    };var OnToggle = function OnToggle(options) {
-        this.options = $.extend({}, defaults, options);
+    /**
+     * PLUGIN CONSTRUCTOR 
+     */
+    let OnToggle = function( options ) {
+        this.options = $.extend( {}, defaults, options );
         this.init();
-    };
+    }
 
     /**
      * 
      */
     // https://stackoverflow.com/questions/4736910/javascript-when-to-use-prototypes
     OnToggle.prototype = {
-
+        
         /**
          * 
          */
-        init: function init() {
+        init: function() {
             this.checkDevice();
+            // ADD CLICK EVENT TO TOGGLE ELEMENT
             $(this.options.toggleEl).on('click', this.openToggle.bind(this));
+            // REMOVE CLICK EVENT ON CHILD ELEMENTS
+            $(this.options.toggleEl).children().css('pointer-events', 'none');
+            // CLICK ANYWHERE BUT THE TOGGLE ELEMENT AND THE TARGET FROM TO DEACTIVATE
             $(document).on(this.eventType, this.detectOutsideClick.bind(this));
         },
-
+        
         /**
          * 
          */
@@ -750,46 +702,55 @@ if (typeof imagesLoaded !== 'undefined') {
         /**
          * 
          */
-        checkDevice: function checkDevice() {
+        checkDevice: function() {
             // if we detect an ios device, then use the `touchstart`event instead of the `click` event
-            var event = /iPad|iPhone|iPod/.test(navigator.userAgent) ? "touchstart" : "click";
-            this.event = event;
+            let event = (/iPad|iPhone|iPod/.test(navigator.userAgent)) ? "touchstart" : "click";
+            this.eventType = event;
         },
         /**
          * 
          */
-        openToggle: function openToggle(event) {
+        openToggle: function(event) {
             event.preventDefault();
+
+            // TOGGLE THIS EL'S CLASS
+            $(event.target).toggleClass(this.options.isVisibleClass);
+
             // get the associated toggle target
-            var thistoggleTargetEl = $(event.target).attr('data-toggle-target');
+            let thisToggleTargetEl = $(event.target).attr('data-toggle-target');
 
             // hide any toggle target that isn't the associated target
-            $(this.options.toggleTargetEl).not($('.' + thistoggleTargetEl)).removeClass(this.options.isVisibleClass);
-            $('.' + thistoggleTargetEl).toggleClass(this.options.isVisibleClass);
+            $(this.options.toggleTargetEl).not( $(`.${thisToggleTargetEl}`) ).removeClass(this.options.isVisibleClass);
+            $(`.${thisToggleTargetEl}`).toggleClass(this.options.isVisibleClass);
         },
 
         /**
          * 
          */
-        detectOutsideClick: function detectOutsideClick(event) {
-            if (!$(event.target).closest(this.options.toggleEl + ', ' + this.options.toggleTargetEl).length) {
-                $('' + this.options.toggleTargetEl).removeClass(this.options.isVisibleClass);
+        detectOutsideClick: function(event) {
+            if ( !$(event.target).closest( `${this.options.toggleEl}, ${this.options.toggleTargetEl}` ).length ) {
+                $(`${this.options.toggleEl}, ${this.options.toggleTargetEl}`).removeClass(this.options.isVisibleClass);
             }
         }
+    }
 
-        // A really lightweight plugin wrapper around the constructor,
-        // preventing against multiple instantiations
-    };$.fn[pluginName] = function (options) {
+    // A really lightweight plugin wrapper around the constructor,
+    // preventing against multiple instantiations
+    $.fn[pluginName] = function ( options ) {
         return this.each(function () {
             if (!$.data(this, "plugin_" + pluginName)) {
-                $.data(this, "plugin_" + pluginName, new OnToggle(options));
+                $.data(this, "plugin_" + pluginName,
+                new OnToggle( options ));
             }
         });
     };
 
+    /*------------------------------------*\
+      EXPORT OPTIONS
+    \*------------------------------------*/
     module.exports = OnToggle;
-})(jQuery, window, document);
 
+})( jQuery, window , document );
 },{}]},{},[13])
 
 //# sourceMappingURL=main.js.map

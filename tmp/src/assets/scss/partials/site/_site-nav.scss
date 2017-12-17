@@ -15,7 +15,6 @@
     z-index: 100;
 
     &.is-visible {
-        /*transition: transform 350ms cubic-bezier(0.6,0,0.2,1), border 150ms 350ms ease;*/
         transform: translate3d(0, 0, 0);
         @include revealed;
     }

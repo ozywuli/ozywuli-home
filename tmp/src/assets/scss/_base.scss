@@ -30,6 +30,12 @@ body {
 .content {
     flex: 1;
     width: 100%;
+
+    li {
+        list-style-type: square;
+        list-style-position: inside;
+        margin-bottom: 12px;
+    }
 }
 
 .content__wrapper {

@@ -2,7 +2,7 @@
 title: Blog
 ---
 
-<% blog.articles[0...5].each do |article| %>
+<% blog.articles.each do |article| %>
 <div class="row">
     <article>
         <time class="article-list__date"><%= article.date.strftime('%e %B %Y') %></time>
