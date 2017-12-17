@@ -75,6 +75,9 @@
     &:hover {
         border: 1px solid $gold;
         color: $light;
+        polygon {
+            fill: $light;
+        }
     }
 
     &.mod-small {
@@ -103,6 +106,10 @@
         display: block;
         width: 100%;
         height: 100%;
+    }
+
+    polygon {
+        fill: $gold;
     }
 }
 
