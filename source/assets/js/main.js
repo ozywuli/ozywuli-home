@@ -1,139 +1,9 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var root = require('./_root');
-
-/** Built-in value references. */
-var Symbol = root.Symbol;
-
-module.exports = Symbol;
-
-},{"./_root":6}],2:[function(require,module,exports){
-var Symbol = require('./_Symbol'),
-    getRawTag = require('./_getRawTag'),
-    objectToString = require('./_objectToString');
-
-/** `Object#toString` result references. */
-var nullTag = '[object Null]',
-    undefinedTag = '[object Undefined]';
-
-/** Built-in value references. */
-var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
-
-/**
- * The base implementation of `getTag` without fallbacks for buggy environments.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the `toStringTag`.
- */
-function baseGetTag(value) {
-  if (value == null) {
-    return value === undefined ? undefinedTag : nullTag;
-  }
-  return (symToStringTag && symToStringTag in Object(value))
-    ? getRawTag(value)
-    : objectToString(value);
-}
-
-module.exports = baseGetTag;
-
-},{"./_Symbol":1,"./_getRawTag":4,"./_objectToString":5}],3:[function(require,module,exports){
-(function (global){
-/** Detect free variable `global` from Node.js. */
-var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
-
-module.exports = freeGlobal;
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-
-},{}],4:[function(require,module,exports){
-var Symbol = require('./_Symbol');
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-var nativeObjectToString = objectProto.toString;
-
-/** Built-in value references. */
-var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
-
-/**
- * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the raw `toStringTag`.
- */
-function getRawTag(value) {
-  var isOwn = hasOwnProperty.call(value, symToStringTag),
-      tag = value[symToStringTag];
-
-  try {
-    value[symToStringTag] = undefined;
-    var unmasked = true;
-  } catch (e) {}
-
-  var result = nativeObjectToString.call(value);
-  if (unmasked) {
-    if (isOwn) {
-      value[symToStringTag] = tag;
-    } else {
-      delete value[symToStringTag];
-    }
-  }
-  return result;
-}
-
-module.exports = getRawTag;
-
-},{"./_Symbol":1}],5:[function(require,module,exports){
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-var nativeObjectToString = objectProto.toString;
-
-/**
- * Converts `value` to a string using `Object.prototype.toString`.
- *
- * @private
- * @param {*} value The value to convert.
- * @returns {string} Returns the converted string.
- */
-function objectToString(value) {
-  return nativeObjectToString.call(value);
-}
-
-module.exports = objectToString;
-
-},{}],6:[function(require,module,exports){
-var freeGlobal = require('./_freeGlobal');
-
-/** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-/** Used as a reference to the global object. */
-var root = freeGlobal || freeSelf || Function('return this')();
-
-module.exports = root;
-
-},{"./_freeGlobal":3}],7:[function(require,module,exports){
 var isObject = require('./isObject'),
     now = require('./now'),
     toNumber = require('./toNumber');
 
-/** Error message constants. */
+/** Used as the `TypeError` message for "Functions" methods. */
 var FUNC_ERROR_TEXT = 'Expected a function';
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -145,18 +15,14 @@ var nativeMax = Math.max,
  * milliseconds have elapsed since the last time the debounced function was
  * invoked. The debounced function comes with a `cancel` method to cancel
  * delayed `func` invocations and a `flush` method to immediately invoke them.
- * Provide `options` to indicate whether `func` should be invoked on the
- * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
- * with the last arguments provided to the debounced function. Subsequent
- * calls to the debounced function return the result of the last `func`
- * invocation.
+ * Provide an options object to indicate whether `func` should be invoked on
+ * the leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent calls
+ * to the debounced function return the result of the last `func` invocation.
  *
- * **Note:** If `leading` and `trailing` options are `true`, `func` is
- * invoked on the trailing edge of the timeout only if the debounced function
- * is invoked more than once during the `wait` timeout.
- *
- * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
- * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is invoked
+ * on the trailing edge of the timeout only if the debounced function is
+ * invoked more than once during the `wait` timeout.
  *
  * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
  * for details over the differences between `_.debounce` and `_.throttle`.
@@ -200,7 +66,7 @@ function debounce(func, wait, options) {
       maxWait,
       result,
       timerId,
-      lastCallTime,
+      lastCallTime = 0,
       lastInvokeTime = 0,
       leading = false,
       maxing = false,
@@ -251,7 +117,7 @@ function debounce(func, wait, options) {
     // Either this is the first call, activity has stopped and we're at the
     // trailing edge, the system time has gone backwards and we're treating
     // it as the trailing edge, or we've hit the `maxWait` limit.
-    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+    return (!lastCallTime || (timeSinceLastCall >= wait) ||
       (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
   }
 
@@ -265,6 +131,7 @@ function debounce(func, wait, options) {
   }
 
   function trailingEdge(time) {
+    clearTimeout(timerId);
     timerId = undefined;
 
     // Only invoke if we have `lastArgs` which means `func` has been
@@ -280,8 +147,8 @@ function debounce(func, wait, options) {
     if (timerId !== undefined) {
       clearTimeout(timerId);
     }
-    lastInvokeTime = 0;
-    lastArgs = lastCallTime = lastThis = timerId = undefined;
+    lastCallTime = lastInvokeTime = 0;
+    lastArgs = lastThis = timerId = undefined;
   }
 
   function flush() {
@@ -302,6 +169,7 @@ function debounce(func, wait, options) {
       }
       if (maxing) {
         // Handle invocations in a tight loop.
+        clearTimeout(timerId);
         timerId = setTimeout(timerExpired, wait);
         return invokeFunc(lastCallTime);
       }
@@ -318,10 +186,55 @@ function debounce(func, wait, options) {
 
 module.exports = debounce;
 
-},{"./isObject":8,"./now":11,"./toNumber":12}],8:[function(require,module,exports){
+},{"./isObject":3,"./now":6,"./toNumber":7}],2:[function(require,module,exports){
+var isObject = require('./isObject');
+
+/** `Object#toString` result references. */
+var funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]';
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is correctly classified,
+ *  else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 8 which returns 'object' for typed array and weak map constructors,
+  // and PhantomJS 1.9 which returns 'function' for `NodeList` instances.
+  var tag = isObject(value) ? objectToString.call(value) : '';
+  return tag == funcTag || tag == genTag;
+}
+
+module.exports = isFunction;
+
+},{"./isObject":3}],3:[function(require,module,exports){
 /**
  * Checks if `value` is the
- * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * [language type](http://www.ecma-international.org/ecma-262/6.0/#sec-ecmascript-language-types)
  * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
  *
  * @static
@@ -346,12 +259,12 @@ module.exports = debounce;
  */
 function isObject(value) {
   var type = typeof value;
-  return value != null && (type == 'object' || type == 'function');
+  return !!value && (type == 'object' || type == 'function');
 }
 
 module.exports = isObject;
 
-},{}],9:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -377,17 +290,26 @@ module.exports = isObject;
  * // => false
  */
 function isObjectLike(value) {
-  return value != null && typeof value == 'object';
+  return !!value && typeof value == 'object';
 }
 
 module.exports = isObjectLike;
 
-},{}],10:[function(require,module,exports){
-var baseGetTag = require('./_baseGetTag'),
-    isObjectLike = require('./isObjectLike');
+},{}],5:[function(require,module,exports){
+var isObjectLike = require('./isObjectLike');
 
 /** `Object#toString` result references. */
 var symbolTag = '[object Symbol]';
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
 
 /**
  * Checks if `value` is classified as a `Symbol` primitive or object.
@@ -397,7 +319,8 @@ var symbolTag = '[object Symbol]';
  * @since 4.0.0
  * @category Lang
  * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @returns {boolean} Returns `true` if `value` is correctly classified,
+ *  else `false`.
  * @example
  *
  * _.isSymbol(Symbol.iterator);
@@ -408,14 +331,12 @@ var symbolTag = '[object Symbol]';
  */
 function isSymbol(value) {
   return typeof value == 'symbol' ||
-    (isObjectLike(value) && baseGetTag(value) == symbolTag);
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
 }
 
 module.exports = isSymbol;
 
-},{"./_baseGetTag":2,"./isObjectLike":9}],11:[function(require,module,exports){
-var root = require('./_root');
-
+},{"./isObjectLike":4}],6:[function(require,module,exports){
 /**
  * Gets the timestamp of the number of milliseconds that have elapsed since
  * the Unix epoch (1 January 1970 00:00:00 UTC).
@@ -423,6 +344,7 @@ var root = require('./_root');
  * @static
  * @memberOf _
  * @since 2.4.0
+ * @type {Function}
  * @category Date
  * @returns {number} Returns the timestamp.
  * @example
@@ -430,16 +352,15 @@ var root = require('./_root');
  * _.defer(function(stamp) {
  *   console.log(_.now() - stamp);
  * }, _.now());
- * // => Logs the number of milliseconds it took for the deferred invocation.
+ * // => Logs the number of milliseconds it took for the deferred function to be invoked.
  */
-var now = function() {
-  return root.Date.now();
-};
+var now = Date.now;
 
 module.exports = now;
 
-},{"./_root":6}],12:[function(require,module,exports){
-var isObject = require('./isObject'),
+},{}],7:[function(require,module,exports){
+var isFunction = require('./isFunction'),
+    isObject = require('./isObject'),
     isSymbol = require('./isSymbol');
 
 /** Used as references for various `Number` constants. */
@@ -491,7 +412,7 @@ function toNumber(value) {
     return NAN;
   }
   if (isObject(value)) {
-    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    var other = isFunction(value.valueOf) ? value.valueOf() : value;
     value = isObject(other) ? (other + '') : other;
   }
   if (typeof value != 'string') {
@@ -506,149 +427,7 @@ function toNumber(value) {
 
 module.exports = toNumber;
 
-},{"./isObject":8,"./isSymbol":10}],13:[function(require,module,exports){
-'use strict';
-
-var _debounce2 = require('lodash/debounce');
-
-var _debounce3 = _interopRequireDefault(_debounce2);
-
-var _OnToggle = require('ontoggle/dist/OnToggle');
-
-var _OnToggle2 = _interopRequireDefault(_OnToggle);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-$(document).ready(function () {
-
-    lazyLoadImg.init();
-    scrollUpObj.init();
-
-    // https://stackoverflow.com/questions/138669/how-can-i-determine-if-a-javascript-variable-is-defined-in-a-page
-    if ('undefined' !== typeof mapboxgl) {
-        contactMapObj.init();
-    }
-});
-
-/*------------------------------------*\
-  GLOBAL SCROLL EVENT
-\*------------------------------------*/
-function scrollHandler() {
-    if ($(window).scrollTop() > $(window).height() / 1.5) {
-        $('.js-scrollup').addClass('is-revealed');
-    } else {
-        $('.js-scrollup').removeClass('is-revealed');
-    }
-}
-
-$(window).on('scroll', (0, _debounce3.default)(scrollHandler, 150));
-
-/*------------------------------------*\
-  SCROLL TO TOP / SCROLL UP
-\*------------------------------------*/
-var scrollUpObj = {
-    $scrollUpBtn: $('.js-scrollup-btn'),
-    scrollUp: function scrollUp(e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-    },
-    init: function init() {
-        this.$scrollUpBtn.on('click', this.scrollUp);
-    }
-
-    // ===============================
-    // Lazy Load Images
-    // ===============================
-};var lazyLoadImg = {
-    $featuredItem: $('.js-featured-list-item'),
-    featuredItemOffsets: [],
-    scrolled: $(window).scrollTop(),
-    windowHeight: $(window).height(),
-
-    updateOffsets: function updateOffsets() {
-
-        var featuredItemOffsets = this.featuredItemOffsets;
-        this.$featuredItem.each(function () {
-            featuredItemOffsets.push($(this).offset().top);
-        });
-    },
-
-    scrolling: function scrolling() {
-        this.scrolled = $(window).scrollTop();
-
-        for (var i = 0; i < this.featuredItemOffsets.length; i++) {
-
-            if (this.scrolled + this.windowHeight - 200 > this.featuredItemOffsets[i]) {
-
-                this.$featuredItem.eq(i).find('.featured-list-item-img').css('background-image', 'url("' + this.$featuredItem.eq(i).attr('data-img') + '")');
-            }
-        }
-    },
-
-    init: function init() {
-        this.updateOffsets();
-
-        $(window).on('scroll', this.scrolling.bind(this));
-    }
-
-    /*------------------------------------*\
-      CONTACT MAP
-    \
-    *------------------------------------*/
-};var contactMapObj = {
-    init: function init() {
-        mapboxgl.accessToken = 'pk.eyJ1IjoibXJvd2wiLCJhIjoiQW5seEFHVSJ9.fC2U7HkEIM-7EPNDMIoRXA';
-        var map = new mapboxgl.Map({
-            container: 'contact-map',
-            style: 'mapbox://styles/mapbox/dark-v9',
-            center: [-118.2468, 34.0407],
-            zoom: 9
-        });
-
-        map.on('load', function () {
-            // var el = document.createElement('div');
-            // el.className = 'marker';
-            // el.style.backgroundImage = 'url(/assets/images/marker.png)';
-            // el.style.width = '64px';
-            // el.style.height = '64px';
-
-            // add marker to map
-            // new mapboxgl.Marker(el)
-            //     .setLngLat([-118.2468, 34.12])
-            //     .addTo(map);
-        });
-    }
-};
-
-/*------------------------------------*\
-  INITIALIZE ONTOGGLE
-\*------------------------------------*/
-var myOnToggle = new _OnToggle2.default();
-
-/*------------------------------------*\
-  MASONRY
-\*------------------------------------*/
-if (typeof imagesLoaded !== 'undefined') {
-    var $msnry = $('.msnry-grid').imagesLoaded(function () {
-        $msnry.css({ opacity: 1 });
-        $msnry.masonry({
-            itemSelector: '.msnry-grid__item',
-            // columnWidth: '.msnry-gris__sizer',
-            percentPosition: true
-            // gutter: '.msnry-grid__gutter'
-        });
-    });
-}
-
-},{"lodash/debounce":7,"ontoggle/dist/OnToggle":14}],14:[function(require,module,exports){
-/**
- * OnToggle.js
- * @author Ozy Wu-Li - @ousikaa
- * @description Toggle DOM element state
- */
-
+},{"./isFunction":2,"./isObject":3,"./isSymbol":5}],8:[function(require,module,exports){
 // https://github.com/jquery-boilerplate/jquery-patterns/blob/master/patterns/jquery.basic.plugin-boilerplate.js
 
 // the semi-colon before the function invocation is a safety
@@ -686,11 +465,7 @@ if (typeof imagesLoaded !== 'undefined') {
          */
         init: function() {
             this.checkDevice();
-            // ADD CLICK EVENT TO TOGGLE ELEMENT
             $(this.options.toggleEl).on('click', this.openToggle.bind(this));
-            // REMOVE CLICK EVENT ON CHILD ELEMENTS
-            $(this.options.toggleEl).children().css('pointer-events', 'none');
-            // CLICK ANYWHERE BUT THE TOGGLE ELEMENT AND THE TARGET FROM TO DEACTIVATE
             $(document).on(this.eventType, this.detectOutsideClick.bind(this));
         },
         
@@ -748,9 +523,159 @@ if (typeof imagesLoaded !== 'undefined') {
     /*------------------------------------*\
       EXPORT OPTIONS
     \*------------------------------------*/
+    // if (typeof define === 'function' && define.amd) {
+    //     define([], function() {
+    //         return toggle;
+    //     });
+    // } else if (typeof exports !== "undefined" && exports !== null) {
+    //     module.exports = toggle;
+    // } else {
+    //     window.toggle = toggle;
+    // }
+
     module.exports = OnToggle;
 
 })( jQuery, window , document );
-},{}]},{},[13])
+},{}],9:[function(require,module,exports){
+'use strict';
+
+var _debounce2 = require('lodash/debounce');
+
+var _debounce3 = _interopRequireDefault(_debounce2);
+
+var _OnToggle = require('ontoggle/dist/OnToggle');
+
+var _OnToggle2 = _interopRequireDefault(_OnToggle);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+$(document).ready(function () {
+
+    lazyLoadImg.init();
+    scrollUpObj.init();
+
+    // https://stackoverflow.com/questions/138669/how-can-i-determine-if-a-javascript-variable-is-defined-in-a-page
+    if ('undefined' !== typeof mapboxgl) {
+        contactMapObj.init();
+    }
+});
+
+/*------------------------------------*\
+  GLOBAL SCROLL EVENT
+\*------------------------------------*/
+function scrollHandler() {
+    if ($(window).scrollTop() > $(window).height() / 1.5) {
+        $('.js-scrollup').addClass('is-revealed');
+    } else {
+        $('.js-scrollup').removeClass('is-revealed');
+    }
+}
+
+$(window).on('scroll', (0, _debounce3.default)(scrollHandler, 150));
+
+/*------------------------------------*\
+  SCROLL TO TOP / SCROLL UP
+\*------------------------------------*/
+var scrollUpObj = {
+    $scrollUpBtn: $('.js-scrollup-btn'),
+    scrollUp: function scrollUp(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+    },
+    init: function init() {
+        this.$scrollUpBtn.on('click', this.scrollUp);
+    }
+};
+
+// ===============================
+// Lazy Load Images
+// ===============================
+var lazyLoadImg = {
+    $featuredItem: $('.js-featured-list-item'),
+    featuredItemOffsets: [],
+    scrolled: $(window).scrollTop(),
+    windowHeight: $(window).height(),
+
+    updateOffsets: function updateOffsets() {
+
+        var featuredItemOffsets = this.featuredItemOffsets;
+        this.$featuredItem.each(function () {
+            featuredItemOffsets.push($(this).offset().top);
+        });
+    },
+
+    scrolling: function scrolling() {
+        this.scrolled = $(window).scrollTop();
+
+        for (var i = 0; i < this.featuredItemOffsets.length; i++) {
+
+            if (this.scrolled + this.windowHeight - 200 > this.featuredItemOffsets[i]) {
+
+                this.$featuredItem.eq(i).find('.featured-list-item-img').css('background-image', 'url("' + this.$featuredItem.eq(i).attr('data-img') + '")');
+            }
+        }
+    },
+
+    init: function init() {
+        this.updateOffsets();
+
+        $(window).on('scroll', this.scrolling.bind(this));
+    }
+};
+
+/*------------------------------------*\
+  CONTACT MAP
+\
+*------------------------------------*/
+var contactMapObj = {
+    init: function init() {
+        mapboxgl.accessToken = 'pk.eyJ1IjoibXJvd2wiLCJhIjoiQW5seEFHVSJ9.fC2U7HkEIM-7EPNDMIoRXA';
+        var map = new mapboxgl.Map({
+            container: 'contact-map',
+            style: 'mapbox://styles/mapbox/dark-v9',
+            center: [-118.2468, 34.0407],
+            zoom: 9
+        });
+
+        map.on('load', function () {
+            // var el = document.createElement('div');
+            // el.className = 'marker';
+            // el.style.backgroundImage = 'url(/assets/images/marker.png)';
+            // el.style.width = '64px';
+            // el.style.height = '64px';
+
+            // add marker to map
+            // new mapboxgl.Marker(el)
+            //     .setLngLat([-118.2468, 34.12])
+            //     .addTo(map);
+        });
+    }
+};
+
+/*------------------------------------*\
+  INITIALIZE ONTOGGLE
+\*------------------------------------*/
+var myOnToggle = new _OnToggle2.default();
+
+/*------------------------------------*\
+  MASONRY
+\*------------------------------------*/
+if (typeof imagesLoaded !== 'undefined') {
+    (function () {
+        var $msnry = $('.msnry-grid').imagesLoaded(function () {
+            $msnry.css({ opacity: 1 });
+            $msnry.masonry({
+                itemSelector: '.msnry-grid__item',
+                // columnWidth: '.msnry-gris__sizer',
+                percentPosition: true
+            });
+        });
+    })();
+}
+
+},{"lodash/debounce":1,"ontoggle/dist/OnToggle":8}]},{},[9])
+
 
 //# sourceMappingURL=main.js.map

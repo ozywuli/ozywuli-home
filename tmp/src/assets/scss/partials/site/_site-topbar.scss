@@ -124,10 +124,10 @@
 
     &:hover {
         svg {
-            fill: $gold !important;
+            fill: $color-accent !important;
 
             path, polygon {
-                fill: $gold !important;
+                fill: $color-accent !important;
             }
         }
     }

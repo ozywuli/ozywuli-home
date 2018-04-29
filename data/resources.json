@@ -17,6 +17,11 @@
                     "name": "ERB Sublime Snippets",
                     "url": "https://github.com/matthewrobertson/ERB-Sublime-Snippets",
                     "description": "Snippets for erb keyboard shortcuts"
+                },
+                {
+                    "name": "Emmet",
+                    "url": "https://docs.emmet.io/",
+                    "description": "Shortcuts for writing HTML"
                 }
             ] 
         },
@@ -64,14 +69,14 @@
             "title": "Rails Resources",
             "list": [
                 {
-                    "name": "Heroku",
-                    "url": "https://www.heroku.com/",
-                    "description": "Heroku makes it easy to set up, manage, and deploy your Rails application. They take care of the system administration so that you can focus on building your app."
-                },
-                {
                     "name": "pgAdmin",
                     "url": "https://www.pgadmin.org/",
                     "description": "Powerful GUI for managing your psql databases. The UI is dated but the tool works great."
+                },
+                {
+                    "name": "Rails Tutorial",
+                    "url": "https://www.railstutorial.org/",
+                    "description": "The best introductory guide to Rails"
                 }
             ] 
         },
@@ -87,6 +92,11 @@
                     "name": "Postman",
                     "url": "https://www.getpostman.com/postman",
                     "description": "Postman makes API development easier and more enjoyable."
+                },
+                {
+                    "name": "MAMP",
+                    "url": "https://www.mamp.info/en/",
+                    "description": "MAMP makes it easy to set up an Apache, MySQL, and PHP environment for OSX."
                 }
             ]
         },
@@ -97,6 +107,16 @@
                     "name": "BeautifulSoup4",
                     "url": "https://www.crummy.com/software/BeautifulSoup/",
                     "description": "BeautifulSoup4 is a great Python library that helps you scrape a website."
+                },
+                {
+                    "name": "Heroku",
+                    "url": "https://www.heroku.com/",
+                    "description": "Heroku makes it easy to set up, manage, and deploy your Rails application. They take care of the system administration so that you can focus on building your app."
+                },
+                {
+                    "name": "FFmpeg",
+                    "url": "https://www.ffmpeg.org/",
+                    "description": "A complete, cross-platform solution to record, convert and stream audio and video."  
                 }
             ]
         }

@@ -3,12 +3,25 @@ title: Portfolio
 ---
 
 <div class="row">
-    <p class="row__p">Selection of projects I've worked on since 2012</p>
-    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.portfolio.items } ) %>
+    <h3 class="row__title">Personal Projects</h3>
+    <p class="row__p">Selection of personal projects:</p>
+    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.portfolio.items, :type => 'personal' } ) %>
+</div>
+
+<div class="row">
+    <h3 class="row__title">Client Projects</h3>
+    <p class="row__p">Selection of client projects I've worked on since 2012:</p>
+    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.portfolio.items, :type => 'client' } ) %>
+</div>
+
+<div class="row">
+    <h3 class="row__title">Open Source</h3>
+    <p class="row__p">Active open source projects that I maintain or contribute to:</p>
+    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.portfolio.items, :type => 'opensource' } ) %>
 </div>
 
 <div class="row">
     <h3 class="row__title">Clients</h3>
-    <p class="row__p">Selection of clients and companies I've worked with since 2012</p>
+    <p class="row__p">Selection of clients and companies I've worked with since 2012:</p>
     <%= partial(:'partials/_blocks.erb', :locals => { :items => data.clients.items, :clear => true } ) %>
 </div>

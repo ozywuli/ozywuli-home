@@ -5,82 +5,14 @@
 html, body {
     height: 100%;
     font-size: 62.5%;
-    background: $dark;
-    color: $light-gray;
 }
 
 body {
-    font-family: $sans-body;
     font-weight: 300;
-    font-size: 1.4rem;
-
-    @media #{$tablet} {
-        font-size: 1.6rem;
-    }
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    min-width: 100%;
-    min-height: 100vh;
-    align-items: center;
-}
-
-.content {
-    flex: 1;
-    width: 100%;
-}
-
-.content__wrapper {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 780px;
-    padding: 0 20px 40px 20px;
-
-    &.mod-article {
-        h2 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
-
-            @media #{$tablet} {
-                font-size: 3.6rem;
-            }
-        }
-
-        p {
-            margin-bottom: 30px;
-        }
-
-        img {
-            display: block;
-            width: 100%;
-        }
-
-        hr {
-            display: block;
-            height: 1px;
-            border: 0;
-            border-top: 1px solid $dark-gray;
-            margin: 30px 0;
-            padding: 0;
-        }
-        li {
-            list-style-type: square;
-            list-style-position: inside;
-            margin-bottom: 12px;
-        }
-    }
 }
 
 a {
     text-decoration: none;
-    color: $gold;    
-
-    &:hover {
-        color: darken($gold, 5%);
-    }
-
 }
 
 p {
@@ -92,7 +24,6 @@ p {
 
 h1, h2, h3, h4, h5 {
     font-weight: 700;
-    color: $light;
 }
 
 
@@ -101,14 +32,12 @@ b, strong {
 }
 
 code {
-    background: $dark-gray;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     padding: 6px;
 }
 
 pre.highlight {
     display: block;
-    background: $dark-gray;
     padding: 16px;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     margin-bottom: 30px;

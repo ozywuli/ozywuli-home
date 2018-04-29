@@ -20,8 +20,9 @@
   GLOBAL
 \*------------------------------------*/
 @import '_base';
+@import '_defaults';
 @import '_page';
-
+@import '_miscellaneous';
 
 /*------------------------------------*\
   PARTIALS
@@ -38,91 +39,3 @@
 @import 'partials/_grid-blocks';
 
 @import 'partials/page/_page-header';
-
-
-
-
-.map-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-}
-
-.contact-map {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.article-list__title {
-    margin-bottom: 10px;
-    font-size: 2.8rem;
-    line-height: 1.2;
-
-    @media #{$tablet} {
-        font-size: 3.6rem;
-    }
-
-    a {
-        color: $light;
-
-        &:hover {
-            color: $gold;
-        }
-    }
-}
-
-.article-list__date {
-    display: block;
-    margin-bottom: 25px;
-}
-
-.article-list__excerpt {
-    margin-bottom: 0;
-}
-
-
-
-.page-wrapper {
-    &.mod-full {
-        padding: 0 20px;
-
-        body.images & {
-            padding: 0 0 0 20px;
-        }
-    }
-}
-
-
-/*------------------------------------*\
-  MASONRY
-\*------------------------------------*/
-.msnry-grid {
-    /*width: calc(100% + 20px);*/
-    /*padding-right: 20px;*/
-    /*padding: 0 20px;*/
-    opacity: 0;
-}
-
-.msnry-grid__item, .msnry-grid__sizer {
-    width: 100%;
-    padding: 0 20px 20px 0;
-
-    @media #{$small-tablet} {
-        width: 50%;
-        padding: 0 20px 20px 0;
-    }
-
-    @media #{$tablet} {
-        width: 33.33%;
-    }
-
-}
-
-.msnry-grid__gutter {
-    @media #{$small-tablet} {
-
-    }
-}

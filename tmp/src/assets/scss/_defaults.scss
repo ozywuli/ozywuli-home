@@ -1,0 +1,33 @@
+html, body {
+    background: $dark;
+    color: $light-gray;
+}
+
+body {
+    font-family: $sans-body;
+    font-size: 1.4rem;
+
+    @media #{$tablet} {
+        font-size: 1.6rem;
+    }
+}
+
+a {
+    color: $color-accent;    
+
+    &:hover {
+        color: $color-accent-hover;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    color: $light;
+}
+
+code {
+    background: $dark-gray;
+}
+
+pre.highlight {
+    background: $dark-gray;
+}

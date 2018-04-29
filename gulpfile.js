@@ -28,23 +28,23 @@ var imagemin = require('gulp-imagemin');
   PATHS
 \*------------------------------------*/
 var paths = {
-  publicAssets: 'tmp/public/',
-  tmpAssets: 'tmp/src/assets/',
-  srcAssets: 'source/assets/'
+    publicAssets: 'tmp/public/',
+    tmpAssets: 'tmp/src/assets/',
+    srcAssets: 'source/assets/'
 }
 
 /*------------------------------------*\
   HANDLE ERRORS
 \*------------------------------------*/
 function handleError(error) {
-  var message = error;
-  if (typeof error === 'function' ) { return; }
-  if (typeof error === 'object' && error.hasOwnProperty('message')) { message = error.message; }
-  if (message !== undefined) { console.log('Error: ' + message); }
+    var message = error;
+    if (typeof error === 'function' ) { return; }
+    if (typeof error === 'object' && error.hasOwnProperty('message')) { message = error.message; }
+    if (message !== undefined) { console.log('Error: ' + message); }
 }
 
 gulp.task('clean', function() {
-  return del(['build']);
+    return del(['build']);
 });
 
 
@@ -52,23 +52,23 @@ gulp.task('clean', function() {
   CSS
 \*------------------------------------*/
 gulp.task('css', function() {
-  gulp.src(paths.tmpAssets + 'scss/main.scss')
-    .pipe(plumber({
-        errorHandler: function (err) {
-            console.log(err);
-            this.emit('end');
-        }
-    }))
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
+    gulp.src(paths.tmpAssets + 'scss/main.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
         }))
+        .pipe(sourcemaps.init())
+        .pipe(sass())
+        .pipe(autoprefixer({
+                browsers: ['last 2 versions'],
+                cascade: false
+            }))
 
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.srcAssets + 'css/'))
-    .pipe(notify({message: 'CSS compiled', onLast: true}))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(paths.srcAssets + 'css/'))
+        .pipe(notify({message: 'CSS compiled', onLast: true}))
 });
 
 
@@ -110,12 +110,12 @@ function compile(watch) {
 
 
 function watchJS() {
-  return compile(true);
+    return compile(true);
 };
 
 
 gulp.task('js', function() {
-  return compile();
+    return compile();
 });
 
 
@@ -124,9 +124,9 @@ gulp.task('js', function() {
   PUBLIC
 \*------------------------------------*/
 gulp.task('public', function() {
-  gulp.src([paths.publicAssets+'*', paths.publicAssets+'.*'])
-    .pipe(gulp.dest('source/'))
-    .pipe(notify({message: 'Public files compiled', onLast: true}))
+    gulp.src([paths.publicAssets+'*', paths.publicAssets+'.*'])
+        .pipe(gulp.dest('source/'))
+        .pipe(notify({message: 'Public files compiled', onLast: true}))
 });
 
 
@@ -134,9 +134,9 @@ gulp.task('public', function() {
   MISCELLANEOUS
 \*------------------------------------*/
 gulp.task('misc', function() {
-  gulp.src(paths.tmpAssets + 'misc/**/*')
-    .pipe(gulp.dest('source/assets/misc'))
-    .pipe(notify({message: 'Miscellaenous files compiled', onLast: true}))
+    gulp.src(paths.tmpAssets + 'misc/**/*')
+        .pipe(gulp.dest('source/assets/misc'))
+        .pipe(notify({message: 'Miscellaenous files compiled', onLast: true}))
 });
 
 
@@ -144,9 +144,9 @@ gulp.task('misc', function() {
   IMAGES
 \*------------------------------------*/
 gulp.task('img', function() {
-  gulp.src(paths.tmpAssets + 'images/**/*')
-    .pipe(gulp.dest(paths.srcAssets + 'images/'))
-    .pipe(notify({message: 'Images compiled!', onLast: true}))
+    gulp.src(paths.tmpAssets + 'images/**/*.*')
+        .pipe(gulp.dest(paths.srcAssets + 'images'))
+        .pipe(notify({message: 'Images compiled!', onLast: true}))
 });
 
 
@@ -154,13 +154,13 @@ gulp.task('img', function() {
   WATCH
 \*------------------------------------*/
 gulp.task('watch', function(error) {
-  gulp.watch(paths.tmpAssets + 'scss/**/*', ['css']);
-  gulp.watch(paths.tmpAssets + 'js/**/*', ['js']);
-  gulp.watch(paths.tmpAssets + 'images/**/*', ['img']);
-  gulp.watch(paths.tmpAssets + 'misc/**/*', ['misc']);
-  gulp.watch([paths.publicAssets + '*', paths.publicAssets + '.*'], ['public'])
+    gulp.watch(paths.tmpAssets + 'scss/**/*', ['css']);
+    gulp.watch(paths.tmpAssets + 'js/**/*', ['js']);
+    gulp.watch(paths.tmpAssets + 'images/**/*', ['img']);
+    gulp.watch(paths.tmpAssets + 'misc/**/*', ['misc']);
+    gulp.watch([paths.publicAssets + '*', paths.publicAssets + '.*'], ['public'])
 
-  watchJS();
+    watchJS();
 });
 
 
@@ -168,7 +168,7 @@ gulp.task('watch', function(error) {
   BUILD
 \*------------------------------------*/
 gulp.task('build', function() {
-  console.log('Ready to go!');
+    console.log('Ready to go!');
 });
 
 

@@ -5,7 +5,6 @@
             "url": "http://geoshen.com",
             "img": "/assets/images/thumbnails/geoshen-thumbnail.jpg",
             "title": "Geoshen",
-            "type": "personal",
             "featured": true
         },
         {
@@ -13,7 +12,6 @@
             "url": "http://henkubao.com",
             "img": "/assets/images/thumbnails/henkubao-reversed-thumbnail.jpg",
             "title": "Henkubao",
-            "type": "personal",
             "featured": true
         },
         {
@@ -21,7 +19,6 @@
             "url": "http://pxlagency.com",
             "img": "/assets/images/thumbnails/pxl-agency-thumbnail.jpg",
             "title": "PXL Agency",
-            "type": "client",
             "featured": true
         },
         {
@@ -29,7 +26,6 @@
             "url": "http://whosinyourblood.com",
             "img": "/assets/images/thumbnails/whos-in-your-blood-thumbnail.jpg",
             "title": "Who's In Your Blood?",
-            "type": "client",
             "featured": true
         },
         {
@@ -37,7 +33,6 @@
             "url": "http://fathomevents.com",
             "img": "/assets/images/thumbnails/fathom-events-thumbnail.jpg",
             "title": "Fathom Events",
-            "type": "client",
             "featured": true
         },
         {
@@ -45,7 +40,6 @@
             "url": "http://foxmovies.com",
             "img": "/assets/images/thumbnails/20th-century-fox-thumbnail.jpg",
             "title": "20th Centry Fox",
-            "type": "client",
             "featured": true
         },
         {
@@ -53,7 +47,6 @@
             "url": "http://ticketbot.us",
             "img": "/assets/images/thumbnails/ticketbot-thumbnail.jpg",
             "title": "Ticketbot",
-            "type": "client",
             "featured": false
         },
         {
@@ -61,7 +54,6 @@
             "url": "http://lamag.com",
             "img": "/assets/images/thumbnails/lamag-thumbnail.jpg",
             "title": "Los Angeles Magazine",
-            "type": "client",
             "featured": false
         },
         {
@@ -69,7 +61,6 @@
             "url": "http://sleeplessmovie.com",
             "img": "/assets/images/thumbnails/sleepless-thumbnail.jpg",
             "title": "Sleepless Movie",
-            "type": "client",
             "featured": false
         },
         {
@@ -77,7 +68,6 @@
             "url": "https://universalpictuers.com",
             "img": "/assets/images/thumbnails/universal-pictures-thumbnail.jpg",
             "title": "Universal Pictures",
-            "type": "client",
             "featured": false
         },
         {
@@ -85,7 +75,6 @@
             "url": "https://github.com/ozywuli/OnToggle",
             "img": "/assets/images/thumbnails/thumbnail-ontoggle.jpg",
             "title": "OnToggleJS",
-            "type": "opensource",
             "featured": false
         }
     ]

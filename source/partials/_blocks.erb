@@ -1,9 +1,21 @@
+<% filteredItems = Array.new() %>
+
+<% if defined? type %>
+    <% items.each do |item| %>
+        <% if item.type == type %>
+            <% filteredItems.push(item) %>
+        <% end %>
+    <% end %>
+<% else %>
+    <% filteredItems = items %>
+<% end %>
+
 <div class="blocks">
     <ul class="blocks__list">
         <!-- CHECK IF IF THERE'S A FLAG -->
         <% flag = false if flag.nil? %>
 
-        <% items.each do |item| %>
+        <% filteredItems.each do |item| %>
             <!-- OUTPUT AN ITEM IF IT'S FLAGGED OR IF NO FLAG HAS BEEN PASSED IN -->
             <% if item[flag] || !flag %>
                 <li class="block js-blocks-item <%= defined?(clear) ? 'mod-clear' : '' %>">

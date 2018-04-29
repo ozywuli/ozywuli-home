@@ -70,13 +70,13 @@
     display: inline-block;
     border: 1px solid $dark-gray;
     text-align: center;
-    color: $gold;
+    color: $color-accent;
 
     &:hover {
-        border: 1px solid $gold;
-        color: $light;
+        border: 1px solid $color-accent-hover;
+        color: $color-accent-hover;
         polygon {
-            fill: $light;
+            fill: $color-accent-hover;
         }
     }
 
@@ -94,7 +94,6 @@
 
 .btn__text {
     position: relative;
-    top: 1px;
 }
 
 .btn__arrow {
@@ -109,7 +108,7 @@
     }
 
     polygon {
-        fill: $gold;
+        fill: $color-accent;
     }
 }
 
@@ -143,7 +142,7 @@
     border: 1px solid $dark-gray;
 
     &:hover {
-        border: 1px solid $gold;
+        border: 1px solid $color-accent;
     }
 }
 
