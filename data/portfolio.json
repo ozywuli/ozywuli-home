@@ -38,7 +38,7 @@
             "img": "/assets/images/thumbnails/fathom-events-thumbnail.jpg",
             "title": "Fathom Events",
             "type": "client",
-            "featured": true
+            "featured": false
         },
         {
             "name": "20th Century Fox",
@@ -78,13 +78,53 @@
             "img": "/assets/images/thumbnails/universal-pictures-thumbnail.jpg",
             "title": "Universal Pictures",
             "type": "client",
-            "featured": false
+            "featured": true
         },
         {
             "name": "OnToggleJS",
             "url": "https://github.com/ozywuli/OnToggle",
             "img": "/assets/images/thumbnails/thumbnail-ontoggle.jpg",
             "title": "OnToggleJS",
+            "type": "opensource",
+            "featured": false
+        },
+        {
+            "name": "AmbienxJS",
+            "url": "https://github.com/ozywuli/ambienx",
+            "img": "/assets/images/thumbnails/ambienx-thumbnail.jpg",
+            "title": "AmbienxJS",
+            "type": "opensource",
+            "featured": false
+        },
+        {
+            "name": "DataTableX",
+            "url": "https://github.com/ozywuli/datatablex",
+            "img": "/assets/images/thumbnails/datatablex-thumbnail.jpg",
+            "title": "DataTableX",
+            "type": "opensource",
+            "featured": false
+        },
+        {
+            "name": "ScrollmapJS",
+            "url": "https://github.com/ozywuli/scrollmapjs",
+            "img": "/assets/images/thumbnails/scrollmap-thumbnail.jpg",
+            "title": "ScrollmapJS",
+            "type": "opensource",
+            "featured": false
+        },
+        {
+            "name": "Mapbox GL Choropleth",
+            "url": "https://github.com/ozywuli/mapboxgl-choropleth",
+            "img": "/assets/images/thumbnails/mapbox-gl-choropleth-thumbnail.jpg",
+            "title": "Mapbox GL Choropleth",
+            "type": "opensource",
+            "featured": false
+        },
+        {
+            "name": "ModalX",
+            "url": "https://github.com/ozywuli/modalx",
+            "img": "/assets/images/thumbnails/modalx-thumbnail.jpg",
+            "title": "ModalX",
             "type": "opensource",
             "featured": false
         }
