@@ -1,14 +1,13 @@
 <header class="page-header">
     <div class="page-header__wrapper">
         <% whatPage = page_classes.split(' ')[0] %>
-        <% if whatPage === 'index' %>
-            <p class="page-header__p">Hey, I'm Ozy Wu-Li <%= partial 'partials/_chinese-name.erb' %></p>
-            <p class="page-header__p">Interaction designer and developer</p>
-            <p class="page-header__p">Helping to make the web a cooler, better&nbsp;place</p>
-        <% else %>
-            <h2 class="page-header__title">
-                <%= current_page.data.title %>
-            </h2>
+        <%= yield %>
+        <% if defined? current_page.data.title %>
+            <% if whatPage != 'index' %>
+                <h2 class="page-header__title">
+                    <%= current_page.data.title %>
+                </h2>
+            <% end %>
             <% if whatPage === 'blog' %>
                 <div class="page-header__date">
                     <% if current_article %>
@@ -19,3 +18,4 @@
         <% end %>
     </div>
 </header>
+
