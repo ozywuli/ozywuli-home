@@ -20,6 +20,8 @@ page "/contact.html", :layout => :single_column
 page "/portfolio.html", :layout => :single_column
 page "/resources.html", :layout => :single_column
 page "/images.html", :layout => :full_page
+page "/resume.html", :layout => :single_column
+page "/experiments.html", :layout => :single_column
 
 
 

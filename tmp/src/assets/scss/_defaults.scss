@@ -30,4 +30,6 @@ code {
 
 pre.highlight {
     background: $dark-gray;
+    overflow-x: auto;
+    line-height: 1.5;
 }

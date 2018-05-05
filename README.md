@@ -1,11 +1,11 @@
 ***TO RUN***
 
 ```bash
-middleman s
+bundle exec middleman s
 ```
 
 
 ***TO BUILD***
-```
-middleman build
+```bash
+bundle exec middleman build
 ```

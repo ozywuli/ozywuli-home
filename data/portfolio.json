@@ -33,6 +33,22 @@
             "featured": true
         },
         {
+            "name": "ApesVR website",
+            "url": "http://apesvr.com",
+            "img": "/assets/images/thumbnails/apesvr-thumbnail.jpg",
+            "title": "ApesVR website",
+            "type": "client",
+            "featured": false
+        },
+        {
+            "name": "Dear World, Love Simon",
+            "url": "http://dearworldlovesimon.com",
+            "img": "/assets/images/thumbnails/lovesimon-thumbnail.jpg",
+            "title": "Dear World, Love Simon",
+            "type": "client",
+            "featured": false
+        },
+        {
             "name": "Fathom Events",
             "url": "http://fathomevents.com",
             "img": "/assets/images/thumbnails/fathom-events-thumbnail.jpg",
@@ -47,6 +63,14 @@
             "title": "20th Centry Fox",
             "type": "client",
             "featured": true
+        },
+        {
+            "name": "Deadpool Core",
+            "url": "http://deadpoolcore.com",
+            "img": "/assets/images/thumbnails/thumbnail-deadpool-core.jpg",
+            "title": "Deadpool Core",
+            "type": "client",
+            "featured": false
         },
         {
             "name": "Ticketbot",
