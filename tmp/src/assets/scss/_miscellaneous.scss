@@ -45,9 +45,18 @@
             padding: 0;
         }
         li {
-            list-style-type: square;
-            list-style-position: inside;
             margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        ul li {
+            list-style-type: square;
+            /*list-style-position: inside;*/
+        }
+        ol li {
+            list-style-type: decimal;
+        }
+        ul, ol {
+            margin-bottom: 30px;
         }
     }
 }

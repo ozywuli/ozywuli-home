@@ -14,3 +14,13 @@ bundle exec middleman s
 ```bash
 bundle exec middleman build
 ```
+
+***DEPLOY TO DEV***
+```bash
+./shell/deploy-dev.sh
+```
+
+***DEPLOY TO PROD***
+```bash
+./shell/deploy-prod.sh
+```
