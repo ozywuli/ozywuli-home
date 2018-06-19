@@ -3,6 +3,8 @@ Ruby Version: 2.3.1
 `bundle exec middleman version`
 Middleman Versiion: 4.0.0
 
+
+
 ***TO RUN***
 
 ```bash
@@ -23,4 +25,9 @@ bundle exec middleman build
 ***DEPLOY TO PROD***
 ```bash
 ./shell/deploy-prod.sh
+```
+
+Give non-root user ownership ability to scp
+```
+sudo chown -R ozywuli /var/www/ozywuli.com
 ```
