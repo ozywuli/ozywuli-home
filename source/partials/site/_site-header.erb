@@ -86,6 +86,11 @@
     <% if currentPage.data.hasMap %>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
     <% end %>
+
+    <% if current_page.path == 'portfolio.html' %>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <% end %>
+
     <%= stylesheet_link_tag "main" %>
 </head>
 

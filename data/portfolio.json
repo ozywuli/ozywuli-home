@@ -6,7 +6,25 @@
             "img": "/assets/images/thumbnails/geoshen-thumbnail.jpg",
             "title": "Geoshen",
             "type": "personal",
-            "featured": true
+            "featured": true,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
             "name": "Henkubao",

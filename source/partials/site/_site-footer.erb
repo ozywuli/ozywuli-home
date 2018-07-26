@@ -18,10 +18,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"></script>
 <% end %>
 
+<% if current_page.path == 'portfolio.html' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+<% end %>
 
-<% if currentPage.data.date %>
-    <%# 
-     %>
+
+<% if currentPage.data.date %>>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 <% end %>
