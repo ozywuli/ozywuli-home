@@ -27,8 +27,10 @@ Well, that's not entirely true, which is the purpose of this article. You can ha
 
 What we can do then is place more complicated vector shapes that can't be animated inside of the `<clipPath>` element. Then we cover that element using the clipping path element that is a simpler shape that can be animated. That way, we can animate the simpler shape and reveal the underlying elements inside `<clipPath>`, that is, the more complicated vector shapes. See the below example: 
 
-<p data-height="265" data-theme-id="0" data-slug-hash="vrLXjd" data-default-tab="result" data-user="ozywuli" data-embed-version="2" data-pen-title="Animate SVG using clip paths" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/vrLXjd/">Animate SVG using clip paths</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="vrLXjd" data-default-tab="result" data-user="ozywuli" data-embed-version="2" data-pen-title="Animate SVG using clip paths" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/vrLXjd/">Animate SVG using clip paths</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>
 
 The above example uses a couple libraries to help animate the SVG clipping path. One is JQuery, an ancient tool but still useful for DOM manipulation. The other is Greensock, the premiere DOM animation library that gives you fine-grain control over how elements animate. In our case, the animation is simple enough that Greensock isn't actually necessary, but I decided to use it anyway to introduce Greensock to anyone not familiar with it.
 

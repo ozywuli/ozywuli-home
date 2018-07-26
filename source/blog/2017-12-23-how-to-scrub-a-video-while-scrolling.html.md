@@ -9,8 +9,10 @@ In this post, we'll take a look at how we can "scrub" a video while scrolling. A
 
 I thought the scroll scrubbing effect was really cool, so I made a demo that replicates it. Check it out below:
 
-<p data-height="265" data-theme-id="0" data-slug-hash="mLwWQw" data-default-tab="result" data-user="ozywuli" data-embed-version="2" data-pen-title="How to scrub a video while scrolling (with unmodified video)" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/mLwWQw/">How to scrub a video while scrolling (with unmodified video)</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="mLwWQw" data-default-tab="result" data-user="ozywuli" data-embed-version="2" data-pen-title="How to scrub a video while scrolling (with unmodified video)" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/mLwWQw/">How to scrub a video while scrolling (with unmodified video)</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>
 
 <hr />
 
@@ -25,8 +27,10 @@ ffmpeg -i input.mp4 -c:v libx264 -profile:v baseline -x264opts keyint=3:min-keyi
 
 Plug in the optimized video and then, bam, we've got a smooth scrolling video:
 
-<p data-height="265" data-theme-id="dark" data-slug-hash="JvEeXV" data-default-tab="result" data-user="ozywuli" data-embed-version="2" data-pen-title="How to scrub a video while scrolling" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/JvEeXV/">How to scrub a video while scrolling</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>
+    <p data-height="265" data-theme-id="dark" data-slug-hash="JvEeXV" data-default-tab="result" data-user="ozywuli" data-embed-version="2" data-pen-title="How to scrub a video while scrolling" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/JvEeXV/">How to scrub a video while scrolling</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>
 
 <hr />
 
