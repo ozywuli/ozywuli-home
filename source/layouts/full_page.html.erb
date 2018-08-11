@@ -1,5 +1,11 @@
 <% wrap_layout :layout do %>
+
+<% partial("/partials/page/page-header", :locals => { :mod => "full-page" }) do %>
+    <%= yield_content :pageHeader %>
+<% end %>
+
 <div class="page-wrapper mod-full">
     <%= yield %>    
 </div>
+
 <% end %>

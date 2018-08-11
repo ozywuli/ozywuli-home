@@ -11,6 +11,10 @@
     padding: 0 20px;
     width: 100%;
     max-width: 780px;
+
+    &.mod-full-page {
+        max-width: none;
+    }
 }
 
 .page-header__title {

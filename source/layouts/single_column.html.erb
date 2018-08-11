@@ -1,4 +1,9 @@
 <% wrap_layout :layout do %>
+
+<% partial 'partials/page/page-header' do %>
+    <%= yield_content :pageHeader %>
+<% end %>    
+
 <div class='content__wrapper'>
     <%= yield %>
 </div>

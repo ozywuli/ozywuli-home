@@ -6,9 +6,6 @@
     <%= partial 'partials/site/site-nav' %> 
     
     <div class="content">
-        <% partial 'partials/page/page-header' do %>
-            <%= yield_content :pageHeader %>
-        <% end %>    
         <%= yield %>
     </div>
 
