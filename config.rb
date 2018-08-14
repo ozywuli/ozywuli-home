@@ -17,12 +17,12 @@ page "/about.html", :layout => :single_column
 page "/blog.html", :layout => :single_column
 page "/blog/*", :layout => :article
 page "/contact.html", :layout => :single_column
-page "/portfolio.html", :layout => :single_column
+page "/portfolio.html", :layout => :full_page
 page "/resources.html", :layout => :single_column
 page "/images.html", :layout => :full_page
 page "/resume.html", :layout => :single_column
 page "/experiments.html", :layout => :single_column
-
+page "/foss.html", :layout => :single_column
 
 
 
@@ -36,7 +36,7 @@ page "/experiments.html", :layout => :single_column
 activate :external_pipeline,
   name: :gulp,
   command: build? ? './node_modules/gulp/bin/gulp.js build' : './node_modules/gulp/bin/gulp.js default',
-  source: "tmp/dist",
+  source: "src/dist",
   latency: 1
 
 # Asset Paths
@@ -56,7 +56,7 @@ helpers do
     # http://cobwwweb.com/render-inline-svg-rails-middleman
     def svg(name) 
         root = Middleman::Application.root 
-        file_path = "#{root}/tmp/src/assets/svg/#{name}.svg" 
+        file_path = "#{root}/src/assets/svg/#{name}.svg" 
         return File.read(file_path) if File.exists?(file_path) 
         '(not found)' 
     end

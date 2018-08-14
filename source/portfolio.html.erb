@@ -2,31 +2,63 @@
 title: Portfolio
 ---
 
-<div class="row">
-    <p class="row__p mod-no-mb">Check out my work</p>
+<div class="portfolio-page">
+    <p>Here you can see a few of my projects from the past few years.</p>
+
+    <hr>
+
+    <% data.portfolio.items.each do |item| %>
+    <div class="row">
+        <div class="portfolio-item">
+            <div class="portfolio-item-meta">
+                <h2 class="portfolio-item-title">
+                    <a 
+                        href="<%= item.url %>" 
+                        class="portfolio-item-link" 
+                        target="_blank"
+                    >
+                        <%= item.title %>
+                    </a>
+                </h2>
+                <p><%= item.description %> <a href="#">Learn more</a></p>
+            </div>
+            
+            <div class="portfolio-item-images">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <% item.images.each_with_index do |image, index| %>
+                            <div class="swiper-slide">
+                                <div 
+                                    class="portfolio-item-img"
+                                    style="background-image: url(<%= image.url %>)"
+                                >
+                                    <a 
+                                        href="#" 
+                                        class="portfolio-item-open js-modalx-open"
+                                        data-id="<%= item.id %>-<%= index %>"
+                                        data-img="<%= image.url %>"
+                                    ></a>
+                                </div>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <% end %>
+
+</div>
+
+<div 
+    class="modalx js-modalx-target"
+>
+    <a 
+        href="#" 
+        class="modalx-close js-modalx-close"
+    >
+        <%= svg('close-button') %>
+    </a>
 </div>
 
 
-<div class="row">
-    <h3 class="row__title">Personal Projects</h3>
-    <p class="row__p">Selection of personal projects:</p>
-    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.portfolio.items, :type => 'personal' } ) %>
-</div>
-
-<div class="row">
-    <h3 class="row__title">Client Projects</h3>
-    <p class="row__p">Selection of client projects I've worked on since 2012:</p>
-    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.portfolio.items, :type => 'client' } ) %>
-</div>
-
-<div class="row">
-    <h3 class="row__title">Open Source</h3>
-    <p class="row__p">Active open source projects that I maintain or contribute to:</p>
-    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.portfolio.items, :type => 'opensource' } ) %>
-</div>
-
-<div class="row">
-    <h3 class="row__title">Clients</h3>
-    <p class="row__p">Selection of clients and companies I've worked with since 2012:</p>
-    <%= partial(:'partials/_blocks.erb', :locals => { :items => data.clients.items, :clear => true } ) %>
-</div>

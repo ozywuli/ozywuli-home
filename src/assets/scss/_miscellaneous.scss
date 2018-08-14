@@ -1,0 +1,152 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.content {
+    flex: 1;
+    width: 100%;
+}
+
+.content__wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 780px;
+    padding: 0 20px 40px 20px;
+
+    &.mod-article {
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+
+            @media #{$tablet} {
+                font-size: 3.6rem;
+            }
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        ul li {
+            list-style-type: square;
+            /*list-style-position: inside;*/
+        }
+        ol li {
+            list-style-type: decimal;
+        }
+        ul, ol {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.contact-map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.article-list__title {
+    margin-bottom: 10px;
+    font-size: 2.8rem;
+    line-height: 1.2;
+
+    @media #{$tablet} {
+        font-size: 3.6rem;
+    }
+
+    a {
+        color: $light;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+}
+
+.article-list__date {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.article-list__excerpt {
+    margin-bottom: 0;
+}
+
+
+
+.page-wrapper {
+    &.mod-full {
+        padding: 0 20px;
+
+        body.images & {
+            padding: 0 0 0 20px;
+        }
+    }
+}
+
+
+/*------------------------------------*\
+  MASONRY
+\*------------------------------------*/
+.msnry-grid {
+    /*width: calc(100% + 20px);*/
+    /*padding-right: 20px;*/
+    /*padding: 0 20px;*/
+    opacity: 0;
+}
+
+.msnry-grid__item, .msnry-grid__sizer {
+    width: 100%;
+    padding: 0 20px 20px 0;
+
+    @media #{$small-tablet} {
+        width: 50%;
+        padding: 0 20px 20px 0;
+    }
+
+    @media #{$tablet} {
+        width: 33.33%;
+    }
+
+}
+
+.msnry-grid__gutter {
+    @media #{$small-tablet} {
+
+    }
+}
+
+
+
+
+/*------------------------------------*\
+  Experiments
+\*------------------------------------*/
+.experiments-iframes {
+    iframe {
+        margin-bottom: 20px;
+    }
+}

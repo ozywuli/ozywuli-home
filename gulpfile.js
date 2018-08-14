@@ -28,9 +28,9 @@ var imagemin = require('gulp-imagemin');
   PATHS
 \*------------------------------------*/
 var paths = {
-    publicAssets: 'tmp/public/',
-    tmpAssets: 'tmp/src/assets/',
-    srcAssets: 'source/assets/'
+    publicAssets: 'src/public/',
+    srcAssets: 'src/assets/',
+    sourceAssets: 'source/assets/'
 }
 
 /*------------------------------------*\
@@ -52,7 +52,7 @@ gulp.task('clean', function() {
   CSS
 \*------------------------------------*/
 gulp.task('css', function() {
-    gulp.src(paths.tmpAssets + 'scss/main.scss')
+    gulp.src(paths.srcAssets + 'scss/main.scss')
         .pipe(plumber({
             errorHandler: function (err) {
                 console.log(err);
@@ -67,7 +67,7 @@ gulp.task('css', function() {
             }))
 
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.srcAssets + 'css/'))
+        .pipe(gulp.dest(paths.sourceAssets + 'css/'))
         .pipe(notify({message: 'CSS compiled', onLast: true}))
 });
 
@@ -76,7 +76,7 @@ gulp.task('css', function() {
   JS
 \*------------------------------------*/
 function compile(watch) {
-  var bundler = watchify(browserify('./tmp/src/assets/js/main.js', {
+  var bundler = watchify(browserify('./src/assets/js/main.js', {
     debug: true,
     extensions: ['js']
   }).transform(babelify.configure({
@@ -134,7 +134,7 @@ gulp.task('public', function() {
   MISCELLANEOUS
 \*------------------------------------*/
 gulp.task('misc', function() {
-    gulp.src(paths.tmpAssets + 'misc/**/*')
+    gulp.src(paths.srcAssets + 'misc/**/*')
         .pipe(gulp.dest('source/assets/misc'))
         .pipe(notify({message: 'Miscellaenous files compiled', onLast: true}))
 });
@@ -144,8 +144,8 @@ gulp.task('misc', function() {
   IMAGES
 \*------------------------------------*/
 gulp.task('img', function() {
-    gulp.src(paths.tmpAssets + 'images/**/*.{jpg, png, gif}')
-        .pipe(gulp.dest(paths.srcAssets + 'images'))
+    gulp.src(paths.srcAssets + 'images/**/*.{jpg, png, gif}')
+        .pipe(gulp.dest(paths.sourceAssets + 'images'))
         .pipe(notify({message: 'Images compiled!', onLast: true}))
 });
 
@@ -154,10 +154,10 @@ gulp.task('img', function() {
   WATCH
 \*------------------------------------*/
 gulp.task('watch', function(error) {
-    gulp.watch(paths.tmpAssets + 'scss/**/*', ['css']);
-    gulp.watch(paths.tmpAssets + 'js/**/*', ['js']);
-    gulp.watch(paths.tmpAssets + 'images/**/*', ['img']);
-    gulp.watch(paths.tmpAssets + 'misc/**/*', ['misc']);
+    gulp.watch(paths.srcAssets + 'scss/**/*', ['css']);
+    gulp.watch(paths.srcAssets + 'js/**/*', ['js']);
+    gulp.watch(paths.srcAssets + 'images/**/*', ['img']);
+    gulp.watch(paths.srcAssets + 'misc/**/*', ['misc']);
     gulp.watch([paths.publicAssets + '*', paths.publicAssets + '.*'], ['public'])
 
     watchJS();

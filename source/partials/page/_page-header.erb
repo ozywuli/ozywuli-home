@@ -1,5 +1,5 @@
 <header class="page-header">
-    <div class="page-header__wrapper mod-<%= mod %>">
+    <div class="page-header__wrapper mod-<% if defined? mod %><%= mod %><% end %>">
         <% whatPage = page_classes.split(' ')[0] %>
         <%= yield %>
         <% if defined? current_page.data.title %>
@@ -18,5 +18,7 @@
         <% end %>
     </div>
 </header>
+
+
 
 

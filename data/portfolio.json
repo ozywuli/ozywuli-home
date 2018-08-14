@@ -1,13 +1,23 @@
 {
     "items": [
         {
+            "id": "geoshen",
             "name": "Geoshen",
             "url": "http://geoshen.com",
             "img": "/assets/images/thumbnails/geoshen-thumbnail.jpg",
             "title": "Geoshen",
             "type": "personal",
             "featured": true,
+            "description": "Geoshen is a media/blog that filters the world through the prism of maps and geography.",
             "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -27,148 +37,424 @@
             ]
         },
         {
+            "id": "Henkubao",
             "name": "Henkubao",
             "url": "http://henkubao.com",
             "img": "/assets/images/thumbnails/henkubao-reversed-thumbnail.jpg",
             "title": "Henkubao",
             "type": "personal",
-            "featured": true
+            "featured": true,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "pxl",
             "name": "PXL Agency",
             "url": "http://pxlagency.com",
             "img": "/assets/images/thumbnails/pxl-agency-thumbnail.jpg",
             "title": "PXL Agency",
             "type": "client",
-            "featured": true
+            "featured": true,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "whosinyourblood",
             "name": "Who's In Your Blood?",
             "url": "http://whosinyourblood.com",
             "img": "/assets/images/thumbnails/whos-in-your-blood-thumbnail.jpg",
             "title": "Who's In Your Blood?",
             "type": "client",
-            "featured": true
+            "featured": true,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "apesvr",
             "name": "ApesVR website",
             "url": "http://apesvr.com",
             "img": "/assets/images/thumbnails/apesvr-thumbnail.jpg",
             "title": "ApesVR website",
             "type": "client",
-            "featured": false
+            "featured": false,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "dearworldlovesimon",
             "name": "Dear World, Love Simon",
             "url": "http://dearworldlovesimon.com",
             "img": "/assets/images/thumbnails/lovesimon-thumbnail.jpg",
             "title": "Dear World, Love Simon",
             "type": "client",
-            "featured": false
+            "featured": false,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "fathomevents",
             "name": "Fathom Events",
             "url": "http://fathomevents.com",
             "img": "/assets/images/thumbnails/fathom-events-thumbnail.jpg",
             "title": "Fathom Events",
             "type": "client",
-            "featured": false
+            "featured": false,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "fox",
             "name": "20th Century Fox",
             "url": "http://foxmovies.com",
             "img": "/assets/images/thumbnails/20th-century-fox-thumbnail.jpg",
             "title": "20th Centry Fox",
             "type": "client",
-            "featured": true
+            "featured": true,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "deadpoolcore",
             "name": "Deadpool Core",
             "url": "http://deadpoolcore.com",
             "img": "/assets/images/thumbnails/thumbnail-deadpool-core.jpg",
             "title": "Deadpool Core",
             "type": "client",
-            "featured": false
+            "featured": false,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "ticketbot",
             "name": "Ticketbot",
             "url": "http://ticketbot.us",
             "img": "/assets/images/thumbnails/ticketbot-thumbnail.jpg",
             "title": "Ticketbot",
             "type": "client",
-            "featured": false
+            "featured": false,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "lamag",
             "name": "Los Angeles Magazine",
             "url": "http://lamag.com",
             "img": "/assets/images/thumbnails/lamag-thumbnail.jpg",
             "title": "Los Angeles Magazine",
             "type": "client",
-            "featured": false
+            "featured": false,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "sleepless",
             "name": "Sleepless Movie",
             "url": "http://sleeplessmovie.com",
             "img": "/assets/images/thumbnails/sleepless-thumbnail.jpg",
             "title": "Sleepless Movie",
             "type": "client",
-            "featured": false
+            "featured": false,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         },
         {
+            "id": "universal",
             "name": "Universal Pictures",
             "url": "https://universalpictures.com",
             "img": "/assets/images/thumbnails/universal-pictures-thumbnail.jpg",
             "title": "Universal Pictures",
             "type": "client",
-            "featured": true
-        },
-        {
-            "name": "OnToggleJS",
-            "url": "https://github.com/ozywuli/OnToggle",
-            "img": "/assets/images/thumbnails/thumbnail-ontoggle.jpg",
-            "title": "OnToggleJS",
-            "type": "opensource",
-            "featured": false
-        },
-        {
-            "name": "AmbienxJS",
-            "url": "https://github.com/ozywuli/ambienx",
-            "img": "/assets/images/thumbnails/ambienx-thumbnail.jpg",
-            "title": "AmbienxJS",
-            "type": "opensource",
-            "featured": false
-        },
-        {
-            "name": "DataTableX",
-            "url": "https://github.com/ozywuli/datatablex",
-            "img": "/assets/images/thumbnails/datatablex-thumbnail.jpg",
-            "title": "DataTableX",
-            "type": "opensource",
-            "featured": false
-        },
-        {
-            "name": "ScrollmapJS",
-            "url": "https://github.com/ozywuli/scrollmapjs",
-            "img": "/assets/images/thumbnails/scrollmap-thumbnail.jpg",
-            "title": "ScrollmapJS",
-            "type": "opensource",
-            "featured": false
-        },
-        {
-            "name": "Mapbox GL Choropleth",
-            "url": "https://github.com/ozywuli/mapboxgl-choropleth",
-            "img": "/assets/images/thumbnails/mapbox-gl-choropleth-thumbnail.jpg",
-            "title": "Mapbox GL Choropleth",
-            "type": "opensource",
-            "featured": false
-        },
-        {
-            "name": "ModalX",
-            "url": "https://github.com/ozywuli/modalx",
-            "img": "/assets/images/thumbnails/modalx-thumbnail.jpg",
-            "title": "ModalX",
-            "type": "opensource",
-            "featured": false
+            "featured": true,
+            "images": [
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                },
+                {
+                    "url": "http://placehold.it/1600x900",
+                    "alt": "placeholder"
+                }
+            ]
         }
     ]
 }
