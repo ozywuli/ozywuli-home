@@ -9,7 +9,7 @@ Sometimes you want some JS code to execute at certain screen widths, that is, yo
 
 For example, at viewport widths below 500px, when a user clicks on a button, you want that button to console log a message. But when the viewport width goes above 500px, you want the that same button to alert a message. Why? I don't know, I can't think of a better example at the moment.
 
-Sure you can probably hard code '500px' in your JavaScript code. Store that in a config object somewhere and reference that as a conditional. But what if you have '500px' also stored as a media query value in your CSS? Instead of maintaing both, you can instead just reference that CSS media query value in your JS. But how? Here's on method that I found to work well: using CSS variables
+Sure you can probably hard code '500px' in your JavaScript code. Store that in a config object somewhere and reference that as a conditional. But what if you have '500px' also stored as a media query value in your CSS? Instead of maintaing both, you can instead just reference that CSS media query value in your JS. But how? Here's one method that I found to work well: using CSS variables
 
 ## The Method
 

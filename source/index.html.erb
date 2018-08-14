@@ -7,6 +7,7 @@ title: Home
     <p class="page-header__p">Helping to make the web a cooler, better&nbsp;place</p>
 <% end %>
 
+<%# Featured Work %>
 <div class="row">
     <h2 class="row__title">Featured Work</h2>
     <%= partial(:'partials/_blocks.erb', :locals => { :items => data.portfolio.items, :flag => 'featured' } ) %>
@@ -16,6 +17,23 @@ title: Home
     </div>
 </div>
 
+<%# Blog %>
+<div class="row">
+    <h2 class="row__title">Blog</h2>
+    <% blog.articles[0...5].each do |article| %>
+        <div class="archive-list">
+            <time class="archive-list__date"><%= article.date.strftime('%e %B %Y') %></time>
+            <h2 class="archive-list__title">
+                <a href="<%= article.url %>" class="archive-list__link"><%= article.title %></a>
+            </h2>
+        </div>
+    <% end %>
+    <div class="btns">
+        <%= partial(:'partials/_btn.erb', :locals => { :url => '/blog', :copy => 'Read More', :arrow => true } ) %>
+    </div>
+</div>
+
+<%# About %>
 <div class="row">
     <h2 class="row__title">About</h2>
     <div class="row__p">My full name is Oscar Wu-Li or <%= partial 'partials/_chinese-name.erb' %>. But I go by my nickname Ozy. </div>
@@ -47,7 +65,7 @@ title: Home
     </div>
 </div>
 
-
+<%# Colophon %>
 <div class="row">
     <h2 class="row__title">Colophon</h2>
     <div class="row__pees">
