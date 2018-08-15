@@ -1,5 +1,13 @@
 .portfolio-page {
     width: 100%;
+
+    .swiper-slide {
+        padding: 0 20px;
+
+        @media #{$tablet} {
+            padding: 0;
+        }
+    }
 }
 
 .portfolio-item {
@@ -20,11 +28,29 @@
 .portfolio-item-img {
     padding-bottom: 56.25%;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
 }
 
 .portfolio-item-link {
     color: $light;
+
+    &:hover {
+        path {
+            fill: $color-accent;
+        }
+    }
+
+    svg {
+        display: inline-block;
+        margin-left: 8px;
+        width: 20px;
+        height: 20px;
+
+        @media #{$tablet} {
+            width: 28px;
+            height: 28px;
+        }
+    }
 }
 
 .portfolio-item-open {

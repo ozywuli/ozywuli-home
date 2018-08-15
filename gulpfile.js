@@ -144,7 +144,7 @@ gulp.task('misc', function() {
   IMAGES
 \*------------------------------------*/
 gulp.task('img', function() {
-    gulp.src(paths.srcAssets + 'images/**/*.{jpg, png, gif}')
+    gulp.src(paths.srcAssets + 'images/**/*')
         .pipe(gulp.dest(paths.sourceAssets + 'images'))
         .pipe(notify({message: 'Images compiled!', onLast: true}))
 });

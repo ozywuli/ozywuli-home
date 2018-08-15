@@ -38,29 +38,10 @@
 
 @import 'partials/_social-blocks';
 @import 'partials/_grid-blocks';
+@import 'partials/_modalx';
 
 @import 'partials/page/_page-header';
 
 @import 'partials/pages/_portfolio';
 
 
-.modalx {
-    display: none;
-    background: rgba($dark, 0.9);
-    z-index: 1000;
-    &.is-visible {
-        display: block;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-}
-
-.modalx-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: block;
-}

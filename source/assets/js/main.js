@@ -911,7 +911,16 @@ if ($('.swiper-container').length) {
         loop: true,
         slidesPerView: 4,
         spaceBetween: 30,
-        centeredSlides: true
+        centeredSlides: true,
+        breakpoints: {
+            1024: {
+                slidesPerView: 3
+            },
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            }
+        }
     });
 }
 
@@ -921,9 +930,16 @@ if ($('.swiper-container').length) {
 var myModalx = new _Modalx2.default({
     singleModalTarget: true,
     openCallback: function openCallback(target, event) {
-        console.log(target);
-        console.log(event);
-        console.log('open callback');
+        $('.js-modalx-content').append('\n            <img src="' + event.currentTarget.dataset.img + '" alt=""/>\n        ');
+
+        var $modalImg = $('.js-modalx-content img');
+
+        if ($modalImg.height() > $modalImg.width()) {
+            $('.js-modalx-content').addClass('is-vertical');
+        }
+    },
+    closeCallback: function closeCallback() {
+        $('.js-modalx-content').removeClass('is-vertical').empty();
     }
 });
 

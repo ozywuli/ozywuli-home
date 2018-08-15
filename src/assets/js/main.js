@@ -153,6 +153,15 @@ if ($('.swiper-container').length) {
         slidesPerView: 4,
         spaceBetween: 30,
         centeredSlides: true,
+        breakpoints: {
+            1024: {
+                slidesPerView: 3
+            },
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            }
+        }
     })
 }
 
@@ -163,8 +172,18 @@ if ($('.swiper-container').length) {
 let myModalx = new Modalx({
     singleModalTarget: true,
     openCallback(target, event) {
-        console.log(target);
-        console.log(event);
-        console.log('open callback');
+        $('.js-modalx-content').append(`
+            <img src="${event.currentTarget.dataset.img}" alt=""/>
+        `)
+
+        let $modalImg = $('.js-modalx-content img');
+
+        if( $modalImg.height() > $modalImg.width()) {
+            $('.js-modalx-content').addClass('is-vertical');
+        }
+
+    },
+    closeCallback() {
+        $('.js-modalx-content').removeClass('is-vertical').empty();
     }
 });

@@ -13,58 +13,19 @@
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
                 }
             ]
         },
         {
-            "id": "Henkubao",
+            "id": "henkubao",
             "name": "Henkubao",
             "url": "http://henkubao.com",
             "img": "/assets/images/thumbnails/henkubao-reversed-thumbnail.jpg",
             "title": "Henkubao",
             "type": "personal",
             "featured": true,
+            "description": "Henkubao is your online portal for all things related to Asian food.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -79,27 +40,8 @@
             "title": "PXL Agency",
             "type": "client",
             "featured": true,
+            "description": "Used Ember to develop the front-end for the PXL Agency website rebrand.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -114,27 +56,8 @@
             "title": "Who's In Your Blood?",
             "type": "client",
             "featured": true,
+            "description": "Created an stylized ancestor search form to help promote the Assassin's Creed movie.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -149,27 +72,8 @@
             "title": "ApesVR website",
             "type": "client",
             "featured": false,
+            "description": "The official website for the Ape's VR game.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -184,27 +88,8 @@
             "title": "Dear World, Love Simon",
             "type": "client",
             "featured": false,
+            "description": "An app site that lets users generate personalized messages to share with friends and family.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -219,27 +104,8 @@
             "title": "Fathom Events",
             "type": "client",
             "featured": false,
+            "description": "Contributed to the front-end for Fathom Event's official website.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -254,27 +120,8 @@
             "title": "20th Centry Fox",
             "type": "client",
             "featured": true,
+            "description": "The official website for 20th Century Fox.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -289,27 +136,8 @@
             "title": "Deadpool Core",
             "type": "client",
             "featured": false,
+            "description": "Created an online form that lets users subscribe to Deadpool Core updates.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -324,27 +152,8 @@
             "title": "Ticketbot",
             "type": "client",
             "featured": false,
+            "description": "The official website for TicketBot, a chatbot app.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -359,27 +168,8 @@
             "title": "Los Angeles Magazine",
             "type": "client",
             "featured": false,
+            "description": "Helped develop the website rebrand for lamag.com back in 2015.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -394,27 +184,8 @@
             "title": "Sleepless Movie",
             "type": "client",
             "featured": false,
+            "description": "The official website for Sleepless movie.",
             "images": [
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
@@ -429,27 +200,24 @@
             "title": "Universal Pictures",
             "type": "client",
             "featured": true,
+            "description": "The official website for Universal Pictures.",
             "images": [
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
-                {
-                    "url": "http://placehold.it/1600x900",
-                    "alt": "placeholder"
-                },
+                }
+            ]
+        },
+        {
+            "id": "downsizing",
+            "name": "Downsizing calculator",
+            "url": "https://universalpictures.com",
+            "img": "http://placehold.it/900x900",
+            "title": "Downsizing calculator",
+            "type": "client",
+            "featured": false,
+            "description": "This website helps calculate your net worth if you were to be downsized.",
+            "images": [
                 {
                     "url": "http://placehold.it/1600x900",
                     "alt": "placeholder"

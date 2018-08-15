@@ -2,6 +2,7 @@
 title: Portfolio
 ---
 
+
 <div class="portfolio-page">
     <p>Here you can see a few of my projects from the past few years.</p>
 
@@ -18,29 +19,34 @@ title: Portfolio
                         target="_blank"
                     >
                         <%= item.title %>
+                        <%= svg('external-link') %>
                     </a>
                 </h2>
-                <p><%= item.description %> <a href="#">Learn more</a></p>
+                <p><%= item.description %></p>
             </div>
             
             <div class="portfolio-item-images">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <% item.images.each_with_index do |image, index| %>
+                        <%# https://forum.middlemanapp.com/t/children-of-a-specified-directory/903 %>
+                        <% sitemap.resources.select do |resource, index| %>
+                            <% if resource.path.start_with?("assets/images/portfolio/#{item.id}") %>  
                             <div class="swiper-slide">
                                 <div 
                                     class="portfolio-item-img"
-                                    style="background-image: url(<%= image.url %>)"
+                                    style="background-image: url('<%= resource.path %>')"
                                 >
                                     <a 
                                         href="#" 
                                         class="portfolio-item-open js-modalx-open"
                                         data-id="<%= item.id %>-<%= index %>"
-                                        data-img="<%= image.url %>"
+                                        data-img="<%= resource.path %>"
                                     ></a>
                                 </div>
                             </div>
+                            <% end %>
                         <% end %>
+
                     </div>
                 </div>
             </div>
@@ -59,6 +65,10 @@ title: Portfolio
     >
         <%= svg('close-button') %>
     </a>
+
+    <div class="modalx-container">
+        <div class="modalx-content js-modalx-content"></div>
+    </div>
 </div>
 
 
