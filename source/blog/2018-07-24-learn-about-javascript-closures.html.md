@@ -24,38 +24,31 @@ What do we mean by "scope"? Scope refers to the accessibility of variables in yo
 Example of global scope:
 
 <p>
-    <p data-height="265" data-theme-id="0" data-slug-hash="LBjpKQ" data-default-tab="js,result" data-user="ozywuli" data-pen-title="closures global" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/LBjpKQ/">closures global</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <p data-height="265" data-theme-id="0" data-slug-hash="NOqbbg" data-default-tab="js,result" data-user="ozywuli" data-pen-title="LEARN ABOUT JAVASCRIPT CLOSURES (global scope)" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/NOqbbg/">LEARN ABOUT JAVASCRIPT CLOSURES (global scope)</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </p>
 
 Example of local scope:
 
 <p>
-    <p data-height="355" data-theme-id="0" data-slug-hash="yqoYre" data-default-tab="js,result" data-user="ozywuli" data-pen-title="closures local" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/yqoYre/">closures local</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <p data-height="265" data-theme-id="0" data-slug-hash="RePoKW" data-default-tab="js,result" data-user="ozywuli" data-pen-title="LEARN ABOUT JAVASCRIPT CLOSURES (local scope)" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/RePoKW/">LEARN ABOUT JAVASCRIPT CLOSURES (local scope)</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </p>
 
 In effect, anytime a function is executed, any local variables will be deleted and will no longer accessible. But there's an exception... closures!
-
-Let's examine this statement again: "a closure is an inner function that has access to the scope of the outer function". When a function executes, it creates a local scope that's inaccessible to code outside of the function. But any inner functions that execute within that parent function has the same access to that parent function's local scope. Let's look at an example for further clarification:
-
-<p>
-    <p data-height="265" data-theme-id="0" data-slug-hash="vaJKQr" data-default-tab="js,result" data-user="ozywuli" data-pen-title="closures outer and inner functions" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/vaJKQr/">closures outer and inner functions</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-</p>
-
-What happened in the above example? The closure created a snapshot of the outer functions scope when the outer function executed. So when the outer function did execute, its local scope closed over (hence the name closure) the local scope of the inner function, giving the inner function access to the outer function's scope.
 
 ---
 
 ## Closure Snapshot
 
-After the outer function has returned, the variables in the scope of the outer function are still accessible in a closure. When a closure is created, what happens is that your code takes a snapshot of the outer function's scope, and this snapshot can be referenced in future code executions. For example: 
+Let's examine this statement again: "a closure is an inner function that has access to the scope of the outer function". When a function executes, it creates a local scope that's inaccessible to code outside of the function. But any inner functions that execute within that parent function has the same access to that parent function's local scope. Let's look at an example for further clarification:
 
 <p>
-    <p data-height="265" data-theme-id="0" data-slug-hash="gjxwYE" data-default-tab="js,result" data-user="ozywuli" data-pen-title="closure snapshot" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/gjxwYE/">closure snapshot</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <p data-height="265" data-theme-id="0" data-slug-hash="JmdbWq" data-default-tab="js,result" data-user="ozywuli" data-pen-title="LEARN ABOUT JAVASCRIPT CLOSURES (outer and inner function)" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/JmdbWq/">LEARN ABOUT JAVASCRIPT CLOSURES (outer and inner function)</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </p>
+
+What happened in the above example? The closure created a snapshot of the outer function's scope when the outer function executed. So when the outer function did execute, its local scope closed over (hence the name closure) the local scope of the inner function, giving the inner function access to the outer function's scope.
 
 ---
 
@@ -76,17 +69,17 @@ If you're using JS libraries that share an alias, such as $ in jQuery and mooToo
 **Store local variables in jQuery click events**
 
 <p>
-    <p data-height="265" data-theme-id="0" data-slug-hash="RBZGLm" data-default-tab="js,result" data-user="ozywuli" data-pen-title="closures in jquery" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/RBZGLm/">closures in jquery</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <p data-height="265" data-theme-id="0" data-slug-hash="mzJOqE" data-default-tab="js,result" data-user="ozywuli" data-pen-title="LEARN ABOUT JAVASCRIPT CLOSURES (store local variables in events)" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/mzJOqE/">LEARN ABOUT JAVASCRIPT CLOSURES (store local variables in events)</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </p>
 
 **Create private methods**
 
-You would want to create private methods to restrict access to code like preventing users of your plugin or library from accidentally executing code that's not meant to be public.
+You would want to create private methods to restrict access to code. For example, you would make certain variables or methods private to prevent users of your plugin or library from intentionally or accidentally accessing them. But at the same time, those private variables or methods should be accessible from within the code.
 
 <p>
-    <p data-height="265" data-theme-id="0" data-slug-hash="bjrBNq" data-default-tab="js,result" data-user="ozywuli" data-pen-title="closure private methods" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/bjrBNq/">closure private methods</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <p data-height="265" data-theme-id="0" data-slug-hash="aROBYr" data-default-tab="js,result" data-user="ozywuli" data-pen-title="LEARN ABOUT JAVASCRIPT CLOSURES (private methods)" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/aROBYr/">LEARN ABOUT JAVASCRIPT CLOSURES (private methods)</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </p>
 ---
 

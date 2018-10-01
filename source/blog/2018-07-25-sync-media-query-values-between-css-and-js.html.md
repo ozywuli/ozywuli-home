@@ -16,8 +16,8 @@ Sure you can probably hard code '500px' in your JavaScript code. Store that in a
 CSS variables are custom properties that can take in any value that you can then reference in the rest of your CSS, for example:
 
 <p>
-    <p data-height="265" data-theme-id="0" data-slug-hash="WKEoBK" data-default-tab="css,result" data-user="ozywuli" data-pen-title="CSS variables" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/WKEoBK/">CSS variables</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p data-height="265" data-theme-id="0" data-slug-hash="NOqRJR" data-default-tab="css,result" data-user="ozywuli" data-pen-title="css custom variables simple example" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/NOqRJR/">css custom variables simple example</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </p>
 
 The trick here is to store every one of your media query values or just the one you want as CSS variables. For the sake of thoroughness, I'll do the former.
@@ -34,8 +34,8 @@ Next, you need to grab the value of the media query you want using the `getCompu
 In the example below, if the viewport width is below 500px and the user clicks on the click link, then a copy called "mobile" appears. If the viewport width is above 500px and the user clicks on the anchor, "desktop" will appear.
 
 <p>
-    <p data-height="265" data-theme-id="0" data-slug-hash="MBvJwM" data-default-tab="js,result" data-user="ozywuli" data-pen-title="Reference CSS variables in your JS" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/MBvJwM/">Reference CSS variables in your JS</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <p data-height="265" data-theme-id="0" data-slug-hash="XxbjGE" data-default-tab="js,result" data-user="ozywuli" data-pen-title="js extract css values" class="codepen">See the Pen <a href="https://codepen.io/ozywuli/pen/XxbjGE/">js extract css values</a> by ozywuli (<a href="https://codepen.io/ozywuli">@ozywuli</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </p>
 
 
