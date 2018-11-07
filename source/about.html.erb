@@ -4,7 +4,7 @@ title: About
 
 <div class="row">
     <h3 class="row__title">Hey I'm Ozy</h3>
-    <p class="row__p">My full name is Oscar Wu-Li or (<span class="ch"><a href="/web/20160307121538/http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb=%E5%90%B4%E5%8D%8E%E5%9C%A3" target="_blank">吴华圣</a></span>). But I go by my nickname Ozy.</p>
+    <p class="row__p">My full name is Oscar Wu-Li or (<span class="ch"><a href="http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb=%E5%90%B4%E5%8D%8E%E5%9C%A3" target="_blank">吴华圣</a></span>). But I go by my nickname Ozy.</p>
     <p class="row__p">
         <%= data.about.description.short %>
     </p>
@@ -13,15 +13,17 @@ title: About
         I've lived in Southern California for most of my life. I grew up in San Diego and attended university at UCLA. In 2012, I graduated from UCLA with a degree in history but ended up pursuing a career in web development. Making neat stuff for the web has been a hobby of mine since high school, and although I don't have formal training in web development, I'm now in my <%= Time.zone.now.year - 2012 %>th year as a professional web developer.
     </p>
 
-    <p class="row__p">
-        Want to see my resume? It's available in several formats below:
-    </p>
+    <div class="row__p">Resume available upon request.</div>
 
-    <div class="cards">
-        <%= partial(:'partials/_card.erb', :locals => { :type => 'HTML', :copy => 'View Resume', :url => '#', :icon => 'html' } ) %>
-        <%= partial(:'partials/_card.erb', :locals => { :type => 'WORD DOC', :copy => 'View Resume', :url => '#', :icon => 'word' } ) %>
-        <%= partial(:'partials/_card.erb', :locals => { :type => 'PDF', :copy => 'View Resume', :url => '#', :icon => 'pdf' } ) %>
-    </div>
+    <%# <p class="row__p">
+        Want to see my resume? It's available in several formats below:
+    </p> %>
+
+    <%# <div class="cards"> %>
+        <%# <%= partial(:'partials/_card.erb', :locals => { :type => 'HTML', :copy => 'View Resume', :url => '#', :icon => 'html' } ) %>
+        <%# <%= partial(:'partials/_card.erb', :locals => { :type => 'WORD DOC', :copy => 'View Resume', :url => '#', :icon => 'word' } ) %>
+        <%# <%= partial(:'partials/_card.erb', :locals => { :type => 'PDF', :copy => 'View Resume', :url => '#', :icon => 'pdf' } ) %>
+    <%# </div> %>
 
 </div>
 
