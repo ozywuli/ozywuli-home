@@ -41,11 +41,11 @@ title: Home
         <%= data.about.description.short %>
     </p>
 
-    <div class="cards">
-        <%= partial(:'partials/_card.erb', :locals => { :type => 'HTML', :copy => 'View Resume', :url => '/resume', :icon => 'html' } ) %>
-        <%= partial(:'partials/_card.erb', :locals => { :type => 'WORD DOC', :copy => 'View Resume', :url => '/assets/misc/oscar_ozy_wu_li_resume.doc', :icon => 'word' } ) %>
-        <%= partial(:'partials/_card.erb', :locals => { :type => 'PDF', :copy => 'View Resume', :url => '/assets/misc/oscar_ozy_wu_li_resume.pdf', :icon => 'pdf' } ) %>
-    </div>
+    <%# <div class="cards"> %>
+        <%#= partial(:'partials/_card.erb', :locals => { :type => 'HTML', :copy => 'View Resume', :url => '/resume', :icon => 'html' } ) %>
+        <%#= partial(:'partials/_card.erb', :locals => { :type => 'WORD DOC', :copy => 'View Resume', :url => '/assets/misc/oscar_ozy_wu_li_resume.doc', :icon => 'word' } ) %>
+        <%#= partial(:'partials/_card.erb', :locals => { :type => 'PDF', :copy => 'View Resume', :url => '/assets/misc/oscar_ozy_wu_li_resume.pdf', :icon => 'pdf' } ) %>
+    <%# </div> %>
 
     <div class="btns">
         <%= partial(:'partials/_btn.erb', :locals => { :url => '/about', :copy => 'Learn More', :arrow => true } ) %>
