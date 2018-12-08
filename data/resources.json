@@ -4,6 +4,11 @@
             "title": "References",
             "list": [
                 {
+                    "name": "Ozy's Web Developer Reference",
+                    "url": "https://ozywuli.github.io/web-developer-reference/",
+                    "description": "Personal but public reference for all things web development."
+                },
+                {
                     "name": "Trello CSS Style Guide",
                     "url": "https://gist.github.com/bobbygrace/9e961e8982f42eb91b80",
                     "description": "This is the CSS style guide I follow for most of my projects. I like that the rules are simple and flexible but scales reasonably well."
