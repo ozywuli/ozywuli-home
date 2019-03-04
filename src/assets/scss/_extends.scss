@@ -197,7 +197,6 @@ $block-list-spacing: 15px;
 
 .block__container {
     padding-bottom: 100%;
-    overflow: hidden;
 
     .block.mod-clear & {
         padding-bottom: 66.66%;
@@ -206,10 +205,10 @@ $block-list-spacing: 15px;
 
 .block__link {
     position: absolute;
-    top: -0.5%;
+    top: 0;
     right: 0;
     bottom: 0;
-    left: -0.5%;
+    left: 0;
     display: block;
     width: 100%;
     height: 100%;
@@ -227,12 +226,11 @@ $block-list-spacing: 15px;
 }
 
 .block__bg {
-    width: 101%;
-    height: 101%;
+    width: 100%;
+    height: 100%;
     background: #f1f1f1;
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
 
     .block.mod-clear & {
         background-color: transparent;
