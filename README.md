@@ -1,9 +1,10 @@
+## Requirements
 `ruby -v`
 Ruby Version: 2.3.1
 `bundle exec middleman version`
 Middleman Versiion: 4.0.0
 
-
+## Develop
 
 ***TO RUN***
 
@@ -11,11 +12,14 @@ Middleman Versiion: 4.0.0
 bundle exec middleman s
 ```
 
+## Build
 
 ***TO BUILD***
 ```bash
 bundle exec middleman build
 ```
+
+## Deploy
 
 ***DEPLOY TO DEV***
 ```bash
