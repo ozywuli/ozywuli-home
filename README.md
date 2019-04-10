@@ -16,19 +16,19 @@ bundle exec middleman s
 
 ***TO BUILD***
 ```bash
-bundle exec middleman build
+npm run build
 ```
 
 ## Deploy
 
 ***DEPLOY TO DEV***
 ```bash
-./shell/deploy-dev.sh
+npm run deploy:dev
 ```
 
 ***DEPLOY TO PROD***
 ```bash
-./shell/deploy-prod.sh
+npm run deploy:prod
 ```
 
 Give non-root user ownership ability to scp

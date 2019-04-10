@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "bundle exec middleman s",
+    "build": "bundle exec middleman build",
+    "deploy:dev": "./shell/deploy-dev.sh",
     "deploy:prod": "./shell/deploy-prod.sh"
   },
   "author": "",
