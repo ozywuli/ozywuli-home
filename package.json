@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "bundle exec middleman s"
+    "start": "bundle exec middleman s",
+    "deploy:prod": "./shell/deploy-prod.sh"
   },
   "author": "",
   "license": "ISC",
