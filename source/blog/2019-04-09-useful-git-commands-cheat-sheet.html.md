@@ -189,6 +189,12 @@ git rebase <base-branch>
 git checkout -b <new branch-name> <SHA>
 ```
 
+Move the base of your feature branch to a new base
+
+```bash
+git rebase --onto newBase oldBase <branch>
+```
+
 ---
 
 ## Stashing
@@ -229,7 +235,7 @@ git stash apply
 git stash apply <id>
 ```
 
-**grab latest stash and then throwit away**
+**grab latest stash and then throw it away**
 
 ```bash
 git stash pop
@@ -261,6 +267,10 @@ git stash clear
 
 ```bash
 git log
+
+# compressed
+
+git log --oneline
 ```
 
 **Ammend the message in the previous commit**
@@ -277,6 +287,10 @@ git commit --all --amend --no-edit
 
 # return to the previous head commit
 git rebase --continue
+
+# undo git rebase
+git reset --hard ORIG_HEAD
+
 ```
 
 ---
@@ -299,4 +313,16 @@ Add a remote for an upstream repo (the main repo you forked from)
 
 ```bash
 git remote add upstream <url>
+```
+
+## Miscellaneous
+
+Problem: Git is not detecting changes in a subdirectory.
+
+Reason 1: The subdirectory is a git repo itself so you can't add it. Once you remove its git history, however, git still can't detect changes in the repo.
+
+Solution 1: You'll need to clear the git cache for the subdirectory in question
+
+```bash
+git rm --cache <subdirectory>
 ```
