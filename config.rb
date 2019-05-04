@@ -22,6 +22,7 @@ page "/resources.html", :layout => :single_column
 page "/images.html", :layout => :full_page
 page "/resume.html", :layout => :single_column
 page "/experiments.html", :layout => :single_column
+page "/patterns.html", :layout => :single_column
 page "/foss.html", :layout => :single_column
 
 
@@ -54,11 +55,11 @@ helpers do
 #     "Helping"
 #   end
     # http://cobwwweb.com/render-inline-svg-rails-middleman
-    def svg(name) 
-        root = Middleman::Application.root 
-        file_path = "#{root}/src/assets/svg/#{name}.svg" 
-        return File.read(file_path) if File.exists?(file_path) 
-        '(not found)' 
+    def svg(name)
+        root = Middleman::Application.root
+        file_path = "#{root}/src/assets/svg/#{name}.svg"
+        return File.read(file_path) if File.exists?(file_path)
+        '(not found)'
     end
 end
 
