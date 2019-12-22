@@ -36,7 +36,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "lodash": "^4.8.2",
+    "lodash": "^4.17.13",
     "modalx": "0.0.7",
     "ontoggle": "0.0.4"
   }
