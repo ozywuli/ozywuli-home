@@ -1,7 +1,7 @@
 ---
 title: Useful Bash commands
 slug: useful-bash-commands
-date: 2019-12-25
+date: 2019-12-22
 excerpt: Some useful Bash commands
 ---
 
