@@ -55,7 +55,7 @@ get weightInKilograms() {
 
 ## References
 
-[https://guides.emberjs.com/v3.3.0/object-model/computed-properties/](https://guides.emberjs.com/v3.3.0/object-model/computed-properties/)
-[https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/](https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/)
-[https://spin.atomicobject.com/2017/04/26/ember-pure-computed-properties/](https://spin.atomicobject.com/2017/04/26/ember-pure-computed-properties/)
-[https://emberigniter.com/guide-promises-computed-properties/](https://emberigniter.com/guide-promises-computed-properties/)
+- [https://guides.emberjs.com/v3.3.0/object-model/computed-properties/](https://guides.emberjs.com/v3.3.0/object-model/computed-properties/)
+- [https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/](https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/)
+- [https://spin.atomicobject.com/2017/04/26/ember-pure-computed-properties/](https://spin.atomicobject.com/2017/04/26/ember-pure-computed-properties/)
+- [https://emberigniter.com/guide-promises-computed-properties/](https://emberigniter.com/guide-promises-computed-properties/)
