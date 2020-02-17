@@ -8,13 +8,16 @@ import Modalx from 'modalx/dist/Modalx';
 //==============================================================================
 $(document).ready(function() {
 
-    lazyLoadImg.init();
-    scrollUpObj.init();
+	lazyLoadImg.init();
+	scrollUpObj.init();
 
-    // https://stackoverflow.com/questions/138669/how-can-i-determine-if-a-javascript-variable-is-defined-in-a-page
-    if ('undefined' !== typeof(mapboxgl)) {
-        contactMapObj.init();    
-    }
+	// https://stackoverflow.com/questions/138669/how-can-i-determine-if-a-javascript-variable-is-defined-in-a-page
+	if ('undefined' !== typeof(mapboxgl) && $('#contact-map').length) {
+		contactMapObj.init();
+	}
+	if ('undefined' !== typeof(mapboxgl) && $('#travel-map').length) {
+		TravelMap().init();
+	}
 });
 
 
@@ -22,11 +25,11 @@ $(document).ready(function() {
 // GLOBAL SCROLL EVENT
 //==============================================================================
 function scrollHandler() {
-    if ($(window).scrollTop() > $(window).height() / 1.5) {
-        $('.js-scrollup').addClass('is-revealed');
-    } else {
-        $('.js-scrollup').removeClass('is-revealed');
-    }
+	if ($(window).scrollTop() > $(window).height() / 1.5) {
+		$('.js-scrollup').addClass('is-revealed');
+	} else {
+		$('.js-scrollup').removeClass('is-revealed');
+	}
 }
 
 $(window).on('scroll', _debounce(scrollHandler, 150));
@@ -37,16 +40,16 @@ $(window).on('scroll', _debounce(scrollHandler, 150));
 // SCROLL TO TOP / SCROLL UP
 //==============================================================================
 let scrollUpObj = {
-    $scrollUpBtn: $('.js-scrollup-btn'),
-    scrollUp: function(e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-    },
-    init: function() {
-        this.$scrollUpBtn.on('click', this.scrollUp);
-    }
+	$scrollUpBtn: $('.js-scrollup-btn'),
+	scrollUp: function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: 0
+		}, 500);
+	},
+	init: function() {
+		this.$scrollUpBtn.on('click', this.scrollUp);
+	}
 }
 
 
@@ -54,37 +57,37 @@ let scrollUpObj = {
 // Lazy Load Images
 //==============================================================================
 var lazyLoadImg = {
-    $featuredItem: $('.js-featured-list-item'),
-    featuredItemOffsets: [],
-    scrolled: $(window).scrollTop(),
-    windowHeight: $(window).height(),
+	$featuredItem: $('.js-featured-list-item'),
+	featuredItemOffsets: [],
+	scrolled: $(window).scrollTop(),
+	windowHeight: $(window).height(),
 
-    updateOffsets: function() {
-        
-        var featuredItemOffsets = this.featuredItemOffsets;
-        this.$featuredItem.each(function() {
-            featuredItemOffsets.push($(this).offset().top);
-        });
-    },
+	updateOffsets: function() {
 
-    scrolling: function() {
-        this.scrolled = $(window).scrollTop();
+		var featuredItemOffsets = this.featuredItemOffsets;
+		this.$featuredItem.each(function() {
+			featuredItemOffsets.push($(this).offset().top);
+		});
+	},
 
-        for (var i = 0; i < this.featuredItemOffsets.length; i++) {
+	scrolling: function() {
+		this.scrolled = $(window).scrollTop();
 
-            if ( (this.scrolled + this.windowHeight - 200) > this.featuredItemOffsets[i] ) {
+		for (var i = 0; i < this.featuredItemOffsets.length; i++) {
 
-                this.$featuredItem.eq(i).find('.featured-list-item-img').css('background-image', 'url("' + this.$featuredItem.eq(i).attr('data-img') + '")');
-                
-            }
-        }
-    },
+			if ( (this.scrolled + this.windowHeight - 200) > this.featuredItemOffsets[i] ) {
 
-    init: function() {
-        this.updateOffsets();
+				this.$featuredItem.eq(i).find('.featured-list-item-img').css('background-image', 'url("' + this.$featuredItem.eq(i).attr('data-img') + '")');
 
-        $(window).on('scroll', this.scrolling.bind(this));
-    }
+			}
+		}
+	},
+
+	init: function() {
+		this.updateOffsets();
+
+		$(window).on('scroll', this.scrolling.bind(this));
+	}
 }
 
 
@@ -92,30 +95,30 @@ var lazyLoadImg = {
 // CONTACT MAP
 //==============================================================================
 let contactMapObj = {
-    init() {
-        mapboxgl.accessToken = 'pk.eyJ1IjoibXJvd2wiLCJhIjoiQW5seEFHVSJ9.fC2U7HkEIM-7EPNDMIoRXA';
-        var map = new mapboxgl.Map({
-            container: 'contact-map',
-            style: 'mapbox://styles/mapbox/dark-v9',
-            center: [-118.2468, 34.0407],
-            zoom: 9
-        });
+	init() {
+		mapboxgl.accessToken = 'pk.eyJ1IjoibXJvd2wiLCJhIjoiQW5seEFHVSJ9.fC2U7HkEIM-7EPNDMIoRXA';
+		var map = new mapboxgl.Map({
+			container: 'contact-map',
+			style: 'mapbox://styles/mapbox/dark-v9',
+			center: [-118.2468, 34.0407],
+			zoom: 9
+		});
 
-        map.on('load', function() {
-            // var el = document.createElement('div');
-            // el.className = 'marker';
-            // el.style.backgroundImage = 'url(/assets/images/marker.png)';
-            // el.style.width = '64px';
-            // el.style.height = '64px';
+		map.on('load', function() {
+			// var el = document.createElement('div');
+			// el.className = 'marker';
+			// el.style.backgroundImage = 'url(/assets/images/marker.png)';
+			// el.style.width = '64px';
+			// el.style.height = '64px';
 
-            // add marker to map
-            // new mapboxgl.Marker(el)
-            //     .setLngLat([-118.2468, 34.12])
-            //     .addTo(map);
-        });
+			// add marker to map
+			// new mapboxgl.Marker(el)
+			//     .setLngLat([-118.2468, 34.12])
+			//     .addTo(map);
+		});
 
-          
-    }
+
+	}
 }
 
 
@@ -130,15 +133,15 @@ let myOnToggle = new OnToggle();
 // MASONRY
 //==============================================================================
 if (typeof imagesLoaded !== 'undefined') {
-    let $msnry = $('.msnry-grid').imagesLoaded(function() {
-        $msnry.css({opacity: 1});
-        $msnry.masonry({
-            itemSelector: '.msnry-grid__item',
-            // columnWidth: '.msnry-gris__sizer',
-            percentPosition: true,
-            // gutter: '.msnry-grid__gutter'
-        });
-    });
+	let $msnry = $('.msnry-grid').imagesLoaded(function() {
+		$msnry.css({opacity: 1});
+		$msnry.masonry({
+			itemSelector: '.msnry-grid__item',
+			// columnWidth: '.msnry-gris__sizer',
+			percentPosition: true,
+			// gutter: '.msnry-grid__gutter'
+		});
+	});
 
 }
 
@@ -147,22 +150,22 @@ if (typeof imagesLoaded !== 'undefined') {
 // Swiper
 //==============================================================================
 if ($('.swiper-container').length) {
-    var mySwiper = new Swiper ('.swiper-container', {
-        // Optional parameters
-        loop: true,
-        slidesPerView: 4,
-        spaceBetween: 30,
-        centeredSlides: true,
-        breakpoints: {
-            1024: {
-                slidesPerView: 3
-            },
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 0
-            }
-        }
-    })
+	var mySwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		loop: true,
+		slidesPerView: 4,
+		spaceBetween: 30,
+		centeredSlides: true,
+		breakpoints: {
+			1024: {
+				slidesPerView: 3
+			},
+			640: {
+				slidesPerView: 1,
+				spaceBetween: 0
+			}
+		}
+	})
 }
 
 
@@ -170,20 +173,74 @@ if ($('.swiper-container').length) {
 // Modalx
 //==============================================================================
 let myModalx = new Modalx({
-    singleModalTarget: true,
-    openCallback(target, event) {
-        $('.js-modalx-content').append(`
-            <img src="${event.currentTarget.dataset.img}" alt=""/>
-        `)
+	singleModalTarget: true,
+	openCallback(target, event) {
+		$('.js-modalx-content').append(`
+		<img src="${event.currentTarget.dataset.img}" alt=""/>
+		`)
 
-        let $modalImg = $('.js-modalx-content img');
+		let $modalImg = $('.js-modalx-content img');
 
-        if( $modalImg.height() > $modalImg.width()) {
-            $('.js-modalx-content').addClass('is-vertical');
-        }
+		if( $modalImg.height() > $modalImg.width()) {
+			$('.js-modalx-content').addClass('is-vertical');
+		}
 
-    },
-    closeCallback() {
-        $('.js-modalx-content').removeClass('is-vertical').empty();
-    }
+	},
+	closeCallback() {
+		$('.js-modalx-content').removeClass('is-vertical').empty();
+	}
 });
+
+//==============================================================================
+// Travel Map
+//==============================================================================
+let TravelMap = () => {
+	const geojson = {
+		type: 'FeatureCollection',
+		features: [{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-77.032, 38.913]
+			},
+			properties: {
+				title: 'Mapbox',
+				description: 'Washington, D.C.'
+			}
+		},
+		{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-122.414, 37.776]
+			},
+			properties: {
+				title: 'Mapbox',
+				description: 'San Francisco, California'
+			}
+		}]
+	}
+
+	const init = () => {
+		var map = new mapboxgl.Map({
+			container: 'travel-map',
+			style: 'https://api.maptiler.com/maps/86d71b2a-af5f-4fa8-8bfa-fc297f69b82d/style.json?key=7rAR6VoxhJjbXn8HZNcj',
+			center: [0, 0],
+			zoom: 0
+		});
+
+		geojson.features.forEach(function(marker) {
+
+			// create a HTML element for each feature
+			var el = document.createElement('div');
+			el.className = 'marker';
+
+			// make a marker for each feature and add to the map
+			new mapboxgl.Marker(el)
+				.setLngLat(marker.geometry.coordinates)
+				.addTo(map);
+		});
+	}
+
+	return { init }
+}

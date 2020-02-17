@@ -1,0 +1,139 @@
+{
+	"cities": [
+		{
+			"coordinates": [-117.159353, 32.715983],
+			"title": "San Diego",
+			"description": ""
+		},
+		{
+			"coordinates": [-118.236110, 34.051721],
+			"title": "Los Angeles",
+			"description": ""
+		},
+		{
+			"coordinates": [-121.874533, 37.373605],
+			"title": "San Jose",
+			"description": ""
+		},
+		{
+			"coordinates": [-122.418876, 37.772189],
+			"title": "San Francisco",
+			"description": ""
+		},
+		{
+			"coordinates": [-115.186545, 36.234901],
+			"title": "Las Vegas",
+			"description": ""
+		},
+		{
+			"coordinates": [-95.237547, 30.061027],
+			"title": "Houston",
+			"description": ""
+		},
+		{
+			"coordinates": [-73.767622, 41.019786],
+			"title": "New York City",
+			"description": ""
+		},
+		{
+			"coordinates": [-75.073621, 40.001969],
+			"title": "Philadelphia",
+			"description": ""
+		},
+		{
+			"coordinates": [-77.035863, 38.907736],
+			"title": "Washington D.C.",
+			"description": ""
+		},
+		{
+			"coordinates": [-122.670389, 49.423322],
+			"title": "Vancouver",
+			"description": ""
+		},
+		{
+			"coordinates": [-80.102522, 43.903606],
+			"title": "Toronto",
+			"description": ""
+		},
+		{
+			"coordinates": [-117.034334, 32.513475],
+			"title": "Tijuana",
+			"description": ""
+		},
+		{
+			"coordinates": [-116.604753, 31.864879],
+			"title": "Ensenada",
+			"description": ""
+		},
+		{
+			"coordinates": [-116.612477, 32.563548],
+			"title": "Tecate",
+			"description": ""
+		},
+		{
+			"coordinates": [-108.986235, 25.790443],
+			"title": "Los Mochis",
+			"description": ""
+		},
+		{
+			"coordinates": [-108.463052, 25.563599],
+			"title": "Guasave",
+			"description": ""
+		},
+		{
+			"coordinates": [-107.396745, 24.808734],
+			"title": "Culiacán",
+			"description": ""
+		},
+		{
+			"coordinates": [116.424792, 39.918579],
+			"title": "Beijing",
+			"description": ""
+		},
+		{
+			"coordinates": [121.493210, 31.234614],
+			"title": "Shanghai",
+			"description": ""
+		},
+		{
+			"coordinates": [113.260779, 23.136716],
+			"title": "Guangzhou",
+			"description": ""
+		},
+		{
+			"coordinates": [120.644770, 31.413311],
+			"title": "Suzhou",
+			"description": ""
+		},
+		{
+			"coordinates": [108.936305, 34.346652],
+			"title": "Xi'an",
+			"description": ""
+		},
+		{
+			"coordinates": [104.081717, 30.788183],
+			"title": "Chengdu",
+			"description": ""
+		},
+		{
+			"coordinates": [112.301988, 22.185436],
+			"title": "Enping",
+			"description": ""
+		},
+		{
+			"coordinates": [114.178506, 22.324083],
+			"title": "Hong Kong",
+			"description": ""
+		},
+		{
+			"coordinates": [113.543716, 22.199660],
+			"title": "Macao",
+			"description": ""
+		},
+		{
+			"coordinates": [118.750104, 32.354739],
+			"title": "Nanjing",
+			"description": ""
+		}
+	]
+}
