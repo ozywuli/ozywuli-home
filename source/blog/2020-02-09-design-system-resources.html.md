@@ -10,7 +10,7 @@ First off, what's a design system? It's a set of standards and documentation tha
 ## Examples
 
 - [https://design.herokai.com/purple3/docs/](https://design.herokai.com/purple3/docs/)
-
+- [https://stackoverflow.design/](https://stackoverflow.design/)
 ## References
 
 - [https://www.invisionapp.com/inside-design/guide-to-design-systems/](https://www.invisionapp.com/inside-design/guide-to-design-systems/)
