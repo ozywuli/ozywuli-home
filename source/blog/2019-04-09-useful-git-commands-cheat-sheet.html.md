@@ -66,6 +66,23 @@ git push <remote-name> <branch-name>
 
 ---
 
+## Staging
+
+Stage only deleted files
+```bash
+git ls-files --deleted | xargs git add
+git ls-files --deleted -- lib/foo | xargs git add
+```
+
+Stage only modified files
+```bash
+git ls-files --modified | xargs git add
+git ls-files --modified -- lib/foo | xargs git add
+```
+
+
+---
+
 ## Revert
 
 Undos a commit and remembers this as a change in history

@@ -515,7 +515,7 @@ module.exports = toNumber;
 
 /**
  * Modalx.js
- * @author Ozy Wu-Li - @ousikaa
+ * @author Ozy Wu Li - @ousikaa
  * @description Simple modal toggler
  */
 
@@ -565,7 +565,7 @@ module.exports = toNumber;
      */
     namespace['pluginName'].prototype = {
         /**
-         * 
+         *
          */
         init: function init() {
             $('.' + this.options.opener).on('click', this.openEventHandler.bind(this));
@@ -662,7 +662,7 @@ module.exports = toNumber;
     let pluginName = 'OnToggle';
 
     /**
-     * 
+     *
      */
     let defaults = {
         toggleEl: '.js-toggle',
@@ -671,7 +671,7 @@ module.exports = toNumber;
     }
 
     /**
-     * PLUGIN CONSTRUCTOR 
+     * PLUGIN CONSTRUCTOR
      */
     let OnToggle = function( options ) {
         this.options = $.extend( {}, defaults, options );
@@ -679,27 +679,27 @@ module.exports = toNumber;
     }
 
     /**
-     * 
+     *
      */
     // https://stackoverflow.com/questions/4736910/javascript-when-to-use-prototypes
     OnToggle.prototype = {
-        
+
         /**
-         * 
+         *
          */
         init: function() {
             this.checkDevice();
             $(this.options.toggleEl).on('click', this.openToggle.bind(this));
             $(document).on(this.eventType, this.detectOutsideClick.bind(this));
         },
-        
+
         /**
-         * 
+         *
          */
         eventType: 'click',
 
         /**
-         * 
+         *
          */
         checkDevice: function() {
             // if we detect an ios device, then use the `touchstart`event instead of the `click` event
@@ -707,7 +707,7 @@ module.exports = toNumber;
             this.eventType = event;
         },
         /**
-         * 
+         *
          */
         openToggle: function(event) {
             event.preventDefault();
@@ -724,7 +724,7 @@ module.exports = toNumber;
         },
 
         /**
-         * 
+         *
          */
         detectOutsideClick: function(event) {
             if ( !$(event.target).closest( `${this.options.toggleEl}, ${this.options.toggleTargetEl}` ).length ) {

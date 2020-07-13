@@ -60,3 +60,4 @@ How are server sessions related?
 [https://www.cisco.com/c/en/us/support/docs/security/web-security-appliance/117925-technote-csc-00.html](https://www.cisco.com/c/en/us/support/docs/security/web-security-appliance/117925-technote-csc-00.html)
 [https://www.guru99.com/difference-between-cookie-session.html](https://www.guru99.com/difference-between-cookie-session.html)
 [https://www.reddit.com/r/learnprogramming/comments/5jneho/difference_between_sessions_and_cookies/](https://www.reddit.com/r/learnprogramming/comments/5jneho/difference_between_sessions_and_cookies/)
+[https://stackoverflow.com/questions/32563236/relation-between-sessions-and-cookies](https://stackoverflow.com/questions/32563236/relation-between-sessions-and-cookies)
